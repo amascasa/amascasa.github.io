@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: Champagne;
+    src: url(cac_champagne.woff);
+    src: url(cac_champagne.ttf);
+}
+
+@font-face {
+    font-family: Grunge;
+    src: url(1942.woff);
+    src: url(1942.ttf);
+}
+
+@font-face {
+    font-family: Dobkin;
+    src: url(DobkinPlain.woff);
+    src: url(DobkinPlain.ttf);
+}
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 2
+   Case Problem 1
+   
+   PHCT Typographic Style Sheet
+   Author: Adam Morehouse
+   Date:   09/02/2023
+   
+   Filename: ph_styles.css
+
+*/
+
+
+/* Structural Styles */
+html {
+    background-color: hsl(91, 8%, 56%)
+}
+
+body {
+    background-color: hsl(58, 31%, 84%);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+header {
+    background-color: black;
+}
+
+p {
+    margin: 0px;
+    padding: 5px 25px 25px 25px;
+}
+
+body p {
+    font-size: 1.1em;
+    text-align: center;
+}
+
+address {
+    font-style: normal;
+    font-size: 0.9em;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+
+
+/* Navigation Styles */
+a:link {
+    font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
+    padding: 10px 0px 10px 0px;
+    color: white;
+    text-decoration: none;
+    background-color: hsla(0, 0%, 42%, 0.4);
+}
+
+a:visited {
+    font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
+    padding: 10px 0px 10px 0px;
+    color: white;
+    text-decoration: none;
+    background-color: hsla(0, 0%, 42%, 0.4);
+}
+
+a:hover {
+    color: hsla(0, 0%, 100%, 0.7);
+    background-color: hsla(0, 0%, 42%, 0.7);
+}
+
+a:active {
+    color: hsla(0, 0%, 100%, 0.7);
+    background-color: hsla(0, 0%, 42%, 0.7);
+}
+
+
+
+/* Section Styles */
+
+.playbill h1 {
+    font-size: 3em;
+    font-weight: normal;
+    margin: 0px;
+    padding: 20px 0px 10px 20px;
+}
+
+#play1 {
+    background-color: hsl(240, 100%, 88%);
+    font-family: Champagne, cursive;
+    
+}
+
+#play2 {
+    background-color: hsl(25, 88%, 73%);
+    font-family:  Grunge, ‘Times New Roman’, Times, serif;
+}
+
+#play3 {
+    background-color: hsl(0, 100%, 75%);
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+#play4 {
+    background-color: hsl(296, 86%, 86%);
+    font-family: Dobkin, cursive;
+}
+
+
+/* Description List Styles */
+dt {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 0.4);
+}
+
+dd {
+    font-size: 1.3em;
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
+
+
+aside {
+    font-size: 0.9em;
+}
+
+aside h1 {
+    font-size: 1.4em;
+    text-align: center;
+}
+
