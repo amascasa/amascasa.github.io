@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+    <meta charset="utf-8">
+    <meta name="Homework 2" content="Homework 2">
+    <title>hw2 Part2</title>
+
+ <style>
+    h1 {
+        color: silver;
+        background-color: blue;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        text-align:center;
+        }
+
+        img {
+        height: 400px;
+     }
+</style>
+    
+    <script>
+        function part2() {
+       
+            let num1, num2, num3, n1, n2, n3, sum, avg, product;
+            
+            num1 = document.forms["form1"].elements["num1"].value;
+            num2 = document.forms["form1"].elements["num2"].value;
+            num3 = document.forms["form1"].elements["num3"].value;
+            
+            n1 = parseInt(num1);
+            n2 = parseInt(num2);
+            n3 = parseInt(num3);
+
+            sum = n1 + n2 + n3;
+            avg = sum / 3;
+            product = num1 * num2 * num3;
+            let max = Math.max(n1, n2, n3);
+            let min = Math.min(n1, n2, n3);
+
+
+            document.forms["form1"].elements["results"].value = ("Sum: " + sum + 
+            "\nAverage: " + avg + "\nProduct: " + product + "\nMax Value: " + max + "\nMin Value: " + min);
+        
+        }
+            
+    </script>
+   
+    
+ </head>
+
+<body>
+
+    <h1>Homework 2 - Basic Operations - Part 2</h1>
+    <a id="part1">Part 1</a>
+    <a id="part2">Part 2</a>
+    <a href="https://amascasa.github.io/homePage.html">Homepage</a>
+
+    <section>
+        <form name="form1">
+        
+            <table>
+                <tr>
+                    <td>First Number:</td>
+                    <td><input type="text" name="num1" size="10"></td>
+                </tr>
+                <tr>
+                    <td>Second Number:</td>
+                    <td><input type="text" name="num2" size="10"></td>
+                </tr>
+                <tr>
+                    <td>Third Number:</td>
+                    <td><input type="text" name="num3" size="10"></td>
+                </tr>
+            </table>
+        
+            <br> Results:
+            <textarea readonly rows="5" cols="20" name="results">
+            </textarea>
+            <br><br>
+        
+            <input type="button" onclick="part2()" value="SUBMIT">
+            <input type="reset" value="RESET">
+        </form>
+        </section>
+   
+
+
+</body>
+</html>
+
+
+
+
