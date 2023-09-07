@@ -32,9 +32,12 @@
             n2 = parseInt(num2);
             n3 = parseInt(num3);
 
-           
+            if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
 
-            if (n1 != NaN || n2 != NaN || n3 != NaN) {
+                document.forms["form1"].elements["results"].value = ("Entries must be numbers");
+                 
+            } 
+            else {
                  sum = n1 + n2 + n3;
                  avg = sum / 3;
                  product = num1 * num2 * num3;
@@ -42,14 +45,8 @@
                  min = Math.min(n1, n2, n3);
 
                  document.forms["form1"].elements["results"].value = ("Sum: " + sum + 
-                "\nAverage: " + avg + "\nProduct: " + product + "\nMax Value: " + max + "\nMin Value: " + min);
-            } 
-            else {
-                document.forms[form1].elements["results"].value = ("Entries must be numbers")
+                 "\nAverage: " + avg + "\nProduct: " + product + "\nMax Value: " + max + "\nMin Value: " + min);
             }
-
-
-           
         
         }
             
