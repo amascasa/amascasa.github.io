@@ -22,7 +22,7 @@
     <script>
         function part2() {
        
-            let num1, num2, num3, n1, n2, n3, sum, avg, product;
+            let num1, num2, num3, n1, n2, n3, sum, avg, product, max, min;
             
             num1 = document.forms["form1"].elements["num1"].value;
             num2 = document.forms["form1"].elements["num2"].value;
@@ -32,15 +32,24 @@
             n2 = parseInt(num2);
             n3 = parseInt(num3);
 
-            sum = n1 + n2 + n3;
-            avg = sum / 3;
-            product = num1 * num2 * num3;
-            let max = Math.max(n1, n2, n3);
-            let min = Math.min(n1, n2, n3);
+           
+
+            if (n1 != NaN || n2 != NaN || n3 != NaN) {
+                 sum = n1 + n2 + n3;
+                 avg = sum / 3;
+                 product = num1 * num2 * num3;
+                 max = Math.max(n1, n2, n3);
+                 min = Math.min(n1, n2, n3);
+
+                 document.forms["form1"].elements["results"].value = ("Sum: " + sum + 
+                "\nAverage: " + avg + "\nProduct: " + product + "\nMax Value: " + max + "\nMin Value: " + min);
+            } 
+            else {
+                document.forms[form1].elements["results"].value = ("Entries must be numbers")
+            }
 
 
-            document.forms["form1"].elements["results"].value = ("Sum: " + sum + 
-            "\nAverage: " + avg + "\nProduct: " + product + "\nMax Value: " + max + "\nMin Value: " + min);
+           
         
         }
             
