@@ -21,11 +21,11 @@ body {
    
    display: grid;
    grid-template-columns: 200px auto 200px; 
-   grid-template-areas: 'header header header'
-                        'link link link'
-                        'nav main side'
-                        'nav coupons side'
-                        'footer footer footer';
+   grid-template-areas: 'headers headers headers'
+                        'links links links'
+                        'navs main sides'
+                        'navs coupons sides'
+                        'footers footers footers';
    grid-gap: 10px 25px;
 }
 
