@@ -5,7 +5,99 @@
     <meta charset="utf-8">
     <meta name="Student grades calculator" content="Homework 3">
     <title>hw3 part 1</title>
+    <style>
+      body {
+          background-color:rgb(218, 221, 236);
+      }
+      h1 {
+            color: silver;
+            background-color: blue;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            text-align:center;
+      }
+      
+      img {
+       height: 400px;
+      }
   
+      input {
+          text-align: right;
+      }
+  
+      table {
+          border-style: double;
+      }
+  
+      td {
+         border-style: solid;
+         border-width: 1px;
+         border-color:aquamarine;
+      }
+  
+      th {
+          color: rgb(5, 14, 93);
+      }
+  
+     
+  
+   </style>
+    <script>
+         
+         function gradeCalc() {
+            let hw, mid, final, partake, grade, hwAvg, midTerm,
+              finalExam, participate;
+
+            hwAvg = document.forms["myForm"].elements["hwAvg"].value;
+            midTerm = document.forms["myForm"].elements["midTerm"].value;
+            finalExam = document.forms["myForm"].elements["finalExam"].value;
+            participate = document.forms["myForm"].elements["participate"].value;
+
+            hw = parseInt(hwAvg);
+            mid = parseInt(midTerm);
+            final= parseInt(finalExam);
+            partake = parseInt(participate);
+
+
+            if (isNaN(hw) || isNaN(mid) || isNaN(final) || isNaN(partake)
+               || hw < 0 || hw > 100 || mid < 0 || mid > 100 ||
+                 final < 0 || final > 100 || partake < 0 || partake > 100) {
+                 
+                  document.forms["myForm"].elements["results"].value = 
+                  ("Entries must be numbers between 0 and 100!");
+                }
+            
+            else {
+               grade = Math.round((.5 * hw) + (.2 * mid) +
+                 (.2 * final) + (.1 * partake));
+                 
+                     if (grade >= 90) {
+                        document.forms["myForm"].elements["results"].value = 
+                        ("Your percentage is: " + grade + "\nThat's an A!");
+                     }
+                     else if (grade >= 80 && grade <= 89) {
+                        document.forms["myForm"].elements["results"].value = 
+                         ("Your percentage is: " + grade + "\nThat's a B!");
+                      }
+                      else if (grade >= 70 && grade <= 79) {
+                        document.forms["myForm"].elements["results"].value = 
+                         ("Your percentage is: " + grade + "\nThat's a C!");
+                      }
+                      else if (grade >= 60 && grade <= 69) {
+                        document.forms["myForm"].elements["results"].value = 
+                         ("Your percentage is: " + grade + "\nThat's a D" +
+                         "\nYou must take the class again");  
+                      }
+                      else if (grade < 60) {
+                        document.forms["myForm"].elements["results"].value = 
+                         ("Your percentage is: " + grade + "\nThat's a F" +
+                         "\nYou must take the class again");
+                     } 
+                }
+            }
+
+   </script>
+
+   
  </head>
 
 <body>
@@ -13,10 +105,48 @@
   <h1>Homework3</h1>
 
   <p>Part I: Student grade calculator</p>
-    
-    
-    <a href="https://amascasa.github.io/homePage.html">Homepage</a>
-    <a href="https://amascasa.github.io/hw3.part2.html">Part 2</a>
+
+  <a href="https://amascasa.github.io/homePage.html">Homepage</a>
+  <a href="https://amascasa.github.io/hw3.part2.html">Part 2</a>
+
+
+  <h1>Student Grades</h1>
+   <form id="myForm" name="myForm">
+      <table>
+         <tbody>
+            <tr>
+               <td>
+                  <label>Homework Avg</label>
+               </td>
+               <td>
+                  <input type="text" name="hwAvg" size="10">
+               </td>
+            </tr>
+            <tr>
+               <td>Mid-Term Exam</td>
+               <td>
+                  <input type="text" name="midTerm" size="10">
+               </td>
+            </tr>
+            <tr>
+               <td>Final-Exam</td>
+               <td><input type="text" name="finalExam" size="10"></td>
+            </tr>
+            <tr>
+               <td>Participation</td>
+               <td><input type="text" name="participate" size="10"></td>
+            </tr>
+         </tbody>
+      </table>
+      <textarea readonly rows="5" cols="20" name="results"></textarea>
+      
+      <input type="button" onclick="gradeCalc()" value="Submit">
+      <input type="reset" value="Reset">
+      <br>
+      <br>
+      
+   </form>   
+   
 
 
 </body>

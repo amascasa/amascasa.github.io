@@ -4,8 +4,83 @@
  <head>
     <meta charset="utf-8">
     <meta name="Wage calculator" content="Homework 3">
-    <title>Wages</title>
-  
+    <title>hw3 part 2</title>
+    <style>
+        body {
+            background-color:rgb(218, 221, 236);
+        }
+        h1 {
+              color: silver;
+              background-color: blue;
+              font-family:Verdana, Geneva, Tahoma, sans-serif;
+              text-align:center;
+        }
+        
+    
+        img {
+         height: 400px;
+        }
+    
+        input {
+            text-align: right;
+        }
+    
+        table {
+            border-style: double;
+        }
+    
+        td {
+           border-style: solid;
+           border-width: 1px;
+           border-color:aquamarine;
+        }
+    
+        th {
+            color: rgb(5, 14, 93);
+        }
+    
+       
+    
+     </style>
+    <script>
+
+        function salaryCalc() {
+             let item1, item2, item3, item4, name, i1, i2, i3, i4,
+              total1, total2, total3, total4, salary, it1, it2, it3, it4;
+            
+             
+             it1 = document.forms["form2"].elements["item1"].value;
+             it2 = document.forms["form2"].elements["item2"].value;
+             it3 = document.forms["form2"].elements["item3"].value;
+             it4 = document.forms["form2"].elements["item4"].value;
+     
+             i1 = parseInt(it1);
+             i2 = parseInt(it2);
+             i3 = parseInt(it3);
+             i4 = parseInt(it4);
+     
+             total1 = (i1 * 0.09);
+             total2 = (i2 * 0.09);
+             total3 = (i3 * 0.09);
+             total4 = (i4 * 0.09);
+     
+     
+             
+             salary = (250 + total1 + total2 + total3 + total4).toFixed(2);
+            
+             document.forms["form2"].elements["entry1"].value = i1;
+             document.forms["form2"].elements["calc1"].value = total1.toFixed(2);
+             document.forms["form2"].elements["entry2"].value = i2;
+             document.forms["form2"].elements["calc2"].value = total2.toFixed(2);
+             document.forms["form2"].elements["entry3"].value = i3;
+             document.forms["form2"].elements["calc3"].value = total3.toFixed(2);
+             document.forms["form2"].elements["entry4"].value = i4;
+             document.forms["form2"].elements["calc4"].value = total4.toFixed(2); 
+     
+             document.forms["form2"].elements["sum"].value = salary;      
+         }
+     
+      </script>
  </head>
 
 <body>
@@ -16,7 +91,95 @@
     
     
  <a href="https://amascasa.github.io/homePage.html">Homepage</a>
- <a href="https://amascasa.github.io/hw3.part2.html">Part 1</a>
+ <a href="https://amascasa.github.io/hw3.part1.html">Part 1</a>
+
+ 
+
+    <h1>Salary Calculator</h1>
+    <br>
+    <section>
+        <form name="form1">
+            <table>
+                <tr>
+                    <td>SalesPerson</td>
+                    <td>
+                        <input type="text" name="name" size="10">
+                    </td>
+                </tr>
+            </table>
+        <form name="form2">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Enter Number Sold</th>
+                </tr>
+                <tr>
+                    <td>Widget</td>
+                    <td><input type="number" name="entry1" size="10"></td>
+                </tr>
+                <tr>
+                    <td>Wid</td>
+                    <td><input type="number" name="entry2" size="10"></td>
+                </tr>
+                <tr>
+                    <td>Wi</td>
+                    <td><input type="number" name="entry3" size="10"></td>
+                </tr>
+                <tr>
+                    <td>Wilson</td>
+                    <td><input type="number" name="entry4" size="10"></td>
+                </tr>
+               
+            </table>
+
+            <input type="button" onclick="salaryCalc()" value="SUBMIT" id="button1">
+            
+            <input type="reset" value="Reset" id="button2">
+           <br><br>
+            <table>
+                <tr>
+                    <th>Item#</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total $</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>$20.99</td>
+                    <td><input type="number" name="item1" size="10" readonly></td>
+                    <td><input type="number" name="calc1" size="10" readonly></td> 
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>$12.75</td>
+                    <td><input type="number" name="item2" size="10" readonly></td>
+                    <td><input type="number" name="calc2" size="10" readonly></td> 
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>$9.95</td>
+                    <td><input type="number" name="item3" size="10" readonly></td>
+                    <td><input type="number" name="calc3" size="10" readonly></td> 
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>$35.89</td>
+                    <td><input type="number" name="item4" size="10" readonly></td>
+                    <td><input type="number" name="calc4" size="10" readonly></td> 
+                </tr>
+                <tr>
+                    <td>Total Earned</td>
+                    <td></td>
+                    <td></td>
+                    <td><input type="number" name="sum" size="10" readonly></td>
+                </tr>
+               
+            </table>
+        </form>   
+
+       
+    </section>
+ 
 
 
 </body>
