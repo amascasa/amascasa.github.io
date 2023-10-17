@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <!--
+   
+   -->
+   <meta charset="utf-8">
+   <title>64330</title>
+   <style>
+      html {
+        background-color: rgb(5, 58, 126);
+        color: antiquewhite,
+      }
+
+      h1, label {
+        color: white;
+      }
+
+      p {
+        color: white;
+      }
+
+     
+   </style>
+
+
+  
+
+   <script>
+
+    
+    function starBox() {  
+        let numStars, lineNum;
+        
+        numStars = parseInt(document.getElementById("numStars").value);
+        lineNum = 1;
+
+        if(numStars < 2 || numStars > 10) {
+            document.write("Your number must be between 2 and 10!");
+        }
+
+        else {
+
+            for(i = 1; i <= numStars; i++) {
+
+                for(j = 1; j <= numStars; j++) {
+
+                    if(i ==1 || i == numStars || j == 1 || j == numStars) {
+                    document.write("* ");
+                    }
+
+                    else {
+                    document.write("&nbsp;&nbsp;&nbsp;");
+                    }
+                }
+                
+                document.write("<br>");
+            }
+    }
+    
+    }     
+ 
+        
+
+
+   
+    </script>
+
+
+</head>
+
+
+
+<body>
+   <header>
+      <h1>ec</h1>
+   </header>
+
+  
+   <form>
+    <label for="numStars">Enter a number between 2 and 10!</label>
+    <input name="numStars" id="numStars" type="text">
+
+    <input type="button" onclick="starBox()" value="Submit">
+    <input type="reset" value="Reset">
+   </form>
+
+  
+
+  
+
+  
+
+</body>
+</html>
