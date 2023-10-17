@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <!--
+   
+   -->
+   <meta charset="utf-8">
+   <title>Salary</title>
+   <style>
+   
+    body {
+      background-color: rgb(3, 19, 62);
+      color: azure; 
+    }
+
+
+    table {
+        
+        display: block;
+        padding: 40px;
+    }
+
+    tr, td, th {
+        border: 1px solid grey;
+        text-align: right;
+        
+
+    }
+
+    
+
+   </style>
+   <script>
+
+     
+      let rate, principal, balance, numYears;
+
+      rate = 0.050;
+      principal = 1000;
+      numYears = 5;
+
+     
+      
+      for (i = 0; i < 3; i++) {
+        document.write( "<table><tr> " + "<th>Year</th><th>Amount on Deposit</th><th>Interest Rate</th></tr>" );
+           
+
+        for(j = 0; j < numYears; j++) {
+
+            balance = (principal * Math.pow((1 + rate), j + 1)).toFixed(2);
+            
+            document.write( "<tr><td>" + (j + 1) + "</td>" + "<td>" + balance + "</td>" + 
+                "<td>" + rate.toFixed(2) + "</td></tr>");
+            
+        }
+
+       
+        rate += 0.01;
+
+
+     }
+
+   </script>
+
+</head>
+
+
+
+<body>
+  <br>
+  <a href="https://amascasa.github.io/homePage.html">Homepage</a>
+  <br>
+  <a href="https://amascasa.github.io/hw4.part1.html">Part One</a>
+  <br><br>
+  
+  <header id="title">
+   
+  </header>
+
+  
+    
+  
+  
+   
+
+   
+
+</body>
+</html>

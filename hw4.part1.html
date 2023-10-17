@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  
+   <meta charset="utf-8">
+    <meta name="Student grades calculator" content="Homework 3">
+    <title>hw4 part 1</title>
+    <style>
+
+        input {
+            display: block;
+            padding: 2px;
+            width: 500px;
+            text-justify: center;
+        }
+
+        body {
+            background-color:rgb(218, 221, 236);
+        }
+
+        h1 {
+              color: silver;
+              background-color: blue;
+              font-family:Verdana, Geneva, Tahoma, sans-serif;
+              text-align:center;
+        }
+        
+        a {
+            display: block;
+        }
+
+        img {
+         height: 400px;
+        }
+    
+        input {
+            text-align: left;
+        }
+    
+        table {
+            border-style: double;
+        }
+    
+        td {
+           border-style: solid;
+           border-width: 1px;
+           border-color:aquamarine;
+        }
+    
+        th {
+            color: rgb(5, 14, 93);
+        }
+    </style>
+    
+    <script>
+
+    function hw4Calc() {
+        let x, sum, product, productComma;
+        product =  1;
+        x = 5;
+        sum = 0;
+
+        for(i=0; x <= 25; i++) {
+            product *= x;
+            sum += x;
+            x += 4;
+        }
+
+       product = product.toLocaleString();
+       sum = sum.toLocaleString();
+
+        document.getElementById("product").value = 
+          ("The result of 5*9*13*17*25 is " + product + "!");
+
+        document.forms["form1"].elements["plus"].value = 
+          ("The result of 5+9+13+17+25 is " + sum + "!");
+      
+      
+          // document.forms["form1"].elements["multiply"].value = product;
+
+
+    }
+
+    function whLoop() {
+        let x, sum, product;
+        x = 3;
+        sum = 0;
+        product = 1;
+
+        while (x <= 18) {
+            sum += x;
+            product *= x;
+            x += 3;
+        }
+
+        product = product.toLocaleString();
+        sum = sum.toLocaleString();
+
+        //document.getElementById["sum2"].value = sum;
+        //document.getElementById["product2"].value = product;
+        document.forms["form1"].elements["sum2"].value = sum;
+        document.forms["form1"].elements["product2"].value = product;
+
+        product = product.toLocalString();
+        sum = sum.toLocalString();
+
+        document.write(product);
+
+    }
+
+
+
+    </script>
+  
+
+
+
+</head>
+<body onload="hw4Calc(), whLoop()">
+   <header>
+      <h1>Loop Statements</h1>
+   </header>
+
+   
+
+   <form name="form1">
+
+        <label for="add">Sum</label>
+        <input name="plus" id="add" type="text" reaadonly>
+
+        <label for="product">Product</label>
+        <input name="multiply" id="product" type="text">
+
+        <label for="sum2">The 3's Sum</label>
+        <input name="plus2" id="sum2" type="text">
+
+        <label for="product2">The 3's Product</label>
+        <input name="plus2" id="product2" type="text">
+
+
+</form>
+
+</body>
+
+<header>
+    <a href="https://amascasa.github.io/homePage.html">Homepage</a>
+    <a href="https://amascasa.github.io/salary.html">Part Two</a>
+</header>
+ 
+</html>
