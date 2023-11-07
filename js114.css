@@ -19,6 +19,11 @@ img {
    height: 400px;
    margin-left: auto;
    margin-right: auto;
+   padding: 10px;
+}
+
+form {
+  padding-top: 10px;
 }
 
 ul {
