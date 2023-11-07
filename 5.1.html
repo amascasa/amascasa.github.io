@@ -10,13 +10,26 @@
    <style></style>
    <script>
 
-   function validate() {
+   
+let nombre, age, browse, type;
+
+function validate() {
       nameCheck();
       ageCheck();
       boxCheck();
-      listCheck();
-   }
+      listCheck(); 
+      
+      total = nombre + age + browse + type;
 
+      if (total == 4) {
+         document.getElementById("final").innerHTML = 
+         "Your form has beem submitted!";
+      }
+      total = 0;
+   }
+      
+   
+ 
 //-------------------nameCheck-------------------
 
    function nameCheck() {
@@ -26,38 +39,40 @@
     if (name == "" || name == null) {
         document.getElementById("nameError").innerHTML = 
         "First and last name required";
+        
     } 
     else {
       document.getElementById("nameError").innerHTML = "";
+      nombre = 1;
     }
-
+   
    }
 
-//--------------------ageCheck-----------
+//--------------------radioCheck-----------
 
 function ageCheck() {
    let selected = false;
    let selection = "";
 
  
-   for (var i=0; i<2; ++i) {
+   for (var i=0; i<3; ++i) {
       
       if (document.form1.age[i].checked) {
             selected = true;
             selection = document.form1.age[i].value;
-            document.getElementById("ageError") = "";
             break;
          }
    }
 
    if (selected == false) {
       
-      document.getElementById("ageError").innerHTML = "Please select your age"
-      
+      document.getElementById("ageError").innerHTML = 
+      "Please select your age";
       }
       else {
-      document.getElementById("ageError").innerHTML = selection;
-            }
+      document.getElementById("ageError").innerHTML = "";
+      age = 1;
+      }
 
 }
 
@@ -74,26 +89,24 @@ function boxCheck() {
     if (document.form1.browser[i].checked) {
          selected = true;
          selection = document.form1.browser[i].value;
-         break;
+         
        }
  }
 
   if (selected == false) {
    
-     document.getElementById("boxError").innerHTML = "Please select a browser"
-    
-    }
+     document.getElementById("boxError").innerHTML =
+      "Please select a browser";
+   }
    else {
-    document.getElementById("boxError").innerHTML = selection;
-           }
+      document.getElementById("boxError").innerHTML = "";
+      browse = 1;
+   }
+
 }
 
 
 
-function res()
-   {
-    document.getElementById("boxError").innerHTML = " ";
-  } 
 
  
 
@@ -104,16 +117,22 @@ function listCheck() {
 let validate = document.getElementById("genre").selectedIndex;
 let selectedValue = "";
 
-if(validate < 1) {
-    document.getElementById("listError").innerHTML = 
-     "Select a genre";
+   if(validate < 1) {
+      document.getElementById("listError").innerHTML = 
+      "Select a genre";
+   }
+   else {
+      selectedValue = document.getElementById("genre").value;
+      type = 1;
+      document.getElementById("listError").innerHTML = " ";
+   }
+
 }
-else {
-    selectedValue = document.getElementById("genre").value;
-    //document.getElementById("listError").innerHTML = "Nice!";
-}
-}
-   
+
+
+
+  
+
    </script>
 
 </head>
@@ -131,9 +150,9 @@ else {
            <li><a href="https://amascasa.github.io/hw4.html">Loops</a></li>
            <li><a href="https://amascasa.github.io/hw5.html">Arrays</a>
                <ul>
-                  <li><a href="5.1.html">Part 1</a></li>
-                  <li><a href="5.2.html">Part 2</a></li>
-                  <li><a href="5.3.html">Part 3</a></li>
+                  <li><a href="https://amascasa.github.io/5.1.html">Part 1</a></li>
+                  <li><a href="https://amascasa.github.io/5.2.html">Part 2</a></li>
+                  <li><a href="https://amascasa.github.io/5.3.html">Part 3</a></li>
                </ul>
             </li>   
            <li><a href="https://amascasa.github.io/hw6.html">Objects</a></li>
@@ -160,12 +179,13 @@ else {
             <label for="under">21 and under</label>
             
             <br>
-            <input name="age" id="between" type="radio" value="21-50" required>
+            <input name="age" id="between" type="radio">
             <label for="between">21-50</label>
+
             <div id="ageError" class="error"></div>
             <br>
             
-            <input name="age" id="over" value="50++" type="radio" required>
+            <input name="age" id="over"  type="radio">
             <label for="over">50+</label>
            
          </fieldset>
@@ -228,7 +248,9 @@ else {
     </form>
 
     
+    <p id="final"></p>
 
+    <p id="x"></p>
   <!----------------------> 
 
   
