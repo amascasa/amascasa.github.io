@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <!--
+   
+   -->
+   <meta charset="utf-8">
+   <title>5.2</title>
+   <link href="code10-2_styles.css" rel="stylesheet" />
+   <link href="js114.css" rel="stylesheet">
+   <style></style>
+   </style>
+   <script>
+   
+   function scienceSites() {
+    let site = document.getElementById("science").value;
+    //let site = myForm.science.options[myForm.science.selectedIndex].value;
+    window.open(site);
+   }
+
+   function thoughtSites () {
+    let site = document.getElementById("thoughts").value;
+    //let site2 = myForm.thoughts.options[myForm.thoughts.selectedIndex].value;
+    window.open(site);
+    
+   }
+   
+   </script>
+
+</head>
+
+
+
+<body>
+   
+    <header>
+        <h1>onClick.Change</h1>
+        
+      <div id="wrap">
+         <ul class="navbar">
+              <li><a href="https://amascasa.github.io/index.html">Home</a></li>
+              <li><a href="https://amascasa.github.io/hw2.html">Basics</a></li>
+              <li><a href="https://amascasa.github.io/hw3.html">Functions</a></li>
+              <li><a href="https://amascasa.github.io/hw4.html">Loops</a></li>
+              <li><a href="https://amascasa.github.io/hw5.html">Arrays</a>
+                  <ul>
+                     <li><a href="5.1.html">Part 1</a></li>
+                     <li><a href="5.2.html">Part 2</a></li>
+                     <li><a href="5.3.html">Part 3</a></li>
+                  </ul>
+               </li>   
+              <li><a href="https://amascasa.github.io/hw6.html">Objects</a></li>
+              <li><a href="https://amascasa.github.io/hw7.html">java</a></li>
+              <li><a href="https://amascasa.github.io/hw8.html">script</a></li>
+         </ul>
+      </div>
+        
+   </header>
+
+   <form>
+
+<h2>onClick handler</h2>
+    <select id="science" name="science">
+        <option value="https://www.nasa.gov">Nasa</option>
+        <option value="https://home.cern">Cern</option>
+        <option value="https://iter.org">Iter</option>
+    </select>
+    <input type="button" value="go" onClick="scienceSites();">
+
+   </form>
+    <br><br>
+ <form>
+<h2>onChange handler</h2>
+    <select id="thoughts" name="thoughts" onChange="thoughtSites();">
+        <option>Select website</option>
+        <option value="https://www.iflscience.com">IflScience</option>
+        <option value="https://www.space.com">Space.com</option>
+        <option value="https://bigthink.com/">Greene</option>
+    </select>
+
+
+
+</form>
+
+   
+
+</body>
+</html>

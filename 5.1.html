@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <!--
+   
+   -->
+   <meta charset="utf-8">
+   <title>js5.1</title>
+   <link href="js114.css" rel="stylesheet">
+   <style></style>
+   <script>
+
+   function validate() {
+      nameCheck();
+      ageCheck();
+      boxCheck();
+      listCheck();
+   }
+
+//-------------------nameCheck-------------------
+
+   function nameCheck() {
+
+    let name = document.getElementById("name").value;
+
+    if (name == "" || name == null) {
+        document.getElementById("nameError").innerHTML = 
+        "First and last name required";
+    } 
+    else {
+      document.getElementById("nameError").innerHTML = "";
+    }
+
+   }
+
+//--------------------ageCheck-----------
+
+function ageCheck() {
+   let selected = false;
+   let selection = "";
+
+ 
+   for (var i=0; i<2; ++i) {
+      
+      if (document.form1.age[i].checked) {
+            selected = true;
+            selection = document.form1.age[i].value;
+            document.getElementById("ageError") = "";
+            break;
+         }
+   }
+
+   if (selected == false) {
+      
+      document.getElementById("ageError").innerHTML = "Please select your age"
+      
+      }
+      else {
+      document.getElementById("ageError").innerHTML = selection;
+            }
+
+}
+
+
+//---------------------boxCheck------------
+   
+function boxCheck() {
+ let selected = false;
+ let selection = "";
+
+ 
+ for (var i=0; i<4; ++i) {
+   
+    if (document.form1.browser[i].checked) {
+         selected = true;
+         selection = document.form1.browser[i].value;
+         break;
+       }
+ }
+
+  if (selected == false) {
+   
+     document.getElementById("boxError").innerHTML = "Please select a browser"
+    
+    }
+   else {
+    document.getElementById("boxError").innerHTML = selection;
+           }
+}
+
+
+
+function res()
+   {
+    document.getElementById("boxError").innerHTML = " ";
+  } 
+
+ 
+
+//------------------ListCheck-----------
+
+function listCheck() {
+
+let validate = document.getElementById("genre").selectedIndex;
+let selectedValue = "";
+
+if(validate < 1) {
+    document.getElementById("listError").innerHTML = 
+     "Select a genre";
+}
+else {
+    selectedValue = document.getElementById("genre").value;
+    //document.getElementById("listError").innerHTML = "Nice!";
+}
+}
+   
+   </script>
+
+</head>
+
+
+
+<body>
+   <header>
+    <h1>FormValidation</h1>
+      <nav>
+        <ul>
+            <li><a href="https://amascasa.github.io/hw2.html">Basics</a></li>
+            <li><a href="https://amascasa.github.io/hw3.html">Functions</a></li>
+            <li><a href="https://amascasa.github.io/hw4.html">Loops</a></li>
+            <li><a href="https://amascasa.github.io/hw5.html">Arrays</a></li>
+            <li><a href="https://amascasa.github.io/hw6.html">Objects</a></li>
+            <li><a href="https://amascasa.github.io/hw7.html">java</a></li>
+            <li><a href="https://amascasa.github.io/hw8.html">script</a></li>
+        </ul>
+      </nav>
+      
+ </header>
+   
+    <form id="form1" name="form1">
+
+
+         <fieldset id="identity">
+            <label for="name">Enter full name</label>
+            <input type="text" name="name" id="name" autofocus required>
+            <div id="nameError" class="error"></div>
+         </fieldset>
+
+ <!-------------------Radio-----------> 
+
+        <fieldset id="ageRange">
+            <input name="age" id="under"  type="radio">
+            <label for="under">21 and under</label>
+            
+            <br>
+            <input name="age" id="between" type="radio" value="21-50" required>
+            <label for="between">21-50</label>
+            <div id="ageError" class="error"></div>
+            <br>
+            
+            <input name="age" id="over" value="50++" type="radio" required>
+            <label for="over">50+</label>
+           
+         </fieldset>
+
+         
+
+   <!---------------------->   
+   
+       
+    
+         <fieldset id="checkBoxes" required>
+            <input name="browser" id="firefox" value="Firefox" type="checkbox">
+            <label for="firefox">Firefox</label>
+
+            <input name="browser" id="edge" value="Edge" type="checkbox">
+            <label for="edge">Edge</label>
+
+            <input name="browser" id="chrome" value="Chrome" type="checkbox">
+            <label for="chrome">Chrome</label>
+
+            <input name="browser" id="safari" value="Safari" type="checkbox">
+            <label for="safari">Safari</label>
+            <div id="boxError" class="error"></div>
+         </fieldset>
+
+        
+
+  <!---------------------->       
+
+  
+       
+          
+   <fieldset id="list">
+      <label>Favorite movie genre</label>
+      <select name="genre" id="genre">
+          <option value="top">Select Genre</option> 
+          <option value="action">Action</option>
+          <option value="comedy">Comedy</option>
+          <option value="drama">Drama</option>
+          <option value="doc">Documentary</option>
+          <option value="scifi">Science Fiction</option>
+      </select>
+      <div id="listError" class="error"></div>
+   </fieldset>
+   
+   
+
+
+   
+     
+     
+      
+   
+
+</form>
+        
+ 
+
+      <fieldset id="buttons">
+         <input type="button" onclick="validate()" value="submitDaForm">
+         <input type="reset" value="Reset" onclick="window.location.reload();">
+         <!-- <input type="button" value="test" onClick="boxCheck();">
+         <input type="button" onclick="listCheck()" value="listCheck">
+         <input type="button" onclick="nameCheck()" value="nameCheck">
+         <input type="button" onclick="ageCheck()" value="ageCheck"> -->
+      </fieldset>
+    </form>
+
+    
+
+  <!----------------------> 
+
+  
+ 
+
+</body>
+</html>

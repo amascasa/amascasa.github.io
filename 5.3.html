@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <!--
+   
+   -->
+   <meta charset="utf-8">
+   <title>5.3</title>
+   <link href="js114.css" rel="stylesheet">
+   <style> </style>
+ <script>
+   
+   
+   let stateInfo = [ 
+                 ["AL", "Alabama", "Montgomery", "4, 903, 185"],
+                 ["AK", "Alaska", "Juneau", "731, 545"],
+                 ["AZ", "Arizona", "Phoenix", "7, 278, 717"],
+                 ["AR", "Arkansas", "Little Rock", "3 ,017, 825"],
+                 ["CA", "California", "Sacramento", "39, 512, 223"],
+                 ["CO", "Colorado", "Denver", "5, 758, 736"] 
+               ];
+
+ 
+  
+ function on(){ 
+      let x;
+      let entry = (document.getElementById("state").value).toLowerCase();
+      
+      switch (entry) {
+         case 'al':
+         case 'alabama':
+            x  = 0;
+            break;
+         case 'ak':
+         case 'alaska':
+            x  = 1;
+            break;
+         case 'az':
+         case 'arizona':
+            x  = 2;
+            break;
+         case 'ar':
+         case 'arkansas':
+            x  = 3;
+            break;
+         case 'ca':
+         case 'california': 
+            x  = 4;
+            break;
+         case 'co': 
+         case 'colorado':
+            x  = 5;
+            break;
+        default:
+           x = "Sorry, I only entered 5 states,<br>"  + 
+               "and I'm not saying which ones!";   
+   
+      }
+    
+   if(x >= 0 && x < stateInfo.length) {
+    document.getElementById("results").innerHTML = 
+    "<br>" +
+     "Fantastic choice!<br><br>" +
+     "State abbr: " + stateInfo[x][0] + "<br>" +
+     "State name: " + stateInfo[x][1] + "<br>" +
+     "Capital: "    + stateInfo[x][2] + "<br>" +
+     "Population: " + stateInfo[x][3];
+   }
+   else {
+      document.getElementById("results").innerHTML = x; 
+   } 
+    
+     
+ }
+ 
+  
+</script>
+
+</head>
+
+<body>
+   <header>
+      <h1>StatesInfo</h1>
+      
+
+       <ul>
+            <li><a href="https://amascasa.github.io/hw2.html">Basics</a></li>
+            <li><a href="https://amascasa.github.io/hw3.html">Functions</a></li>
+            <li><a href="https://amascasa.github.io/hw4.html">Loops</a></li>
+            <li><a href="https://amascasa.github.io/hw5.html">Arrays</a></li>
+            <li><a href="https://amascasa.github.io/hw6.html">Objects</a></li>
+            <li><a href="https://amascasa.github.io/hw7.html">java</a></li>
+            <li><a href="https://amascasa.github.io/hw8.html">script</a></li>
+       </ul>
+
+      
+ </header>
+
+  
+   <form>
+
+      <label for="state">Enter a state</label>
+      <input id="state" name="state" type="text">
+
+      <input type="button" onclick="on();" value="Submit">
+      <input type="reset" value="Reset" onclick="window.location.reload();">
+   
+
+ 
+   </form>
+
+   <div id="results"></div>
+
+   <div id="results1"></div>
+
+
+
+   
+
+</body>
+</html>
