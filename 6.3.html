@@ -29,7 +29,7 @@
    </script>
  -->
  
- <!--ßßßßßßßßßßßßßßßßßßßßßßßßßß--Da Code--ßßßßßßßßßßßßßßßßßßßßßßßßßßßß-->
+ <!--ßßßßßßßßßßßßßßßßßßßßßßßßßß~~Da Code~~ßßßßßßßßßßßßßßßßßßßßßßßßßßßß-->
 
 
  <script>
@@ -97,11 +97,11 @@
    </script>
 </head>
 
-<!--ßßßßßßßßßßßßßßßßßßßßßßßßß--End Script--ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß-->
+<!--ßßßßßßßßßßßßßßßßßßßßßßßßß~~End Script~~ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß-->
 
 
 
-<!--∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆--Navigation header--∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆ -->
+<!--∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆~~Navigation header~~∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆ -->
 
 <body onload="regExTable()">
       
@@ -136,15 +136,16 @@
    </header>
 
 
-   <!--åååååååååååååååååååååååå--Phone number disection--åååååååååååååååååååååååååååå-->
+   <!--åååååååååååååååååååååååå~~Phone number disection~~åååååååååååååååååååååååååååå-->
   
 <section name="main" id="main" class="elements">
- <!--   <section name="jQ" id="jQ" class="userInfo"> -->
     <div id="jQ">
       <form name="form1" id="form1">
 
          <table id="phone" class="phoneInfo">
-            <th colspan='2'>$('input[name="jQphone"]').mask('(000) 000-0000')</th>
+            <tr>
+               <th colspan='2'>$('input[name="jQphone"]').mask('(000) 000-0000')</th>
+            </tr>
             <tr>
                <td><label for="jQphone">Enter your phone number</label></td>
                <td><input id="jQphone" name="jQphone" type="text" data-mask="(000) 000-0000" autofocus></td>
@@ -172,8 +173,9 @@
             </tr>
          </table>
        </form>
-      </div>
-    <!-- </section> -->
+   </div>
+</section>
+   
 
  <!-- åååååå≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈Other Information≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈-->  
 
@@ -181,7 +183,9 @@
     <form>
       <table>
         <tbody>
-          <th colspan="2">La Otra Informacíon</th>
+          <tr>
+            <th colspan="2">La Otra Informacíon</th>
+          </tr>
           <tr>
             <td><label for="date">Date</label></td>
             <td><input id="date" name="date" type='text' data-mask="00/00/0000"></td>
@@ -454,7 +458,7 @@
    <br>
 
 
-   <!-- ∆∆∆∆∆∆∆∆∆©©©©©©©©©©©©--String methods table--ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ -->
+   <!-- ∆∆∆∆∆∆∆∆∆©©©©©©©©©©©©~~String methods table~~ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ -->
 
 
    <div name="allTables" id="allTables" class="elements">
@@ -475,17 +479,17 @@
 
 
 
- <!-- πƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ--regEx--≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈  -->
+ <!-- πƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ~~regEx~~≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈  -->
 
 <aside name="regExRight" id="regExRight" class="elements">
   <div name="regExInput" id="regExInput" onload="regExTable()"></div> 
 </aside>
 
-<!--πππππππππππππππππππππππππππππ--images--ππππππππππππππππππππππππππππππππø-->
+<!--πππππππππππππππππππππππππππππ~~images~~ππππππππππππππππππππππππππππππππø-->
 
    <section class="elements">
       <img id="stringCode" src="6.3.stringMethodsCode.png" alt="String methods code">
-      <img id="jQ.phone" src="6.3.jQuery.phone.code.png">
+      <img id="jQ.phone" src="6.3.jQuery.phone.code.png" alt="Phone mask code" >
    </section>
 
 
