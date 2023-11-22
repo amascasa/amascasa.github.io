@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <!--
+   
+   -->
+   <meta charset="utf-8">
+   <title>FindTheCharacter</title>
+   <link href="js.navBar.css" rel="stylesheet">
+   <link href="js114.css" rel="stylesheet">
+   <link href="js.flexBox.css" rel="stylesheet">
+   <style>
+    img {
+      width:40%;
+      opacity: 0.8;
+      padding: 10px;
+     
+    }
+            
+   </style>
+   
+   <script>
+   
+   
+      
+   
+   function counter() {
+
+      let userString = (document.getElementById("entry").value).toLowerCase();
+      let userChar = document.getElementById("letter").value;
+      let count = 0;
+      
+      for(let i = 0; i < userString.length; ++i) {
+         if(userChar === userString.charAt(i)) {
+            count++;
+         }
+      }
+
+      if(count === 0) {
+         errorWindow(userChar);
+         document.getElementById("results").innerHTML = " ";
+         document.getElementById("letter").innerHTML = " ";
+      }
+      else {
+         if(count == 1) {
+            document.getElementById("results").innerHTML = 
+             "'" + userChar.toUpperCase() + "'" + " appears " + count +
+             " time in your entry!";
+         }
+         else {
+            document.getElementById("results").innerHTML = 
+            "'" + userChar.toUpperCase() + "'" + " appears " + count +
+             " times in your entry!";
+         }
+        
+      }  
+   }
+
+   //-----------------------new window--------------------
+     
+   function errorWindow (character) {
+      let userChar = document.getElementById("letter").value;
+      let errorMsg = "Search character " + "'" + character + "'" + " is not found in the content you typed";
+      let newHTML = "<!doctype html>\n" + 
+                     "<html lang=en>\n" +
+                        "<head>\n" + 
+                        "<title>window.open</title>\n" +
+                        "</head>\n" +
+                        "<body>\n" +
+                           "<div>\n" +
+                              "<p>" + errorMsg + "</p>\n" +
+                              "<input type='button' value='Close' onClick='window.close();'value='Close'\n>" +
+                           "</div>\n" +
+                        "</body\n>" + 
+                     "</html>";         
+                        
+      let errorWin = window.open("","errorPage","top=300,left=600,width=300,height=100");
+
+      errorWin.opener = null;   
+
+      errorWin.focus();
+
+      errorWin.document.write(newHTML);
+
+      errorWin.document.close();
+
+   }
+//-------------------------------
+ 
+ 
+function notesObjects() {
+   let tools = ["charAt()",  "indexOf()",  "substr(start, end)",  
+         "substring(1stIndex,lastIndex)", "toUpperCase()", "toLowerCase()",
+          "trim()",  "trimStart()",  "trimEnd()", "split()"];
+
+   let htmlCode = "<table id='functions'>";
+
+   for(let i = 0; i < tools.length; i++) {
+      htmlCode += "<tr>";
+
+         for(let j = 0; j < 1; j++) {
+            htmlCode += "<td>" + tools[i] + "</td>";
+            htmlCode += "<td>descriptions</td>";
+            htmlCode += "</tr>"
+         }
+
+     
+   }
+
+   htmlCode += "</table>";
+   return htmlCode;
+}
+
+
+let newTable = notesObjects();
+
+//console.log(newTable);
+//document.getElementById("notes").innerHTML = newTable;
+
+
+
+   </script>
+
+</head>
+
+<!--=====================================-->
+
+<body>
+   
+  <header>
+    <h1>How many Characters</h1>
+        
+    <nav id="drop">
+      <ul class="navbar">
+           <li><a href="index.html">Home</a></li>
+           <li><a href="https://amascasa.github.io/hw2.html">Basics</a></li>
+           <li><a href="https://amascasa.github.io/hw3.html">Functions</a></li>
+           <li><a href="https://amascasa.github.io/hw4.html">Loops</a></li>
+           <li><a href="5.0.html">Arrays</a>
+               <ul>
+                  <li><a href="5.1.html">Part 1</a></li>
+                  <li><a href="5.2.html">Part 2</a></li>
+                  <li><a href="5.3.html">Part 3</a></li>
+               </ul>
+            </li>   
+           <li><a href="6.0.html">Objects</a>
+              <ul>
+                <li><a href="6.1.html">Part 1</a></li>
+                <li><a href="6.2.html">Part 2</a></li>
+                <li><a href="6.3.html">Part 3</a></li>
+              </ul>
+           </li>  
+           <li><a href="https://amascasa.github.io/hw7.html">java</a></li>
+           <li><a href="https://amascasa.github.io/hw8.html">script</a></li>
+      </ul>
+    </nav>
+        
+   </header>
+
+<!-- ¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥--Entry & Letter--¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥-->   
+
+   <form name="form1" id="form1">
+     <div name="question" id="question">
+      <label id="quest" for="entry">What is your favorite thing to do?<br>
+        Type a response, then enter a letter you<br>wish to know
+        the count of then hit Submit!</label><br><br>
+      <textarea id="entry" name="entry" rows="4" cols="40" autofocus></textarea><br>
+     </div> 
+
+   <div name="letterEntry" id="letterEntry">
+      <label for="letter">Pick a character to count</label>
+      <input name="letter" id="letter" type="text" maxlength="1">
+
+      <input type="button" value="Submit" onclick="counter();">
+      <input type="reset" value="Reset" onclick="window.location.reload();">
+   </div>
+  </form>
+
+  <div id="results"></div>
+   
+   
+<!-- &&&&&&&&&&&&&&&&&&&&--Error Window--&&&&&&&&&&&&&&&&&&-->
+
+
+<section name="windowOpen" id="windowOpen" class="info">
+   <table id="winOpen" name="winOpen">
+      <tr>
+         <th colspan="2">window.open method</th>
+      </tr>
+      <tr>
+         <td>window.open("url","name","width=","height=")</td>
+         <td>comma seperated - no spaces</td>
+      </tr>
+      <tr>
+         <td>...resizable,scrollbars,menubar,status,location,toolbar";</td>
+         <td>optionable window opening attributes</td>
+      </tr>
+      <tr rowspan = 2>
+         <td>function doStuff(myMSG, myURL) {<br>
+         &nbsp;&nbsp;&nbsp; 
+         window.open(myURL, "nasa", "width=500,height=400");}
+         </td>
+         <td>Generic window.open function</td>
+      </tr>
+   </table>
+</section>
+</div>
+
+
+
+<!-- &&&&&&&&&&&&&&&&&&&&&--Functions Table--&&&&&&&&&&&&&&&&&-->
+
+<div name="allTables" id="allTables">
+   <section name="string" id="string" class="info">
+      <table id="stringMethods">
+         <tr><th colspan="2">String Methods</th></tr>
+         <tr><td>charAt()</td><td>variable.charAt(index) || Returns character at index</td></tr>
+         <tr><td>indexOf()</td><td>returns index of selected character</td></tr>
+         <tr><td>substr(start, end)</td><td>descriptions</td></tr>
+         <tr><td>substring(1stIndex,lastIndex)</td><td>descriptions</td></tr>
+         <tr><td>toUpperCase()</td><td>Converts string to upper case</td></tr>
+         <tr><td>toLowerCase()</td><td>Converts string to lower case</td></tr>
+         <tr><td>trim()</td><td>descriptions</td></tr>
+         <tr><td>trimStart()</td><td>descriptions</td></tr>
+         <tr><td>trimEnd()</td><td>descriptions</td></tr>
+         <tr><td>split()</td><td>descriptions</td></tr>
+      </table>
+   </section>
+
+   
+
+<!-- &&&&&&&&&&&&&&&&&&&&&&&--For Loops---&&&&&&&&&&&&&&&&&&&&&&&&&&-->
+
+   <section name="forLoop" id="forLoop" class="info">
+      <table>
+         <tr>
+            <th colspan="2">For Loops</th>
+         </tr>
+         <tr>
+            <td>for (let i = 0; i lessThan arr.length; ++i)</td>
+            <td>Standard loop</td>
+         </tr>
+         <tr>
+            <td>arr.forEach((v, i) => {  })</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>for (let i in arr)</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>for (const v of arr)</td>
+            <td></td>
+         </tr>
+      </table>
+   </section>
+
+
+<!-- &&&&&&&&&&&&&&&&&&&&&&&&&&--Images--&&&&&&&&&&&&&&&&&&&&&&&&& -->
+    
+
+    <div id="codeImg">
+      <img src="6.2.caracterCounter.png" alt="Counter code">
+      <img src="6.2.window.open.png" alt="Counter code">
+    </div>
+   
+
+
+</body>
+</html>

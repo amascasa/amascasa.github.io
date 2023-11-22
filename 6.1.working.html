@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <!--
+   
+   -->
+   <meta charset="utf-8">
+   <title>Math.methods</title>
+   <link href="js.navBar.css" rel="stylesheet">
+   <link href="js114.css" rel="stylesheet">
+   <link href="js.flexBox.css" rel="stylesheet">
+   <style>
+    
+            
+   </style>
+   
+   <script>
+
+    function round() {
+      let number, num, round, sqrRound, tenths, hundredths, thousandths;
+      num = (document.getElementById("entry").value);
+      
+        if(num == NaN || num.indexOf(".") == -1) {
+          document.getElementById("error").innerHTML = 
+          "Must be a number with at least 4 decimals";
+         } 
+         else {
+          let deci = num.split(".");
+
+            if (deci == " " || deci[1].length < 4) {
+                document.getElementById("error").innerHTML = 
+                  "Number must have at least 4 decimals";
+            }
+            else {
+                round = Math.round(num);
+                sqr = Math.sqrt(num).toFixed(3);
+                sqrRound = Math.round(Math.sqrt(num));
+                tenths = Math.floor(num*10 + 0.5)/10;
+                hundredths = Math.floor(num*100 + 0.5)/100;
+                thousandths = Math.floor(num*1000 + 0.5)/1000;
+
+                document.getElementById("error").innerHTML = "";
+
+                //document.getElementById("whole").innerHTML =  round;
+                document.forms["formDecimal"].elements["userNum"].value = num.toLocaleString();
+                document.forms["formDecimal"].elements["whole"].value = round.toLocaleString();
+                document.forms["formDecimal"].elements["sqr"].value = sqrRound.toLocaleString();
+                document.forms["formDecimal"].elements["ten"].value = tenths.toLocaleString();
+                document.forms["formDecimal"].elements["hundred"].value = hundredths.toLocaleString();
+                document.forms["formDecimal"].elements["thousand"].value = thousandths.toLocaleString();    
+
+            }
+         }
+        
+         
+      }
+
+   </script>
+
+</head>
+
+
+
+<body>
+   
+  <header>
+    <h1>¡Objects!</h1>
+        
+    <nav id="drop">
+      <ul class="navbar">
+           <li><a href="index.html">Home</a></li>
+           <li><a href="https://amascasa.github.io/hw2.html">Basics</a></li>
+           <li><a href="https://amascasa.github.io/hw3.html">Functions</a></li>
+           <li><a href="https://amascasa.github.io/hw4.html">Loops</a></li>
+           <li><a href="5.0.html">Arrays</a>
+               <ul>
+                  <li><a href="5.1.html">Part 1</a></li>
+                  <li><a href="5.2.html">Part 2</a></li>
+                  <li><a href="5.3.html">Part 3</a></li>
+               </ul>
+            </li>   
+           <li><a href="6.0.html">Objects</a>
+              <ul>
+                <li><a href="6.1.html">Part 1</a></li>
+                <li><a href="6.2.html">Part 2</a></li>
+                <li><a href="6.3.html">Part 3</a></li>
+              </ul>
+           </li>  
+           <li><a href="https://amascasa.github.io/hw7.html">java</a></li>
+           <li><a href="https://amascasa.github.io/hw8.html">script</a></li>
+      </ul>
+    </nav>
+        
+ </header>
+
+   <section name="decimal" id="decimal">
+    <form name="formDecimal" id="formDecimal">
+      <br>
+      <label for="entry">Enter a number with at least four decimal places</label><br>
+      <input name="entry" id="entry" type="text" autofocus placeholder="xx.xxxx">
+      <div id="error"></div>
+      <br>
+
+      <input type="button" onclick="round();" value="Submit">
+      <input type="reset" value="Reset" onclick="window.location.reload();">
+         <br>
+      
+         <table>
+            <tr>
+               <td><label for="userNum">Your number</label></td>
+               <td><input name="userNum" id="userNum" type="text" readonly></td>
+            </tr>
+            <tr>
+               <td><label for="whole">Nearest whole number</label></td>
+               <td> <input id="whole" name="whole" type="text" readonly></td>
+            </tr>
+            <tr>
+               <td><label for="sqr">Rounded square root</label></td>
+               <td> <input id="sqr" name="sqr" type="text" readonly></td>
+            </tr>
+            <tr>
+               <td><label for="ten">Tenths place</label></td>
+               <td> <input id="ten" name="ten" type="text" readonly></td>
+            </tr>
+            <tr>
+               <td><label for="hundred">Hundredths place</label></td>
+               <td> <input id="hundred" name="hundred" type="text" readonly></td>
+            </tr>
+            <tr>
+               <td><label for="thousand">Thousandths place</label></td>
+               <td> <input id="thousand" name="thousand" type="text" readonly></td>
+            </tr>
+       </table>
+    </form>
+</section>
+ 
+   <br>
+   <div id="results"></div>
+
+   <section name="images" id="images">
+      <img src="6.1.mathMethods.png" alt="Code for Math Methods">
+   </section>
+   
+
+   
+  
+
+
+</body>
+</html>

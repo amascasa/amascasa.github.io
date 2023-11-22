@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+
+body {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+    width: 100%;
+    background-color: rgb(215, 210, 210);
+    margin-left: auto;
+    margin-right: auto;
+    
+ }
+
+h1 {
+     color: silver;
+     background-color: blue;
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+     text-align:center;
+     box-shadow: 0px 0px 4px 4px white inset;
+     border-radius: 5px;
+     padding: 5px;
+}
+
+section#main {
+   display: flex;
+   flex-flow: row wrap;
+}
+
+aside {
+   flex: 1 1 120px;
+   float: right;
+}
+
+div#question {
+   border: 3px double blue;
+   font-size: 1.2em;
+   padding: 10px;
+}
+ 
+textarea {
+   box-shadow: 0px 0px 20 black;
+   box-shadow: 0px 0px 16px rgb(67, 138, 215) inset;
+}
+
+div#letterEntry {
+   border: 3px double blue;
+   border-radius: 4px;
+   padding: 15px;
+   box-shadow: 0px 0px 5px 5px rgb(67, 138, 215) inset;
+}
+
+#error {
+   display: inline;
+   color:rgb(40, 15, 235);
+   padding: 10px; 
+}
+
+#results {
+   color: rgb(40, 15, 235);
+   padding: 20px;
+   font-size: 1.5em;
+   text-shadow: 0px 0px 10px blue;
+   font-style: italic;
+   
+}
+
+ 
+
+section.info {
+  border: 3px double blue;
+  border-radius: 4px;
+  padding: 15px;
+  box-shadow: 0px 0px 5px 5px rgb(67, 138, 215) inset;
+  margin-top: 30px;
+}
+
+th {
+   padding: 8px;
+}
+
+table, tr, td, input,
+#question, #letterEntry, img, button{
+  box-shadow: 0px 0px 10px 3px rgb(83, 149, 220) inset;
+  border: 1px solid aqua;
+  border-radius: 6px;
+  padding: 8px;
+  border-collapse: collapse;
+}
+
+table {
+  box-shadow: 0px 0px 20px .5px rgb(108, 108, 154);
+  border-collapse: collapse;
+}
+
+
+  
+
+
+
+
+ /* ================
+    Base Flex Styles:   flex: grow shrink basis
+    ================
+ */
+
+
+ 
+
+ 
+ 
+ header {
+    width: 100%
+ }
+ 
+ aside {
+    flex: 1 1 120px;
+ }
+ 
+ section#main {
+    flex: 3 1 361px;
+ }
+ 
+ section#topics {
+    display: flex;
+    flex-flow: row wrap;
+ }
+ 
+ section#topics article {
+    flex: 1 1 200px
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* =========================
+    Mobile Styles: 0 to 480px 
+    =========================
+ */
+ 
+ @media only screen and (max-width: 480px) {
+    
+    aside {
+       order: 99;
+    }
+ 
+    footer {
+       order: 100;
+    }
+ 
+    a#navicon {
+       display: block
+    }
+ 
+    nav.horizontal ul {
+       display: none;
+    }
+ 
+    a#navicon:hover+ul,
+    nav.horizontal ul:hover {
+       display: block;
+    }
+ 
+ 
+  
+ }
+ 
+ /* ============================================
+    Tablet and Desktop Styles: 481px and greater 
+    ============================================
+ */
+ 
+ @media only screen and (min-width: 481px) {
+ 
+    nav.horizontal ul {
+       display: flex;
+       flex-flow: row nowrap;
+    }
+    
+    nav.horizontal li {
+       flex: 1 1 auto;
+    }
+ 
+    a#navicon {
+       display: none;
+    }
+ 
+ }
+ 
+ 
+ 

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <!--
+   
+   -->
+   <meta charset="utf-8">
+   <title>6.1.test</title>
+   
+   <style>
+    
+            
+   </style>
+   
+   <script>
+
+      function round() {
+         let round, sqr, sqrRound, tenths, hundredths, thousandths;
+         let num = document.getElementById("entry").value;
+
+         if(num == "" || num.indexOf(".") == -1) {
+            document.getElementById("error").innerHTML = 
+               "Number must have at least 4 decimals";
+         } 
+
+         let deci = num.split(".");
+
+         if (deci == " " || deci[1].length < 4) {
+            document.getElementById("error").innerHTML = 
+               "Number must have at least 4 decimals";
+         }
+         else {
+            round = Math.round(num);
+            sqr = Math.sqrt(num).toFixed(3);
+            sqrRound = Math.round(Math.sqrt(num));
+            tenths = Math.floor(num*10 + 0.5)/10;
+            hundredths = Math.floor(num*100 + 0.5)/100;
+            thousandths = Math.floor(num*1000 + 0.5)/1000;
+
+            document.getElementById("error").innerHTML = "";
+
+          
+
+           
+            document.forms["form1"].elements["whole"].value = round;
+         }
+         
+      }
+
+
+   </script>
+
+</head>
+
+
+
+<body>
+   
+  <header>
+    <h1>¡Objects!</h1>
+        
+    <nav id="drop">
+      <ul class="navbar">
+           <li><a href="index.html">Home</a></li>
+           <li><a href="https://amascasa.github.io/hw2.html">Basics</a></li>
+           <li><a href="https://amascasa.github.io/hw3.html">Functions</a></li>
+           <li><a href="https://amascasa.github.io/hw4.html">Loops</a></li>
+           <li><a href="5.0.html">Arrays</a>
+               <ul>
+                  <li><a href="5.1.html">Part 1</a></li>
+                  <li><a href="5.2.html">Part 2</a></li>
+                  <li><a href="5.3.html">Part 3</a></li>
+               </ul>
+            </li>   
+           <li><a href="6.0.html">Objects</a>
+              <ul>
+                <li><a href="6.1.html">Part 1</a></li>
+                <li><a href="6.2.html">Part 2</a></li>
+                <li><a href="6.3.html">Part 3</a></li>
+              </ul>
+           </li>  
+           <li><a href="https://amascasa.github.io/hw7.html">java</a></li>
+           <li><a href="https://amascasa.github.io/hw8.html">script</a></li>
+      </ul>
+    </nav>
+        
+   </header>
+
+   <form name="form1" id="form1">
+     
+  
+     <br>
+     <label for="entry">Enter a number</label><br><br>
+     <input name="entry" id="entry" type="text" autofocus placeholder="xx.xxxx">
+     <br><br>
+
+     <input type="button" onclick="round();" value="Submit">
+     <input type="reset" value="Reset" onclick="window.location.reload();">
+      <br><br>
+     
+      <table>
+         <tr>
+            <td><label for="whole">Rounded to nearest whole number</label></td>
+            <td><input id="whole" name="whole" type="text" readonly /></td>
+         </tr>
+         
+      </table>
+
+  </form>
+  
+  
+   <br>
+   <div id="results"></div>
+   <div id="error"></div>
+
+   
+  
+
+
+</body>
+</html>

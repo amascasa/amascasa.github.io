@@ -1,0 +1,211 @@
+@charset "utf-8";
+
+html {
+  border-left: 5px double grey;
+}
+body {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   width: 100%;
+ }
+
+h1 {
+   color: silver;
+   background-color: blue;
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   text-align:center;
+   box-shadow: 0px 0px 4px 4px white inset;
+   border-radius: 5px;
+   padding: 5px;
+}
+
+header {
+   width: 100%;
+}
+
+section.userInfo {
+   display: flex;
+   flex-flow: row wrap;
+}
+
+form {
+   display: flex;
+   flex-flow: column wrap;
+   padding: 10px;
+   border:3px double blue;
+   box-shadow: 0px 0px 10px 5px rgb(238, 174, 79) inset;
+   box-shadow: 0px 0px 20px 1px aqua;
+}
+
+div form {
+   padding-left: 20px;
+}
+
+div#question {
+   border: 3px double blue;
+   box-shadow: 0px 0px 10px 5px rgb(67, 138, 215) inset;
+   font-size: 1.1em;
+   padding: 15px;
+   justify-content: center;
+   align-content: center;
+   
+}
+ 
+textarea {
+   box-shadow: 0px 0px 20 black;
+   box-shadow: 0px 0px 16px rgb(67, 138, 215) inset;
+}
+
+div#letterEntry {
+   border: 3px double blue;
+   border-radius: 4px;
+   padding: 10px;
+   box-shadow: 0px 0px 5px 5px rgb(67, 138, 215) inset;
+}
+
+#error {
+   display: inline;
+   color:rgb(40, 15, 235);
+   padding: 10px; 
+}
+
+#results {
+   color: rgb(40, 15, 235);
+   border: 2px double turquiose;
+   
+   padding: 20px;
+   font-size: 1.5em;
+   text-shadow: 0px 0px 16px black;
+   font-style: italic;
+   
+}
+
+ div#allTables {
+   display: flex;
+   flex-flow: row wrap;
+ }
+
+section.info {
+  border: 3px double blue;
+  border-radius: 4px;
+  padding: 15px;
+  box-shadow: 0px 0px 5px 5px rgb(67, 138, 215) inset;
+  margin-top: 30px;
+}
+
+
+
+tr, td, input,
+#question, #letterEntry {
+  box-shadow: 0px 0px 10px 3px rgb(83, 149, 220) inset;
+  border: 1px solid aqua;
+  border-radius: 6px;
+  padding: 10px;
+  border-collapse: collapse;
+}
+
+table {
+  box-shadow: 0px 0px 20px .5px rgb(108, 108, 154);
+  border-radius: 6px;
+  border-collapse: collapse;
+}
+
+
+
+
+#cheatSheet {
+  scale: 0.4;
+}
+
+  
+/* ˜∫˜∫˜∫˜∫˜∫˜∫˜∫˜∫˜∫˜∫˜∫˜∫˜∫˜∫˜∫˜∫˜∫˜∫˜∫˜∫˜∫˜∫˜∫˜∫˜∫
+                6.0.home                            */
+
+/* centers single item in flex box */
+table#sixHome {
+   display: flex;
+   width: 100%;
+   justify-content: center;
+   align-content: center;
+
+}                
+
+
+
+ /* ================
+    Base Flex Styles:   flex: grow shrink basis
+    ================
+ */
+
+
+ 
+
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* =========================
+    Mobile Styles: 0 to 480px 
+    =========================
+ */
+ 
+ @media only screen and (max-width: 480px) {
+    
+    aside {
+       order: 99;
+    }
+ 
+    footer {
+       order: 100;
+    }
+ 
+    a#navicon {
+       display: block
+    }
+ 
+    nav.horizontal ul {
+       display: none;
+    }
+ 
+    a#navicon:hover+ul,
+    nav.horizontal ul:hover {
+       display: block;
+    }
+ 
+ 
+  
+ }
+ 
+ /* ============================================
+    Tablet and Desktop Styles: 481px and greater 
+    ============================================
+ */
+ 
+ @media only screen and (min-width: 481px) {
+ 
+    nav.horizontal ul {
+       display: flex;
+       flex-flow: row nowrap;
+    }
+    
+    nav.horizontal li {
+       flex: 1 1 auto;
+    }
+ 
+    a#navicon {
+       display: none;
+    }
+ 
+ }
+ 
+ 
+ 
