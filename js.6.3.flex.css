@@ -23,13 +23,12 @@ h1 {
 }
 
 section#main {
-   display: flex;
-   flex-flow: row wrap;
+  flex: 1 1 481px
 }
 
 aside {
-   flex: 1 1 120px;
-   float: right;
+   flex: 3 1 120px;
+  
 }
 
 div#question {
