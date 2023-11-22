@@ -45,7 +45,7 @@
    background-color: #100dc4;
    border-radius: 4px;
    color: white;
-   border: 2px solid orange;
+   border: 1px solid blue;
  }
 
  nav ul {
@@ -78,11 +78,13 @@ nav ul li {
 
  .navbar ul li a {
    color: white;
+   border: 2px single black;
+   border-radius: 3px
  }
    
  .navbar ul li a:hover {
    background-color: aquamarine;
-   color: white;
+   color: black;
    display: block;
    border-radius: 3px;
  }
@@ -93,12 +95,14 @@ nav ul li {
  
  
  a {
-    transition: transform .4s ease-in-out;
+    transition: 
+       transform .4s ease-in-out;
+
  }
  
  a:hover {
-    transform: scale(1.06); 
-    
+    transform: scale(1.06);
+     
  }
 
 
