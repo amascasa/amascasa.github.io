@@ -52,6 +52,15 @@ button {
   background-color: rgb(215, 210, 210);
   padding: 20px;
   margin-bottom: 0;
+  transition: transform .4s ease-in-out,
+              background-color .8s ease-in-out,
+              color .8s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.02); 
+  background-color: blue;
+  color: white;
 }
 
 #result {
