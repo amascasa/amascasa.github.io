@@ -77,7 +77,7 @@ img {
   box-shadow: 0px 0px 20px 1px;
 }
 
-table, tr, td, input, button {
+table, tr, td,  button {
   box-shadow: 0px 0px 10px 3px rgb(181, 181, 216 ) inset;
   border: 1px solid aqua;
   border-radius: 6px;
