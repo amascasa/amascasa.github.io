@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+ <html lang="en">
+
+ <!--
+ document.cookie = "username=; 
+ expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+ 4kb max; about 20 cookies max
+
+
+
+
+ -->
+ 
+ <head>
+    <meta charset="utf-8">
+    <meta name="CIS 114 Assignments" content="Assignments">
+    <title>Cookies2</title>
+    <link href="7.nav.css" rel="stylesheet">
+    <link href="7.layout.css" rel="stylesheet">
+    <link href="7.css" rel="stylesheet">
+    <script src="navBar.js"></script>
+    <script>
+
+function setCookie(cname, cvalue, expDays) {
+
+const date = new Date();
+date.setTime(date.getTime() + (expDays*24*60*60*1000));
+let expire = "expires" + date.toUTCString();
+
+document.createCookie = cname + "=" + cvalue + ";" + expDays + ";path/";
+}
+
+
+      function createCookie() {
+      let cName = "username";
+      let cValue = document.getElementById("user").value;
+      document.cookie = cName + "=" + cValue + ";";
+      }
+
+      function getCookie(cName) {
+      let name = cName + "=";
+      let cArray = document.cookie.split(';');
+      for(let i = 0; i < cArray.length; i++) {
+         let c = cArray[i];
+         while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+         }
+         if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+         }
+      }
+      return "";
+      }
+
+      function checkCookie() {
+      let user = getCookie("username");
+      if (user != "") {
+         console.log(user);
+         document.getElementById("result").innerHTML = "Welcome back " + user;
+         document.getElementById("myform").style.display = "none";
+      } else {
+         document.getElementById("myform").style.display = "block";
+         }
+      }
+
+
+    </script>
+ </head>
+
+
+
+
+
+
+<body onload="checkCookie(); navBar();">
+
+   <header>
+      <h1>¡Cookies?2</h1>
+      <div id="navBar"></div>
+   </header>
+         
+   <img src="daFotiJpeg--14.jpg" alt="Cervo Italy">
+
+
+   <section>
+   
+    <h2>Working with Cookies</h2>
+    <p id="result"></p>
+    <div id="myform" style="display: block;">
+
+     <form>
+      <label for="user">Type your username: </label> 
+      <input type="text" name="user" id="user">
+       <br><br>
+      <input type="button" value="Create Cookie" onclick="createCookie();"><br>
+      <input type="reset" value="Reset">
+   </form>
+ </section>
+   
+   
+   </body>
+   </html>

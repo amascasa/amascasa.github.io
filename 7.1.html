@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+    <meta charset="utf-8">
+    <meta name="CIS 114 Assignments" content="Assignments">
+    <title>Cookies1</title>
+    <link href="7.nav.css" rel="stylesheet">
+    <link href="7.layout.css" rel="stylesheet">
+    <link href="7.css" rel="stylesheet">
+    
+
+    <style>
+
+      p {
+        padding: 15px;
+        flex: column wrap;
+        border-radius: 6px;
+      }
+
+      .blue {
+        background-color: blue;
+        color: white;
+      }
+
+      .aqua {
+        background-color: aqua;
+        color: black;
+      }
+
+      .purple { 
+        background-color: rgb(90, 0, 90);
+        color: white;
+      }
+
+      .underline {text-decoration: underline;}
+      .italic {font-style:italic;}
+      .bold {font-weight:bold;}
+      
+      .small {font-size: 0.8em;}
+      .medium {font-size: 1em;}
+      .large {font-size: 1.5em;}
+
+
+      #para {
+        border: 2px double white;
+        box-shadow: 0px 0px 10px 1px white;
+        margin-left: 30px;
+      }
+
+      td {
+        padding: 10px;
+      }
+
+     
+
+    </style>
+
+
+    <script src="navBar.js"></script>
+    <script>
+
+
+// ©©©©©©©©©©©©©©©©©©©©©©©  FontColor Radio  ©©©©©©©©©©©©©©©©©©©©©©©©©©
+
+    function changeColor(backColor) {
+        
+      text = document.getElementById('text');
+
+        switch(backColor) {
+          case 0:
+              text.classList.add('blue');
+              text.classList.remove('aqua', 'purple');
+             //text.className += "blue";
+            break;
+          case 1:
+            text.classList.add('aqua');
+            text.classList.remove('blue', 'purple');
+            //text.className += "turquoise";
+            
+            break;
+          case 2: 
+            text.classList.add('purple');
+            text.classList.remove('blue', 'aqua'); 
+           // text.className += "grey";
+            break;  
+        }
+     }
+
+// ©©©©©©©©©©©©©©©©©©©©©©©  FontStyle CheckBox  ©©©©©©©©©©©©©©©©©©©©©©©©©©
+
+    function changeStyle(fontStyle) {
+      
+      let text = document.getElementById('text');
+
+        if(fontStyle == 0 ) {
+          text.classList.toggle('underline'); 
+        } 
+        if (fontStyle == 1) {
+          text.classList.toggle('italic');
+        }
+        if(fontStyle == 2) {
+          text.classList.toggle('bold');
+        }
+
+     }
+// ©©©©©©©©©©©©©©©©©©©©©©©  FontSize Select  ©©©©©©©©©©©©©©©©©©©©©©©©©©
+
+     function changeFontSize() {    
+
+        let fontSize = document.getElementById("text");    
+        let userInput = document.getElementById('size').value;
+                
+        if (userInput == "small") {
+          text.classList.add('small');
+          text.classList.remove('medium', 'large');
+          //text.className = "small";
+        }
+        else if (userInput == "medium") {
+          text.classList.add('medium');
+          text.classList.remove('small', 'large');
+          //text.className = "medium";
+        }
+        else if (userInput == "large") {
+          text.classList.add('large');
+          text.classList.remove('small', 'medium');
+          //text.className = "large";
+        }           
+}
+
+
+/* function renew () {
+  document.getElementById("form1").reset();
+} */
+          
+  </script>
+</head>
+
+
+
+
+
+
+
+ <body onload="navBar(); " >
+
+   <header>
+      <h1>¡Cookies?1</h1>
+      <div id="navBar"></div>
+   </header>
+
+   <img src="daFotiJpeg--14.jpg" alt="Cervo Italy">
+   
+ 
+<!-- ©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©-->
+
+  <form name="form1">
+
+     <!-- ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈  Radio Color  ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈ -->
+
+      <table>
+        <tr>
+          <th colspan="2">Background color</th>
+        </tr>
+        <tr>
+          <td> <label for="blue">Blue</label></td>
+          <td> <input name="radioColor" id="blue" type="radio" onclick="changeColor(0)"></td>
+        </tr>
+        <tr>
+          <td><label for="aqua">aqua</label></td>
+          <td><input name="radioColor" id="aqua" type="radio" onclick="changeColor(1)"></td>
+        </tr>
+        <tr>
+          <td> <label for="purple">purple</label></td>
+          <td><input name="radioColor" id="purple" type="radio" onclick="changeColor(2)"></td>
+        </tr>
+      </table>
+        
+       
+     
+   <!-- ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈  Check Style  ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈ -->  
+
+       <table>
+         <tr>
+          <th colspan="2">Select styles</th>
+         </tr>
+         <tr>
+          <td><label for="underline">Underline</label></td>
+          <td><input name="check" id="underline" type="checkbox" onclick="changeStyle(0)"></td>
+         </tr>
+         <tr>
+          <td><label for="italic">Italic</label></td>
+          <td><input name="check" id="italic" type="checkbox" onclick="changeStyle(1)"></td>
+         </tr>
+         <tr>
+          <td><label for="bold">Bold</label></td>
+          <td><input name="check" id="bold" type="checkbox" onclick="changeStyle(2)"></td>
+         </tr>
+       </table>
+
+  <!-- ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈  Selection Size  ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈ -->  
+
+    
+          <label for="size">Select font size</label><br>
+       
+          <select name="size" id="size" onchange="changeFontSize()">
+            <option value="">Choose</option>
+            <option value="small">small</option>
+            <option value="medium">medium</option>
+            <option value="large">large</option>
+         </select>
+       
+      
+   </form>
+    
+<!-- ©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©  -->   
+       
+   <div id="para">
+     <p id="text">
+       The heart of a tokamak is its doughnut-shaped vacuum chamber.<br><br>
+    
+       Inside, under the influence of extreme heat and pressure, gaseous hydrogen fuel becomes
+       a plasma—a hot, electrically charged gas. In a star as in a fusion device,
+       plasmas provide the environment in which light elements can fuse and yield energy.
+       <br><br>
+       The charged particles of the plasma can be shaped and controlled by the massive
+       magnetic coils placed around the vessel; physicists use this important property to 
+       confine the hot plasma away from the vessel walls. The term "tokamak" comes to us 
+       from a Russian acronym that stands for "toroidal chamber with magnetic coils" 
+       (тороидальная камера с магнитными катушками).
+    <br><br>
+    
+      To start the process, air and impurities are first evacuated from the vacuum chamber. 
+      Next, the magnet systems that will help to confine and control the plasma are charged up 
+      and the gaseous fuel is introduced. As a powerful electrical current is run through
+      the vessel, the gas breaks down electrically, becomes ionized (electrons are stripped 
+      from the nuclei) and forms a plasma.
+      <br>
+     <br>As the plasma particles become energized and collide they also begin to
+       heat up. Auxiliary heating methods help to bring the plasma to fusion temperatures 
+       (between 150 and 300 million °C). Particles "energized" to such a degree can overcome 
+       their natural electromagnetic repulsion on collision to fuse, releasing huge amounts of energy.
+     <br><br>
+     First developed by Soviet research in the late 1960s, 
+      the tokamak has been adopted around the world as the most promising configuration 
+      of magnetic fusion device. ITER will be the world's largest tokamak—twice the size 
+      of the largest machine currently in operation, with ten times the plasma chamber volume.
+      <br><br>
+      Iter.org
+    </p>
+  </div>
+
+  <cite><Iter.org</cite>
+   
+
+ </body>
+
+</html>     
+
+
+

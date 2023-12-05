@@ -8,14 +8,8 @@
    <title>Math.methods</title>
    <link href="js.navBar.css" rel="stylesheet">
    <link href="js114.css" rel="stylesheet">
-   <link href="js.6.3.flex.css" rel="stylesheet">
    <link href="js.flexBox.css" rel="stylesheet">
-   
-   <style>
-    
-            
-   </style>
-   
+   <script src="navBar.js"></script>
    <script>
 
     function round() {
@@ -25,6 +19,7 @@
         if(num == NaN || num.indexOf(".") == -1) {
           document.getElementById("error").innerHTML = 
           "Must be a number with at least 4 decimals";
+          document.getElementById("formDecimal").reset = "";
          } 
          else {
           let deci = num.split(".");
@@ -32,6 +27,8 @@
             if (deci == " " || deci[1].length < 4) {
                 document.getElementById("error").innerHTML = 
                   "Number must have at least 4 decimals";
+                  document.getElementById("formDecimal").reset = "";
+                   
             }
             else {
                 round = Math.round(num);
@@ -60,36 +57,14 @@
 
 </head>
 
-<body>
-   
-  <header>
-    <h1>¡Objects!</h1>
+<body onload="navBar()">
+
+   <header>
+      <h1>¡String Methods!</h1>
+      <div id="navBar"></div>
+   </header>
         
-    <nav id="drop">
-      <ul class="navbar">
-           <li><a href="index.html">Home</a></li>
-           <li><a href="https://amascasa.github.io/hw2.html">Basics</a></li>
-           <li><a href="https://amascasa.github.io/hw3.html">Functions</a></li>
-           <li><a href="https://amascasa.github.io/hw4.html">Loops</a></li>
-           <li><a href="5.0.html">Arrays</a>
-               <ul>
-                  <li><a href="5.1.html">Part 1</a></li>
-                  <li><a href="5.2.html">Part 2</a></li>
-                  <li><a href="5.3.html">Part 3</a></li>
-               </ul>
-            </li>   
-           <li><a href="6.0.html">Objects</a>
-              <ul>
-                <li><a href="6.1.html">Part 1</a></li>
-                <li><a href="6.2.html">Part 2</a></li>
-                <li><a href="6.3.html">Part 3</a></li>
-              </ul>
-           </li>  
-           <li><a href="https://amascasa.github.io/hw7.html">java</a></li>
-           <li><a href="https://amascasa.github.io/hw8.html">script</a></li>
-      </ul>
-    </nav>  
- </header>
+    
 
    <section id="decimal">
     <form name="formDecimal" id="formDecimal">
@@ -103,7 +78,7 @@
       <input type="reset" value="Reset" onclick="window.location.reload();">
          <br>
       
-         <table>
+         <table id="theResults">
             <tr>
                <td><label for="userNum">Your number</label></td>
                <td><input name="userNum" id="userNum" type="text" readonly></td>

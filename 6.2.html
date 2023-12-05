@@ -1,9 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-   <!--
-   
-   -->
+  
    <meta charset="utf-8">
    <title>FindTheCharacter</title>
    <link href="js.navBar.css" rel="stylesheet">
@@ -18,11 +16,11 @@
     }
             
    </style>
-   
+   <script src="navBar.js"></script>
    <script>
    
    
-      
+     
    
    function counter() {
 
@@ -84,6 +82,8 @@
 
       errorWin.document.close();
 
+
+
    }
 //-------------------------------
  
@@ -125,37 +125,14 @@ let newTable = notesObjects();
 
 <!--=====================================-->
 
-<body>
-   
-  <header>
-    <h1>How many Characters</h1>
-        
-    <nav id="drop">
-      <ul class="navbar">
-           <li><a href="index.html">Home</a></li>
-           <li><a href="https://amascasa.github.io/hw2.html">Basics</a></li>
-           <li><a href="https://amascasa.github.io/hw3.html">Functions</a></li>
-           <li><a href="https://amascasa.github.io/hw4.html">Loops</a></li>
-           <li><a href="5.0.html">Arrays</a>
-               <ul>
-                  <li><a href="5.1.html">Part 1</a></li>
-                  <li><a href="5.2.html">Part 2</a></li>
-                  <li><a href="5.3.html">Part 3</a></li>
-               </ul>
-            </li>   
-           <li><a href="6.0.html">Objects</a>
-              <ul>
-                <li><a href="6.1.html">Part 1</a></li>
-                <li><a href="6.2.html">Part 2</a></li>
-                <li><a href="6.3.html">Part 3</a></li>
-              </ul>
-           </li>  
-           <li><a href="https://amascasa.github.io/hw7.html">java</a></li>
-           <li><a href="https://amascasa.github.io/hw8.html">script</a></li>
-      </ul>
-    </nav>
-        
+     
+<body onload="navBar()">
+
+   <header>
+      <h1>How many Characters</h1>
+      <div id="navBar"></div>
    </header>
+        
 
 <!-- ¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥~~Entry & Letter~~¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥¥-->   
 

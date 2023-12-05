@@ -23,11 +23,11 @@ h1 {
 }
 
 section#main {
-  flex: 1 1 481px
+  flex: 3 1 481px
 }
 
 aside {
-   flex: 3 1 120px;
+   flex: 1 1 120px;
   
 }
 

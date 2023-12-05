@@ -7,8 +7,8 @@
 
     <link href="js.navBar.css" rel="stylesheet">
     <link href="js114.css" rel="stylesheet">
-    <link href="js.6.3.flex.css" rel="stylesheet">
     <link href="js.flexBox.css" rel="stylesheet">
+    <script src="navBar.js"></script>
    
    <!-- <script src=
      "https://code.jquery.com/jquery-3.3.1.slim.min.js"> 
@@ -103,43 +103,21 @@
 
 <!--∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆~~Navigation header~~∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆ -->
 
-<body onload="regExTable()">
-      
-  <header>
-    <h1>¡RegEx!</h1>
-        
-    <nav id="drop">
-      <ul class="navbar">
-           <li><a href="index.html">Home</a></li>
-           <li><a href="https://amascasa.github.io/hw2.html">Basics</a></li>
-           <li><a href="https://amascasa.github.io/hw3.html">Functions</a></li>
-           <li><a href="https://amascasa.github.io/hw4.html">Loops</a></li>
-           <li><a href="5.0.html">Arrays</a>
-               <ul>
-                  <li><a href="5.1.html">Part 1</a></li>
-                  <li><a href="5.2.html">Part 2</a></li>
-                  <li><a href="5.3.html">Part 3</a></li>
-               </ul>
-            </li>   
-           <li><a href="6.0.html">Objects</a>
-              <ul>
-                <li><a href="6.1.html">Part 1</a></li>
-                <li><a href="6.2.html">Part 2</a></li>
-                <li><a href="6.3.html">Part 3</a></li>
-              </ul>
-           </li>  
-           <li><a href="https://amascasa.github.io/hw7.html">java</a></li>
-           <li><a href="https://amascasa.github.io/hw8.html">script</a></li>
-      </ul>
-    </nav>
-        
-   </header>
+
+   <body onload="navBar(), regExTable()">
+
+      <header>
+         <h1>RegEx</h1>
+         <div id="navBar"></div>
+      </header>
 
 
    <!--åååååååååååååååååååååååå~~Phone number disection~~åååååååååååååååååååååååååååå-->
   
 <section name="main" id="main" class="elements">
-    
+
+
+   
       <form name="form1" id="form1">
          <table id="phone" class="phoneInfo">
             <tr>
@@ -153,7 +131,7 @@
 
             <div name="error" id="error"></div>
 
-            <button type="button" onclick="phoneTest()">Enter</button>
+            <button type="button" onclick="phoneTest()">Submit</button>
             <button type="button" onclick="window.location.reload();">Reset</button>
          
           
@@ -173,15 +151,14 @@
          </table>
        </form>
     
+    
 
    
 
    <!-- åååååå≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈Other Information≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈-->  
 
-   <section name="laOtra" id="laOtra" class="elements">
-    <form>
+   <div name="laOtra" id="laOtra" class="elements">
       <table>
-        <tbody>
           <tr>
             <th colspan="2">La Otra Informacíon</th>
           </tr>
@@ -450,10 +427,8 @@
              </select>
              </td>
           </tr>
-        </tbody>
       </table>
-    </form>
-   </section>
+   </div>
    
 
 

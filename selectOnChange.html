@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+<meta charset="utf-8">
+<meta name="description" content="Exercise 1 miscellaneous using classname">
+<title>ClassName Example</title>
+
+<script>
+
+
+function selectFontSize() {      
+    let fontSize = document.getElementById("text");    
+    let userInput = document.getElementById('fontSizeDropDown').value;
+            
+    if (userInput == "small") {
+         fontSize.className = "small";
+    }
+    else if (userInput == "medium") {
+      fontSize.className = "medium";
+    }
+    else if (userInput == "large") {
+      fontSize.className = "large";
+    }           
+}
+
+
+</script>
+
+<style>
+body {
+	background-color: #CCCCFF;
+	color: #0000CC;
+}
+img {
+    display: block;
+    margin: 0 auto;
+}
+p {
+    text-align: center;
+	font-family: Georgia;
+	font-size: 18px;
+}
+p.main {
+	text-align: left;
+	font-family: Georgia;
+	font-size: 15px;
+	color: #3300CC;
+}
+h2 {
+    text-align: center;
+	font: 35px Georgia;
+	color: #0000CC ;
+}
+#content {
+	width:425px;
+	margin: 0px auto; 
+	padding: 50px;
+    text-align: left; 
+	background-color:#CCFF99;
+	border-style: solid;
+    border-width: 2px;
+}  
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th{
+    padding: 5px;
+	background-color: #99CCFF ;
+    color: black;
+}
+td {
+    padding: 5px;
+	background-color: #C8C8C8;
+    color: #000099;
+}
+
+.originalBody {
+     
+     background-color: #CCCCFF;  
+     font-family: Georgia;
+     color: #0000CC; 
+}
+.arialFont {
+    font-family: Arial;
+}
+#originalTable td{
+	text-align:center;
+}
+.purple {
+    background-color: #9900FF;
+}
+.yellow {
+    background-color: #FFFF00;
+}
+.orange {
+    background-color: #FF9900;
+}
+.red {
+    background-color: #CC0000;
+}
+.italic {font-style:italic;}
+.normal {font-style:normal;}
+.bold {font-weight:bold;}
+.normal {font-weight:normal;}
+.small {
+    font-size: 10px;
+}
+.medium {
+    font-size: 14px;
+}
+.large {
+    font-size: 18px;
+}
+</style>
+</head>
+
+<body id="body" class="originalBody">
+
+<h2>ClassName Example</h2>
+
+<section id="content">
+
+<form name="myform">
+<p class="main"><b>Customize the font and background:</b></p>
+<br>
+
+
+Select font size: <br>
+<select name="fontSizeDropDown" id="fontSizeDropDown" onchange="selectFontSize()">
+
+<option  value="#">--Select font size--</option> 
+<option value="small">10</option>                         
+<option value="medium">14</option>                        
+<option value="large">18</option>       
+</select>
+</td>
+
+<p id="text" name="text">
+   fasd;jklhgfasd;ljhgfasd;ljfhashj;ldfasdf<br>
+   fasl;kjdfhas;kludhfal;sjhdf<br>
+   asdlfhjasdkjfhasdfc
+</p>
+     
+</section>
+</body>
+</html>

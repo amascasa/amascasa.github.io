@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+    <meta charset="utf-8">
+    <meta name="CIS 114 Assignments" content="Assignments">
+    <title>Cookies1</title>
+    <link href="js.navBar.css" rel="stylesheet">
+    <link href="js114.css" rel="stylesheet">
+    <link href="js.flexBox.css" rel="stylesheet">
+    <script src="navBar.js"></script>
+    
+    
+    <script>
+
+      function changeColor(backColor) {
+        
+      text = document.getElementById('text');
+
+        switch(backColor) {
+          case 0:
+             text.className = "blue";
+            break;
+          case 1:
+            text.className = "turquoise";
+            break;
+          case 2:  
+            text.className = "grey";
+            break;  
+        }
+    }
+/* function myFunction() {
+  var element = document.getElementById("myDIV");
+  element.classList.toggle("mystyle");
+} */
+
+    function changeStyle(fontStyle) {
+      
+      let text = document.getElementById('text');
+
+        if(fontStyle == 0 ) {
+          text.classList.toggle('underline'); 
+        } 
+        if (fontStyle == 1) {
+          text.classList.toggle('italic');
+        }
+        if(fontStyle == 2) {
+          text.classList.toggle('bold');
+        }
+
+     }
+
+    
+
+
+     function changeFontSize() {    
+
+        let fontSize = document.getElementById("text");    
+        let userInput = document.getElementById('size').value;
+                
+        if (userInput == "small") {
+          text.className = "small";
+        }
+        else if (userInput == "medium") {
+          text.className = "medium";
+        }
+        else if (userInput == "large") {
+          text.className = "large";
+        }           
+}
+      
+       
+  </script>
+   
+ 
+    <style>
+
+      p {
+        border: 5px double black;
+      }
+
+      .blue {
+        background-color: blue;
+        color: white;
+      }
+
+      .turquoise {
+        background-color: turquoise;
+        color: black;;
+      }
+
+      .grey { 
+        background-color: grey;
+        color: white;
+      }
+
+      .underline {text-decoration: underline;}
+      .italic {font-style:italic;}
+      .bold {font-weight:bold;}
+      
+      .small {font-size: 18px;}
+      .medium {font-size: 24px;}
+      .large {font-size: 30px;}
+
+
+    </style>
+
+</head>
+
+
+
+
+ <body onload="navBar()" >
+
+   <header>
+      <h1>¡Cookies?1</h1>
+      <div id="navBar"></div>
+   </header>
+
+   <img src="daFotiJpeg--14.jpg" alt="Cervo Italy">
+   
+ 
+<!-- ©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©-->
+
+  <form name="form1">
+
+     <!-- ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈  Radio Color  ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈ -->
+
+      <fieldset>
+         <h3>Pick a background color</h3>
+         <label for="blue">Blue</label>
+         <input name="radioColor" id="blue" type="radio" onclick="changeColor(0)">
+   
+         <label for="aqua">Turquoise</label>
+         <input name="radioColor" id="aqua" type="radio" onclick="changeColor(1)">
+   
+         <label for="grey">grey</label>
+         <input name="radioColor" id="grey" type="radio" onclick="changeColor(2)">
+      </fieldset>
+   <!-- ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈  Check Style  ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈ -->  
+
+       <fieldset>
+         <h3>Select styles</h3>
+         <label for="underline">Underline</label>
+         <input name="check" id="underline" type="checkbox" onclick="changeStyle(0)">
+
+         <label for="italic">Italic</label>
+         <input name="check" id="italic" type="checkbox" onclick="changeStyle(1)">
+
+         <label for="bold">Bold</label>
+         <input name="check" id="bold" type="checkbox" onclick="changeStyle(2)">
+       </fieldset>
+
+  <!-- ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈  Selection Size  ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈ -->  
+
+       <fieldset>
+         <label for="size">Select font size</label>
+         <select name="size" id="size" onchange="changeFontSize()">
+            <option value="">Choose</option>
+            <option value="small">10</option>
+            <option value="medium">14</option>
+            <option value="large">18</option>
+         </select>
+        </fieldset>
+      
+   </form>
+    
+<!-- ©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©  -->   
+       
+
+   <p id="text"> aw;reithasdfl;jhgjas dfasd fasdfl;<br>
+    jhasdf l;jasdfljasdf  s asdf
+    asdf;lasdf;lk asdf asdfsdf<br>
+   </p>
+
+ </body>
+
+</html>     
+
+
+

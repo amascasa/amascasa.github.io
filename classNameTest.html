@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+<meta charset="utf-8">
+<meta name="description" content="Exercise 1 miscellaneous using classname">
+<title>ClassName Example</title>
+
+<script>
+/* Change background color using radio buttons:
+
+We need to link up the result of clicking a radio button with the
+script function switchStyle(style) and the class name styles of purple and yellow.
+
+*/
+function switchStyle(style) 
+{
+
+/* if the first radio button was checked then style will = 0, as the first element
+in the radio button array */
+
+    var body = document.getElementById("body");
+    if(style == 0) {
+        body.className = "purple";
+    }
+    else if(style == 1) {
+        body.className = "yellow";
+    }
+    else if(style == 2) {
+        body.className = "orange";
+    }
+    else if(style == 3) {
+        body.className = "red";
+    }
+}
+
+
+</script>
+
+<style>
+body {
+	background-color: #CCCCFF;
+	color: #0000CC;
+}
+img {
+    display: block;
+    margin: 0 auto;
+}
+p {
+    text-align: center;
+	font-family: Georgia;
+	font-size: 18px;
+}
+p.main {
+	text-align: left;
+	font-family: Georgia;
+	font-size: 15px;
+	color: #3300CC;
+}
+h2 {
+    text-align: center;
+	font: 35px Georgia;
+	color: #0000CC ;
+}
+#content {
+	width:425px;
+	margin: 0px auto; 
+	padding: 50px;
+    text-align: left; 
+	background-color:#CCFF99;
+	border-style: solid;
+    border-width: 2px;
+}  
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th{
+    padding: 5px;
+	background-color: #99CCFF ;
+    color: black;
+}
+td {
+    padding: 5px;
+	background-color: #C8C8C8;
+    color: #000099;
+}
+
+.originalBody {
+     
+     background-color: #CCCCFF;  
+     font-family: Georgia;
+     color: #0000CC; 
+}
+.arialFont {
+    font-family: Arial;
+}
+#originalTable td{
+	text-align:center;
+}
+.purple {
+    background-color: #9900FF;
+}
+.yellow {
+    background-color: #FFFF00;
+}
+.orange {
+    background-color: #FF9900;
+}
+.red {
+    background-color: #CC0000;
+}
+.italic {font-style:italic;}
+.normal {font-style:normal;}
+.bold {font-weight:bold;}
+.normal {font-weight:normal;}
+.small {
+    font-size: 10px;
+}
+.medium {
+    font-size: 14px;
+}
+.large {
+    font-size: 18px;
+}
+</style>
+</head>
+
+<body id="test" class="originalBody">
+
+<h2>ClassName Example
+</h2>
+
+<section id="content">
+
+<form name="myform">
+<p class="main"><b>Customize the font and background:</b></p>
+<br>
+
+<!-- selecting the second option will execute the function selectFontSize()
+and pass the second element whose value is small to the function's variable of
+selectedFontSize, which gets is linked to the select id of fontSizeDropDown 
+Then if the selectedFontSize has the value of small then the table class of originalTable
+is set to the style of small basicTable.
+-->
+
+<table class="basicTable" id="originalTable">
+<tr>
+<!-- clicking the first radio button will execute the function switchStyle
+and pass the first element in the radio button array, i.e., 0 to the function -->
+
+<td>
+Background: <br>
+<input type="radio" name="style" onclick="switchStyle(0)">Purple
+</td>
+
+<!-- clicking the second radio button will execute the function switchStyle
+and pass the second element in the radio button array, i.e., 1 to the function -->
+
+<td>
+Background:<br>
+<input type="radio" name="style" onclick="switchStyle(1)">Yellow
+</td>
+
+<td>
+Background:  <br>
+<input type="radio" name="style" onclick="switchStyle(2)">Orange
+</td>
+
+<td>
+Background:  <br>
+<input type="radio" name="style" onclick="switchStyle(3)">Red
+</td>
+</tr>
+
+
+     
+</section>
+</body>
+</html>

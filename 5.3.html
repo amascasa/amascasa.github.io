@@ -6,8 +6,10 @@
    -->
    <meta charset="utf-8">
    <title>States Info</title>
+   <link href="js.navBar.css" rel="stylesheet">
    <link href="js114.css" rel="stylesheet">
-   <style> </style>
+   <link href="js.flexBox.css" rel="stylesheet">
+   <script src="navBar.js"></script>
  <script>
    
    
@@ -76,61 +78,28 @@
   
 </script>
 
-</head>
-
-<body>
-   <header>
-      <h1>StatesInfo</h1>
-      
-
-      <div id="wrap">
-         <ul class="navbar">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="https://amascasa.github.io/hw2.html">Basics</a></li>
-              <li><a href="https://amascasa.github.io/hw3.html">Functions</a></li>
-              <li><a href="https://amascasa.github.io/hw4.html">Loops</a></li>
-              <li><a href="5.0.html">Arrays</a>
-                  <ul>
-                     <li><a href="5.1.html">Part 1</a></li>
-                     <li><a href="5.2.html">Part 2</a></li>
-                     <li><a href="5.3.html">Part 3</a></li>
-                  </ul>
-               </li>   
-              <li><a href="6.0.html">Objects</a>
-                 <ul>
-                   <li><a href="6.1.html">Part 1</a></li>
-                   <li><a href="6.2.html">Part 2</a></li>
-                   <li><a href="6.3.html">Part 3</a></li>
-                 </ul>
-              </li>  
-              <li><a href="https://amascasa.github.io/hw7.html">java</a></li>
-              <li><a href="https://amascasa.github.io/hw8.html">script</a></li>
-         </ul>
-      </div>
-      
- </header>
+  </head>
+  
+  <body onload="navBar()">
+  
+     <header>
+        <h1>StatesInfo</h1> 
+        <div id="navBar"></div>
+        <img src="daFotiJpeg-5-2.jpg" alt="Wise Reflection">
+     </header>
 
   
    <form>
-      <br>
-      
       <label for="state">Enter a state name or code:</label>
       <input id="state" name="state" type="text">
 
       <input type="button" onclick="on();" value="Submit">
       <input type="reset" value="Reset" onclick="window.location.reload();">
-   
-
- 
    </form>
 
+   
    <div id="results"></div>
 
-  
-
-
-
-   
 
 </body>
 </html>
