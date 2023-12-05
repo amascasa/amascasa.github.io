@@ -1,16 +1,6 @@
 <!DOCTYPE html>
  <html lang="en">
 
- <!--
- document.cookie = "username=; 
- expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-
- 4kb max; about 20 cookies max
-
-
-
-
- -->
  
  <head>
     <meta charset="utf-8">
@@ -22,47 +12,56 @@
     <script src="navBar.js"></script>
     <script>
 
-function setCookie(cname, cvalue, expDays) {
+/* function setCookie(cname, cvalue, expDays) {
 
 const date = new Date();
 date.setTime(date.getTime() + (expDays*24*60*60*1000));
 let expire = "expires" + date.toUTCString();
 
 document.createCookie = cname + "=" + cvalue + ";" + expDays + ";path/";
-}
+} */
 
 
       function createCookie() {
-      let cName = "username";
-      let cValue = document.getElementById("user").value;
-      document.cookie = cName + "=" + cValue + ";";
+         let cUserName = "username";
+         let cUserValue = document.getElementById("user").value;
+         document.cookie = cUserName + "=" + cUserValue + ";";
+
+         let cFirst = 'firstname';
+         let cFirstValue = document.getElementById("firstName").value;
+         document.cookie = cFirst + '=' + cFirstValue + ';';
+
+
+
       }
 
       function getCookie(cName) {
-      let name = cName + "=";
-      let cArray = document.cookie.split(';');
-      for(let i = 0; i < cArray.length; i++) {
-         let c = cArray[i];
-         while (c.charAt(0) == ' ') {
-            c = c.substring(1);
+         let name = cName + "=";
+         let cArray = document.cookie.split(';');
+         for(let i = 0; i < cArray.length; i++) {
+            let c = cArray[i];
+            while (c.charAt(0) == ' ') {
+               c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+               return c.substring(name.length, c.length);
+            }
          }
-         if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-         }
-      }
-      return "";
+         return "";
       }
 
       function checkCookie() {
-      let user = getCookie("username");
-      if (user != "") {
-         console.log(user);
-         document.getElementById("result").innerHTML = "Welcome back " + user;
-         document.getElementById("myform").style.display = "none";
-      } else {
-         document.getElementById("myform").style.display = "block";
-         }
-      }
+         let user = getCookie("username");
+         let name = getCookie("firstname");
+         if (user != "" && name != "") {
+            console.log(user);
+            console.log(name);
+            document.getElementById("result").innerHTML = "Welcome back " + name + " " + user;
+            document.getElementById("myform").style.display = "none";
+         } else {
+            document.getElementById("myform").style.display = "block";
+            }
+       }
 
 
     </script>
@@ -90,6 +89,9 @@ document.createCookie = cname + "=" + cvalue + ";" + expDays + ";path/";
     <div id="myform" style="display: block;">
 
      <form>
+      <label for="firstName">Enter your first name</label>
+      <input type="text" id="firstName">
+
       <label for="user">Type your username: </label> 
       <input type="text" name="user" id="user">
        <br><br>
