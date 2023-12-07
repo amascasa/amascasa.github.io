@@ -31,6 +31,10 @@ document.createCookie = cname + "=" + cvalue + ";" + expDays + ";path/";
          let cFirstValue = document.getElementById("firstName").value;
          document.cookie = cFirst + '=' + cFirstValue + ';';
 
+         document.getElementById('confirm').innerHTML = 
+         "Hello " + cFirstValue + ". Your username is " + cUserValue + ".";
+
+         document.getElementById("myform").style.display = "none";
 
 
       }
@@ -54,8 +58,7 @@ document.createCookie = cname + "=" + cvalue + ";" + expDays + ";path/";
          let user = getCookie("username");
          let name = getCookie("firstname");
          if (user != "" && name != "") {
-            console.log(user);
-            console.log(name);
+           
             document.getElementById("result").innerHTML = "Welcome back " + name + " " + user;
             document.getElementById("myform").style.display = "none";
          } else {
@@ -98,7 +101,12 @@ document.createCookie = cname + "=" + cvalue + ";" + expDays + ";path/";
       <input type="button" value="Create Cookie" onclick="createCookie();"><br>
       <input type="reset" value="Reset">
    </form>
+      </div>
+      
+      <div id="confirm"></div>
  </section>
+
+
    
    
    </body>

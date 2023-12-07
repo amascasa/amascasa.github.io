@@ -7,7 +7,7 @@ function navBar() {
              "<li><a href='index.html'>Home</a></li>";
   
   topics = ['Basics', 'Functions', 'Loops', 'Arrays',
-            'Objects', 'Cookies'];
+            'Objects', 'Cookies', 'Ajax'];
   number = ['2.', '3.', '4.', '5.', '6.', '7.', '8.'];
   part   = ['I', 'II', 'III'];   
   
@@ -26,9 +26,21 @@ function navBar() {
   
      }
   
-  html += "</li></ul></nav>";
+  html += "</li>";
+  
+ /*  html += "<ul>" +
+             "<li><a href='8.0.html'>Ajax</a>" +
+               "<ul>" +
+                 "<li><a href='ajaxassignment.html'>Part 1</a></li>" +
+                "</ul>" +
+             "</li>"    */
+
+
+
+  html += "</ul></nav>";
   
   document.getElementById('navBar').innerHTML = html;
   
+  console.log(html);
   }
   
