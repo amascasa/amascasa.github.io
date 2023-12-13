@@ -8,6 +8,9 @@
   <link href="8.nav.css" rel="stylesheet">
   <link href="8.1.css" rel="stylesheet">
   <script src="navBar.js"></script>
+
+
+
   <script>
     function loadDoc() {
       const xhttp = new XMLHttpRequest();
@@ -28,7 +31,7 @@
           x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
           "</td></tr>";
       }
-      document.getElementById("demo").innerHTML = table;
+      document.getElementById("results").innerHTML = table;
     }
 
 
@@ -129,14 +132,14 @@
   </section>
 
 
-
-  <button type="button" onclick="loadDoc()">Get CD collection</button>
   <br><br>
+  <button type="button" onclick="loadDoc()">Get CD collection</button>
+  
 
-  <table id="!Eyo!"></table>
+  <table id="results"></table>
 
 
-  <div id="stuff"></div>
+  
 
 <footer>
  
