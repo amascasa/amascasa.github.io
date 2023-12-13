@@ -1,0 +1,92 @@
+
+
+
+
+
+section#layout {
+   display: flex;
+   flex-flow: row nowrap;
+   border: 3px solid green solid;
+   width: 100%;
+   
+ }
+ img#fireLine {
+   width: 100%;
+   box-shadow: 0px 0px 15px 2px white;
+   margin-bottom: 20px;
+ }
+ #lefters {
+   display: flex;
+     flex: 1 8 360px;
+       flex-flow: column nowrap;
+         border: 3px black;
+          box-shadow: 0px 0px 15px 2px white inset;
+            border-radius: 6px;  
+}
+       #first {
+         flex: 1 1 auto;
+            padding: 20px; 
+       }
+       #second {
+         flex: 1 1 auto;
+            padding: 20px;
+       }
+       #third {
+         flex: 1 1 auto;
+            padding: 20px;
+       }
+ div#walk {
+   flex: 8 1 361px;
+      justify-content: center;
+          align-items:center;
+ }
+
+ img#theWalk {
+   width: 100%;
+   padding: 20px;
+   margin-top: 10px;
+   border-radius: 3px;
+   /* box-shadow: 0px 0px 10px 2px red inset;
+ */
+ }
+
+ footer {
+   width: 100%;
+   height: 2px;
+   background-color: rgba(255, 68, 0, 0.727);
+   /* border: 10px double  rgba(142, 52, 13, 0.798); */
+   box-shadow: 0px 0px 22px 10px white;
+   border-radius: 6px;
+
+ }
+
+ 
+
+
+
+ body {
+   color: white;
+   background-color: black;
+
+ }
+ h1, h2{
+   text-align: center;
+   color: white;
+   text-shadow: 0px 0px 15px 2px orange;
+ }
+ p {
+   color: orange;
+ }
+
+
+ table,
+th,
+td {
+  border: 1px solid orange;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 5px;
+}

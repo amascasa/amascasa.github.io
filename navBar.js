@@ -25,22 +25,11 @@ function navBar() {
       html += "</ul>";
   
      }
+
+  html += "</li></ul></nav>";
   
-  html += "</li>";
-  
- /*  html += "<ul>" +
-             "<li><a href='8.0.html'>Ajax</a>" +
-               "<ul>" +
-                 "<li><a href='ajaxassignment.html'>Part 1</a></li>" +
-                "</ul>" +
-             "</li>"    */
-
-
-
-  html += "</ul></nav>";
   
   document.getElementById('navBar').innerHTML = html;
   
-  console.log(html);
   }
   

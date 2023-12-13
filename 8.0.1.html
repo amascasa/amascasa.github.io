@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="Ajax" content="Assignments">
+  <title>Ajax</title>
+  <link href="8.nav.css" rel="stylesheet">
+  <link href="8.1.css" rel="stylesheet">
+  <script src="navBar.js"></script>
+  <script>
+    function loadDoc() {
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function () {
+        myFunction(this);
+      }
+      xhttp.open("GET", "cd_catalog.xml");
+      xhttp.send();
+    }
+    function myFunction(xml) {
+      const xmlDoc = xml.responseXML;
+      const x = xmlDoc.getElementsByTagName("CD");
+      let table = "<tr><th>Artist</th><th>Title</th></tr>";
+      for (let i = 0; i < x.length; i++) {
+        table += "<tr><td>" +
+          x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+          "</td><td>" +
+          x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+          "</td></tr>";
+      }
+      document.getElementById("demo").innerHTML = table;
+    }
+
+
+
+    function tableTest() {
+
+      let html = "<table>";
+      let rows = 10;
+
+      for (let i = 0; i < rows; i++) {
+        html += "<tr><td>stuff</td><td>moreStuff</td></tr>";
+      }
+
+      html += "</table>";
+
+      document.getElementById("stuff").innerHTML = html;
+
+    }
+  </script>
+</head>
+
+<body onload="navBar(); ">
+
+  <!-- d∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂  ~~~Header~~~~   ∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂d-->
+
+
+  <header id="zabuttons">
+     <h1>Ajax Applications</h1>
+      <div id="navBar"></div>
+        </header>
+
+  <img src="daFotiJpeg-1-3.jpg" alt="Cervo Boar b&w" id="fireLine">
+
+
+  <!-- d∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂  ~~~First paragraph~~~~   ∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂d-->
+  <section id="layout">
+
+ <div id="lefters">
+      <article id='first' class="left">
+        <h2>The Mystery of AJAX</h2>
+
+        <p>I don't really know what AJAX is. I suppose it is used to retrieve information
+          from the server, whatever that is. I'm perpetually confused over terminology</p>
+        <p>The wonders of AJAX is that the browser can recieve updates and modify only those
+          elements without reloading the whole page. To formulate a request the first part is
+          to create a function that requests data from a web server.
+          This is done first by creating a new browser built-in XMLHttpRequest object,
+          which looks like this:<br><span style="color:orange">const xhttp = new XMLHttpRequest()</span><br>
+          Once the object is created it can be used on an onload event function
+          to retrieve the data. the function sends the request to the server, then receives
+          the response, and then processes the data through javaScript. Womderful stuff!
+        </p>
+
+      </article>
+
+
+
+      <!-- d∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂  ~~~2nd Paragraph~~  ∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂d-->
+
+
+      <article id='second' class="left">
+        <h2>REST API</h2>
+
+        <p>words and stuff about REST which has nothiung to do with the<br>
+          word 'rest.' Appropriate nomenclature for the developer's world.
+        </p>
+        <p>
+          I chose the random cat picture generator.<br>
+          Base url: https://cat-fact.herokuapp.com<br>
+        </p>
+
+      </article>
+
+      <article id="third">
+        <h2>LaOtra</h2>
+        <p>
+          Here is another paragraph so I can play around with three paragraphs. 
+          This is actually the second paragraph but displayed as the third using 
+          the order: property. But alas it is displayed as the third paragraph.....duh,
+          didn't miove the html. I totally forgot what i was trying to do, but
+          it's in the write place so onward Captain! 
+        </p>
+      </article>
+
+  </div>
+
+
+    <!-- d∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂d-->
+
+
+
+   <div id="walk">
+    <img src="daFotiJpeg-7034.jpg" id='theWalk' alt="walk">
+   </div>
+   
+
+
+
+  </section>
+
+
+
+  <button type="button" onclick="loadDoc()">Get CD collection</button>
+  <br><br>
+
+  <table id="!Eyo!"></table>
+
+
+  <div id="stuff"></div>
+
+<footer>
+ 
+</footer>
+
+
+
+
+</body>
+
+</html>
