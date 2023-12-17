@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="Ajax" content="Assignments">
+  <title>Ajax 8.2</title>
+  <link href="8.nav.css" rel="stylesheet">
+  <link href="8.1.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   
+  <script src="navBar.js"></script>
+
+
+
+  <script>
+    function loadDoc() {
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function () {
+        myFunction(this);
+      }
+      xhttp.open("GET", "cd_catalog.xml");
+      xhttp.send();
+    }
+    function myFunction(xml) {
+      const xmlDoc = xml.responseXML;
+      const x = xmlDoc.getElementsByTagName("CD");
+      let table = "<tr><th>Artist</th><th>Title</th></tr>";
+      for (let i = 0; i < x.length; i++) {
+        table += "<tr><td>" +
+          x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+          "</td><td>" +
+          x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+          "</td></tr>";
+      }
+      document.getElementById("results").innerHTML = table;
+    }
+
+// †††††††††††††††††††††††††††††††††††††††
+
+    function getAnimals() {
+
+         let urlCat = 'https://cat-fact.herokuapp.com/facts/random';
+         let urlDog = 'https://dog.ceo/api/breeds/image/random';
+
+         let xmlhttpDog = new XMLHttpRequest(); // the false below is to run the request synchronously otherwise you would write true to run it asynchronously - the last method is better in terms of performance
+            xmlhttpDog.open('GET', urlDog, false);   // doing a get and the URL will be the URL above + username attached to the end of the URL
+            xmlhttpDog.send();
+
+         let xmlhttpCat = new XMLHttpRequest();
+            xmlhttpCat.open('GET', urlCat, false);
+            xmlhttpCat.send();
+
+         showDog(xmlhttpDog);
+          // showCat(xmlhttpCat);
+        
+         }
+
+
+
+function showDog(xmlhttp) {
+   
+  if(xmlhttp.status === 200) {  // testing if the request was successful
+  
+      let response = xmlhttp.responseText;   // the responseText is where the data is stored 
+      
+      let first = response.indexOf(':');
+      let last = response.indexOf(',');
+      let dog = response.substring(first + 1, last);
+
+      let html = "<img src=" + dog + ">";
+      document.getElementById('dogFoto').innerHTML = html;
+
+   } else {
+      document.getElementById('dogFoto').innerHTML = 'error';
+   }
+
+}
+
+
+/* function showCat(xmlhttp) {
+ 
+   if(xmlhttp.status === 200) {
+      let respondCat = xmlhttp.responseText;
+     
+      document.getElementById('catFact').innerHTML = respondCat;
+   }
+
+} */
+
+
+fetch('https://cat-fact.herokuapp.com/facts/random')
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("catFact").innerHTML = data.text;
+       // console.log(data);
+    })
+
+
+
+
+
+/* fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('drink').innerHTML = data;
+      //console.log(data);
+    })
+
+
+    const xmlhttp = new XMLHttpRequest();
+
+      xmlhttp.onload = function() {
+      const data = JSON.parse(this.responseText);
+      document.getElementById("quotes").innerHTML = data[1].strDrink;
+      console.log(data.strDrink);
+      }
+      xmlhttp.open("GET", "https://www.thecocktaildb.com/api/json/v1/1/random.php");
+      xmlhttp.send();
+
+const api_url ="https://www.thecocktaildb.com/api/json/v1/1/random.php";
+
+async function getapi(url)
+{
+  const response = await fetch(url);
+  var drink = await response.json();
+  console.log(drink);
+  document.getElementById("quotes").innerHTML = drink;
+}
+
+getapi(api_url); 
+ */
+
+
+
+ </script>
+
+<style>
+
+   #layout {
+      display: flex;
+      flex-flow: row wrap;
+   }
+
+   header {
+      width:100%;
+   }
+
+  #dogFoto {
+   border: 3px solid white;
+   margin-bottom: 50px;
+   max-width: 600px;
+   flex: 1 1 330px;
+  }
+
+  #catFact {
+   border: 3px solid orange;
+   margin-bottom: 100px;
+   padding: 15px;
+   flex: 1 1 330px;
+  }
+
+  #drink {
+   border: 2px solid rgb(86, 86, 190);
+  }
+
+  #quotes {
+   border: 2px solid red;
+   flex: 1 1 330px;
+  }
+
+  div {
+   color: white;
+  }
+</style>
+
+
+</head>
+
+<body onload="navBar(), getAnimals()">
+
+  <!-- d∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂  ~~~Header~~~~   ∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂d-->
+
+
+  <header id="zabuttons">
+     <h1>Ajax Applications 8.2</h1>
+      <div id="navBar"></div>
+        </header>
+
+ 
+
+
+  <!-- d∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂  ~~~First paragraph~~~~   ∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂d-->
+ 
+  <section id="layout">
+
+
+   <div id="dogFoto">dogFoto</div>
+   <div id="catFact">catFact</div>
+   <!-- <div id="drink">drink</div>
+   <div id="quotes">quotes</div> -->
+  
+  
+
+  </section>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
