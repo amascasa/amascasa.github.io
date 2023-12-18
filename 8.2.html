@@ -68,7 +68,7 @@ function showDog(xmlhttp) {
       let last = response.indexOf(',');
       let dog = response.substring(first + 1, last);
 
-      let html = "<img src=" + dog + ">";
+      let html = "<img src=" + dog + "width:'50%'>";
       document.getElementById('dogFoto').innerHTML = html;
 
    } else {
@@ -138,36 +138,53 @@ getapi(api_url);
 <style>
 
    #layout {
+     
+      width: 100%;
+     /*  display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: column wrap; */
    }
 
-   header {
-      width:100%;
-   }
+  
 
   #dogFoto {
-   border: 3px solid white;
+   /* border: 3px solid white; */
    margin-bottom: 50px;
-   max-width: 600px;
-   flex: 1 1 330px;
+   /* max-width: 600px;
+   flex: 1 1 330px; */
+   width: 50%;
+   display: block;
+   
   }
+
+  
 
   #catFact {
-   border: 3px solid orange;
+  /*  border: 3px solid orange; */
    margin-bottom: 100px;
    padding: 15px;
-   flex: 1 1 330px;
+  /*  flex: 1 1 330px; */
   }
 
-  #drink {
-   border: 2px solid rgb(86, 86, 190);
+ 
+
+  #api {
+   width: 25%;
+   margin: 20px;
   }
 
-  #quotes {
-   border: 2px solid red;
-   flex: 1 1 330px;
+  a.inner {
+   color:rgb(105, 105, 242);
   }
+
+  a.inner:visited {
+   color: rgb(231, 28, 231);
+  }
+
+
 
   div {
    color: white;
@@ -195,10 +212,40 @@ getapi(api_url);
   <section id="layout">
 
 
+   
+
+  
+
+
+   <p id="api">
+      We have Two API's here that I believe work wonderfully together,
+      with any web page. Random dog photos coupled with random cat facts
+      with API's 
+      <a href='https://dog.ceo/dog-api/?ref=apilist.fun' class="inner">Randomdog</a> and 
+      <a href='https://alexwohlbruck.github.io/cat-facts/docs/' class="inner">Cat Facts</a>. <br>
+
+      First diplayed you will find the random dog photos, which are always delightful.
+      A slight drawback with this API; it doesn't always return a  delightful
+       dog photo. But, I'd say about 90% of the time and 90% ain't bad.<br>
+         This API returns a JSON file that contains two properties: 'message', which
+       contains the image url, and 'status' which returns success
+       or fail. The devolper has generously supplied this API at no 
+       cost but accepts donations from appreciative users.<br>
+
+       Accompanning these delightful photos are wonderful random
+       cat facts. This API also has the drawback of also not returning cat
+       facts every time, and in this case it's closer to a 60% success rate. 
+       Nonetheless, still a perfect addition to dog photos as it still adds
+       to the random flare. Also the term 'facts' should be regarded very
+       loosly but again, just as entertaining.<br>
+       
+       
+
+   </p>
+
    <div id="dogFoto">dogFoto</div>
    <div id="catFact">catFact</div>
-   <!-- <div id="drink">drink</div>
-   <div id="quotes">quotes</div> -->
+  
   
   
 
