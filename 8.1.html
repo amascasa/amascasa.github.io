@@ -39,6 +39,30 @@
 
 
   </script>
+
+  <style>
+     a.inner {
+       color:rgb(169, 169, 236);
+     }
+
+  a.inner:visited {
+   color: rgb(231, 28, 231);
+  }
+
+  label {
+    color: rgb(255, 85, 0);
+  }
+
+  #zaCode {
+   box-shadow: 0px 0px 15px 1px white inset;
+    border-radius: 6px;
+     border: 1px solid black;
+ }
+
+  
+  </style>
+
+  
 </head>
 
 <body onload="navBar()">
@@ -87,7 +111,9 @@
         
         </p>
         <br>
-        <button type="button" onclick="loadDoc()">Get CD collection</button>
+        <label for="partTwo">¡See an XMLHttpRequest load a CD collection!</label>
+        <br>
+        <button id="partTwo" type="button" onclick="loadDoc()">Get CD collection</button>
         <table id="results"></table>
 
       </article>
@@ -99,14 +125,14 @@
 
       <article id='second' class="left">
         <h2>REST API</h2>
-        <p>words and stuff about REST which has nothiung to do with the<br>
+        <p>words and stuff about REST which has nothiung to do with the
           word 'rest.' Appropriate nomenclature for the developer's world to the uninformed
           mind.
         </p>
         <p>
           I chose the random cat picture generator.<br>
           Base url: https://cat-fact.herokuapp.com<br>
-          It's in <a href='8.2.html'>Part II</a>
+          It's in <a href='8.2.html' class="inner">Ajax, Part II</a>
 
         </p>
       </article>
