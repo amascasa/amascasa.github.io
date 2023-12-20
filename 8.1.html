@@ -12,6 +12,8 @@
 
 
   <script>
+
+
     function loadDoc() {
       const xhttp = new XMLHttpRequest();
       xhttp.onload = function () {
@@ -36,24 +38,10 @@
 
 
 
-    function tableTest() {
-
-      let html = "<table>";
-      let rows = 10;
-
-      for (let i = 0; i < rows; i++) {
-        html += "<tr><td>stuff</td><td>moreStuff</td></tr>";
-      }
-
-      html += "</table>";
-
-      document.getElementById("stuff").innerHTML = html;
-
-    }
   </script>
 </head>
 
-<body onload="navBar(); ">
+<body onload="navBar()">
 
   <!-- d∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂  ~~~Header~~~~   ∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂d-->
 
@@ -72,24 +60,35 @@
    
 
  <div id="lefters">
-      <article id='first' class="left">
 
-        <button type="button" onclick="loadDoc()">Get CD collection</button>
-        <table id="results"></table>
+      <article id='first' class="left">
 
         <h2>The Mystery of AJAX</h2>
 
-        <p>I don't really know what AJAX is. I read it is used too retrieve information
-          from the server,.... but whatever even that means.<br> Server you sever who?<br>I'm perpetually confused over terminology</p>
-        <p>The aleged wonders of AJAX is that the browser can recieve updates and modify only those
-          elements without reloading the whole page. To formulate a contradictlry request the first part is
-          to create a function that requests data from a web server.
-          This is done first by creating a new browser built-in XMLHttpRequest object,
-          which takes the appearence of:<br><br><span style="color: rgb(255, 85, 0)">const xhttp = new XMLHttpRequest()</span><br>
-          <br>Once the object is created it can be used on an onload event function
+        <!-- <p>I don't really know what AJAX is. I read it is used too retrieve information
+          from the server,.... but whatever even that means.<br> Server you sever who?<br>I'm perpetually confused over terminology</p> -->
+
+
+        <p>The wonders of AJAX is that the browser can receive updates and modify only those
+          elements without reloading the whole page. After the page has loaded, data can still
+          be requested and recieved and the data can move in the background creating a more
+          streamlined experience for the user.
+          To formulate a request the first part is
+          to create a an XMLHttpsRequest object, 
+          which takes the appearance of:<br><br><span style="color: rgb(255, 85, 0)">const xhttp = new XMLHttpRequest()</span><br>
+          <br>
+          
+          Then an if-statement is created to check the status of the request using
+          the  '.readyState' and '.status' methods. If they return "4" and "200" respectively
+          which indicates the server is ready then by using '.responseText' the data can be sent
+          to the html page to be displayed.
           to retrieve the data. the function sends the request to the server, then receives
-          the response, and then processes the data through javaScript. Womderful stuff!
+          the response, and then processes the data through javaScript. Wonderful stuff!
+        
         </p>
+        <br>
+        <button type="button" onclick="loadDoc()">Get CD collection</button>
+        <table id="results"></table>
 
       </article>
 
@@ -101,11 +100,14 @@
       <article id='second' class="left">
         <h2>REST API</h2>
         <p>words and stuff about REST which has nothiung to do with the<br>
-          word 'rest.' Appropriate nomenclature for the developer's world.
+          word 'rest.' Appropriate nomenclature for the developer's world to the uninformed
+          mind.
         </p>
         <p>
           I chose the random cat picture generator.<br>
           Base url: https://cat-fact.herokuapp.com<br>
+          It's in <a href='8.2.html'>Part II</a>
+
         </p>
       </article>
 
@@ -134,7 +136,9 @@
     <img src="daFotiJpeg-7034.jpg" id='theWalk' alt="walk">
    </div>
    
-
+   <div id="code">
+    <img src="xmlHTTP.png" alt="Code for XMLHttpRequest" id="zaCode" width="500px">
+   </div>
 
 
   </section>

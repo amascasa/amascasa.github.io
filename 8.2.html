@@ -14,7 +14,7 @@
 
 
   <script>
-    function loadDoc() {
+    /* function loadDoc() {
       const xhttp = new XMLHttpRequest();
       xhttp.onload = function () {
         myFunction(this);
@@ -34,7 +34,7 @@
           "</td></tr>";
       }
       document.getElementById("results").innerHTML = table;
-    }
+    } */
 
 // †††††††††††††††††††††††††††††††††††††††
 
@@ -88,13 +88,15 @@ function showDog(xmlhttp) {
 
 } */
 
-
-fetch('https://cat-fact.herokuapp.com/facts/random')
+function catFacts() {
+   fetch('https://cat-fact.herokuapp.com/facts/random')
     .then(response => response.json())
     .then(data => {
         document.getElementById("catFact").innerHTML = data.text;
        // console.log(data);
     })
+}
+
 
 
 
@@ -177,7 +179,7 @@ getapi(api_url);
   }
 
   a.inner {
-   color:rgb(105, 105, 242);
+   color:rgb(169, 169, 236);
   }
 
   a.inner:visited {
@@ -194,7 +196,7 @@ getapi(api_url);
 
 </head>
 
-<body onload="navBar(), getAnimals()">
+<body onload="navBar(), getAnimals(), catFacts()">
 
   <!-- d∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂  ~~~Header~~~~   ∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂d-->
 
@@ -222,25 +224,27 @@ getapi(api_url);
       with any web page. Random dog photos coupled with random cat facts
       with API's 
       <a href='https://dog.ceo/dog-api/?ref=apilist.fun' class="inner">Randomdog</a> and 
-      <a href='https://alexwohlbruck.github.io/cat-facts/docs/' class="inner">Cat Facts</a>. <br>
+      <a href='https://alexwohlbruck.github.io/cat-facts/docs/' class="inner">Cat Facts</a>
+      <br><br>
 
-      First diplayed you will find the random dog photos, which are always delightful.
+      First displayed you will find the random dog photos, which are always delightful.
       A slight drawback with this API; it doesn't always return a  delightful
-       dog photo. But, I'd say about 90% of the time and 90% ain't bad.<br>
-         This API returns a JSON file that contains two properties: 'message', which
+      dog photo. But, I'd say about 90% of the time and 90% ain't bad.<br><br>
+      
+      This API returns a JSON file that contains two properties: 'message', which
        contains the image url, and 'status' which returns success
-       or fail. The devolper has generously supplied this API at no 
-       cost but accepts donations from appreciative users.<br>
+       or fail. The developer has generously supplied this API at no 
+       cost but accepts donations from appreciative users.<br><br>
 
-       Accompanning these delightful photos are wonderful random
+       Accompanying these delightful photos are wonderful random
        cat facts. This API also has the drawback of also not returning cat
        facts every time, and in this case it's closer to a 60% success rate. 
        Nonetheless, still a perfect addition to dog photos as it still adds
        to the random flare. Also the term 'facts' should be regarded very
-       loosly but again, just as entertaining.<br>
-       
-       
+       loosely but again, just as entertaining.<br><br><br>
 
+       <button type='button' onclick="getAnimals()">Un otra perr0?</button>
+       <button type="button" onclick="catFacts()">Another cat fact perhaps?</button>
    </p>
 
    <div id="dogFoto">dogFoto</div>

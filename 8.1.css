@@ -5,7 +5,8 @@
 
 section#layout {
    display: flex;
-   flex-flow: row nowrap;
+   flex-flow: row wrap;
+   align-items: stretch;
    border: 3px solid green solid;
    width: 100%;
    
@@ -24,11 +25,11 @@ section#layout {
             border-radius: 6px;  
 }
        #first {
-         flex: 1 1 auto;
+         flex: 2 1 auto;
             padding: 20px; 
        }
        #second {
-         flex: 1 1 auto;
+         flex: 1 2 auto;
             padding: 20px;
        }
        #third {
@@ -36,16 +37,20 @@ section#layout {
             padding: 20px;
        }
  div#walk {
+   width: 100%;
    flex: 8 1 361px;
       justify-content: center;
           align-items:center;
+          border: 1px solid white;
  }
 
  img#theWalk {
-   width: 100%;
-   padding: 20px;
-   margin-top: 10px;
-   border-radius: 3px;
+   width: 90%;
+    padding: 20px;
+     margin-top: 10px;
+      border: 1px solid orangered;
+       border-radius: 3px;
+
    /* box-shadow: 0px 0px 10px 2px red inset;
  */
  }
@@ -62,7 +67,9 @@ section#layout {
 
  
 
-
+html {
+  background-color: black;
+}
 
  body {
    color: white;
