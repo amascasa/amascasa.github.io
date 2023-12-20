@@ -85,7 +85,7 @@ nav ul li {
 
  .navbar ul li a {
    color: black;
-   border: 2px single black;
+   border: 2px solid black;
    border-radius: 3px
  }
    
