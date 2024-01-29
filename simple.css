@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+html {
+  border-left: 5px double grey;
+}
+body {
+    color: white;
+    width: 80%;
+    background-color:black;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ header {
+  padding-bottom: 20px;
+ }
+
+h1 {
+     color: white;
+     background-color: black;
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+     text-align:center;
+     box-shadow: 0px 0px 4px 4px white inset;
+     border-radius: 5px;
+     padding: 5px;
+}
+
+#intro {
+  border: 1px solid white;
+  padding: 10px;
+}
+
+h3 {
+  text-align: center;
+  border: 1px solid white;
+  padding: 5px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  margin: 15px auto;
+  border: 1x solid black;
+  box-shadow: 0px 0px 20px 1px;
+}
+
+
+a {
+  color: red;
+}
+
+a:visited {
+  color: orange;
+}
+
+
+/* ∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂--6.1--∂∂∂∂∂∂∂∂∂∂∂∂∂ -- */
+
+
+
+
+
+
+ 
+
+
+
+
