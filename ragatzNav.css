@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+
+div#navBar {
+        background-color: black;
+        padding: 20px;
+}
+ 
+ ul.navbar {
+      display: flex;
+      flex-flow: row nowrap;
+       padding: 20px;
+       position:absolute;
+ }
+
+ li {
+      width: 20%;
+ }
+
+ 
+ .navbar ul li {
+   border: 2px solid green;
+   text-align: center;
+   list-style: none;
+   font: normal bold 13px/1em Arial, Verdana, Helvetica;
+ }
+ 
+ .navbar a {
+   border: 1px solid white;
+   border-radius: 2px;
+   padding: 10px; 
+   text-decoration: none;
+   text-align: center;
+   color: black;
+   background-color: orange;
+   display: block;
+ }
+
+ 
+
+ .navbar a:hover {
+   background-color: orange;
+   border-radius: 4px;
+   color: white;
+   border: 1px solid blue;
+ }
+
+ 
+ 
+ .navbar li ul {
+   display: none;
+   height: auto;
+   margin: 0;
+   padding: 0;
+ }
+ 
+ .navbar li:hover ul {
+   display: block;
+ }
+ 
+
+ 
+ .navbar li ul li {
+   height: auto;
+   background-color: white;
+   color: black;
+   text-align: center;
+   border-radius: 4px;
+ }
+
+ .navbar ul li a {
+   color: black;
+   border: 2px solid black;
+   border-radius: 3px
+ }
+   
+ .navbar ul li a:hover {
+   background-color: white;
+   color: black;
+   display: block;
+   border-radius: 3px;
+ }
+
+ ul {
+  list-style-type: none;
+ }
+ 
+ 
+ a {
+    transition: 
+       transform .4s ease-in-out;
+
+ }
+ 
+ a:hover {
+    transform: scale(1.06);
+     
+ }
+
+
+ 
+

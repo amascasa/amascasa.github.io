@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+
+/* body {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+} */
+
+header {
+   
+   border: 2px solid orange;
+}
+
+div#navBar {
+   display: absolute;
+   padding-bottom: 15px;
+   border: 1px solid blue;
+} 
+
+ul.navbar {
+   display: flex;
+   flex-flow: row wrap;
+  /*  border: 1px solid tomato; */
+   margin: 50px;
+   width:90%;
+}
+
+/*  µµµµµµµµµµµµµµµµµµµµµµµµµµ˜˜˜˜˜µµµµ˜µ˜µ˜µ˜µ˜µ˜µ˜µ˜µ˜µ˜µ˜˜˜˜˜˜˜µµµµµµ */
+
+#tables {
+   display: flex;
+   flex-flow: row wrap;
+   /* border: 1px solid cornflowerblue; */
+   justify-content: center;
+   background-color: black;
+}
+
+
+
+
+
+
+
+section#details {
+               /*   border: 3px solid red; */
+   display: flex;
+    margin-top: 50px;
+}
+
+
+div.row {
+               /*   border: 2px solid orange; */
+   display: flex;
+    flex-flow: row wrap;
+     justify-content: center;
+       height: 400px;
+        width: auto;
+         margin-top: 50px;
+}
+
+section#details > div.row > div.column {
+                /*  border: 1px solid yellow; */
+   display: flex;
+      min-width: 600px;
+      justify-content: center;
+     
+}
+
+img {
+                 border: 4px solid aqua;
+   max-width: 77%;
+    height: auto;
+    
+}
+
+
+
+
+/*  µµµµµµµµµµµµµµµµµµµµµµµµµµ˜˜˜˜˜µµµµ˜µ˜µ˜µ˜µ˜µ˜µ˜µ˜µ˜µ˜µ˜˜˜˜˜˜˜µµµµµµ */
+
+
+
+section#images {
+   color: red;
+}
+
+
+
+
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px){
+      .modal-content {
+        width: 100%;
+      }
+    }
+

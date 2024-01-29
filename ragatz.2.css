@@ -1,0 +1,63 @@
+html {
+   background-color: black;
+ }
+  
+  body {
+    width: 100%;
+    margin: auto;
+    color: white;
+    background-color: black;
+     }
+  
+   h1, h2, h3 {
+      
+      text-align: center;
+      color: orange;
+      border: 1px solid aliceblue;
+   }
+
+  img {
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 2px white;
+    border-radius: 4px;
+  } 
+  
+
+  section#details {
+   
+   background-color: rgb(27, 27, 27);
+   height: 600px;
+  }
+  
+  section#materialBox, #displayBox {
+    margin: 20px;
+  }
+
+  section#images {
+   border: 2px solid aqua;
+}
+
+  table {
+   border: 2px solid blue;
+   box-shadow: 0px 0px 10px 1px white;
+  }
+   
+  td, tr, th {
+   border: 1px solid white;
+   padding: 7px 100px;
+   /* box-shadow: 0px 0px 10px 1px white inset; */
+   border-radius: 2px;
+   text-decoration: underline;
+    
+  }
+
+  th {
+   color: orange;
+
+  }
+  
+  div#top {
+    padding: 20px;
+  }
+  

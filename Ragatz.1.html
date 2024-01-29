@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ragatz.1</title>
+  
+   
+    <link href="ragatzNav.css" rel="stylesheet">
+    <link href="ragatz.css" rel="stylesheet">
+    <link href="modal.css" rel="stylesheet">
+    <link href="ragatzLayout.css" rel="stylesheet">
+
+<!-- ΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩ -->
+
+    <script src="navBar.js"></script>
+
+    <script src="modal.js"></script>
+  
+    
+
+
+  </head>
+  
+  
+  <!-- ΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩ -->
+  
+   
+  <body onload="navBar()">
+
+    <header>
+      <h1>Ragatz Performance Bicycles</h1> 
+      <div id="navBar"></div>
+      
+   </header>
+    
+    
+
+   <section id='materialBox'>
+     <h3>Ragatz Build</h3>
+     
+     <table id='materials'>
+
+      <tr>
+        <th colspan="4">Cabinet Build</th>
+       </tr> 
+
+       <tr>
+        <th>Gabinetti</th>
+         <td>ThreeStraight</td>
+          <td>TwoOutCorner</td>
+           <td>oneInCorner</td>
+      </tr>
+       <tr>
+         <th></th>
+          <td>$1000</td>
+           <td>$800</td>
+            <td>$400</td>
+       </tr>
+        <tr>
+         <th></th>
+           <td></td>
+             <td></td>
+              <td></td>
+       </tr>
+        <tr>
+         <th></th>
+           <td></td>
+             <td></td>
+              <td></td>
+       </tr>
+        <tr>
+         <th></th>
+           <td></td>
+            <td></td>
+              <td></td>
+       </tr>
+        <tr>
+         <th></th>
+           <td></td>
+            <td></td>
+              <td></td>
+       </tr>
+     </table>
+  </section>  
+
+<section id="displayBox">
+
+  <table id='display'>
+
+    <tr>
+       <th colspan="4"> Display Cases</th>
+        
+     </tr> 
+     <tr>
+       <th></th>
+        <td></td>
+         <td></td>
+          <td></td>
+     </tr>
+      <tr>
+       <th>Display cases</th>
+         <td>$3000</td> 
+           <td>@n $600</td>
+            <td>glass coust?</td>
+     </tr>
+      <tr>
+       <th></th>
+         <td></td>
+           <td></td>
+            <td></td>
+     </tr>
+      <tr>
+       <th></th>
+         <td></td>
+          <td></td>
+            <td></td>
+     </tr>
+      <tr>
+       <th></th>
+         <td></td>
+          <td></td>
+            <td></td>
+     </tr>
+   </table>
+
+</section>
+
+<section id="views">
+
+    <!-- Images used to open the lightbox -->
+<div class="row">
+  <div class="column">
+    <img src="1.top.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="4.rightCornerEye.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="2.entryEye.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="3.entryBird.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="5.rightCornerBird.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="6.leftCornerEye.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="7.leftCornerBird.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="8.familyCornerEye.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="9.familyCornerBird.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="10.shopCornerEye.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="11.shopCornerBird.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="1.top.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="4.rightCornerEye.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="2.entryEye.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="3.entryBird.jpg" style="width:100%">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" src="1.top.jpg" onclick="currentSlide(1)" alt="PlanView">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="4.rightCornerEye.jpg" onclick="currentSlide(2)" alt="RightCorner">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="2.entryEye.jpg" onclick="currentSlide(3)" alt="Mountains">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="3.entryBird.jpg" onclick="currentSlide(4)" alt="Lights">
+    </div>
+    <div class="column">
+      <img class="demo" src="5.rightCornerBird.jpg" onclick="currentSlide(1)" alt="">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="6.leftCornerEye.jpg" onclick="currentSlide(2)" alt="">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="7.leftCornerBird.jpg" onclick="currentSlide(3)" alt="">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="8.familyCornerEye.jpg" onclick="currentSlide(4)" alt="">
+    </div>
+  </div>
+</div>
+ 
+
+</section>
+
+
+    
+  
+    
+    
+    
+    
+    
+ </body>
+  
+   <!-- ΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩΩ -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</html>
