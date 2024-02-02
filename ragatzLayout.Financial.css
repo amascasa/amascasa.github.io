@@ -1,51 +1,49 @@
 @charset "utf-8";
 
 
-/* body {
+body {
    display: flex;
    flex-flow: row wrap;
    justify-content: center;
-} */
-
-header {
-   
-   border: 2px solid orange;
 }
+
+
 
 div#navBar {
    display: absolute;
    padding-bottom: 15px;
-   border: 1px solid blue;
+  
+  /*  border: 1px solid blue; */
 } 
 
-ul.navbar {
+/* ul.navbar {
    display: flex;
    flex-flow: row wrap;
-  /*  border: 1px solid tomato; */
+   border: 1px solid tomato;
    margin: 50px;
    width:90%;
-}
+} */
 
 /*  µµµµµµµµµµµµµµµµµµµµµµµµµµ˜˜˜˜˜µµµµ˜µ˜µ˜µ˜µ˜µ˜µ˜µ˜µ˜µ˜µ˜˜˜˜˜˜˜µµµµµµ */
 
 #tables {
    display: flex;
    flex-flow: row wrap;
-   /* border: 1px solid cornflowerblue; */
+  /*  border: 1px solid cornflowerblue; */
    justify-content: center;
    background-color: black;
+   width: 80%;
 }
 
 
 
 
 
-
-
 section#details {
-               /*   border: 3px solid red; */
+  /*  border: 3px solid red; */
    display: flex;
     margin-top: 50px;
+    width: 80%;
 }
 
 

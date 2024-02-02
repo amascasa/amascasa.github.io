@@ -7,10 +7,11 @@
     <title>RagatzHome</title>
 
 
-    <link href="modal.css" rel="stylesheet">
+   
     <link href="nav.css" rel="stylesheet">
     <link href="ragatz.css" rel="stylesheet">
     <link href="ragatzLayout.css" rel="stylesheet">
+    <link href="modal.css" rel="stylesheet">
  
     <script src="modal.js"></script>
 </head>
@@ -64,57 +65,87 @@
     <img src="3.entryBird.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
   </div>
   <div class="column">
-    <img src="5.rightCornerBird.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+    <img src="5.rightCornerBird.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
   </div>
   <div class="column">
-    <img src="6.leftCornerEye.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+    <img src="6.leftCornerEye.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
   </div>
   <div class="column">
-    <img src="7.leftCornerBird.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+    <img src="7.leftCornerBird.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
   </div>
   <div class="column">
-    <img src="8.familyCornerEye.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+    <img src="8.familyCornerEye.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow">
   </div>
   <div class="column">
-    <img src="9.familyCornerBird.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+    <img src="9.familyCornerBird.jpg" onclick="openModal();currentSlide(9)" class="hover-shadow">
   </div>
   <div class="column">
-    <img src="10.shopCornerEye.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+    <img src="10.shopCornerEye.jpg" onclick="openModal();currentSlide(10)" class="hover-shadow">
   </div>
   <div class="column">
-    <img src="11.shopCornerBird.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+    <img src="11.shopCornerBird.jpg" onclick="openModal();currentSlide(11)" class="hover-shadow">
   </div>
 
 </div>
 
 <!-- The Modal/Lightbox -->
+ <!-- Next/previous controls -->
+
+
 <div id="myModal" class="modal">
   <span class="close cursor" onclick="closeModal()">&times;</span>
   <div class="modal-content">
 
     <div class="mySlides">
-      <div class="numbertext">1 / 4</div>
       <img src="1.top.jpg" style="width:100%">
     </div>
 
+    
+
     <div class="mySlides">
-      <div class="numbertext">2 / 4</div>
       <img src="4.rightCornerEye.jpg" style="width:100%">
     </div>
 
     <div class="mySlides">
-      <div class="numbertext">3 / 4</div>
       <img src="2.entryEye.jpg" style="width:100%">
     </div>
 
     <div class="mySlides">
-      <div class="numbertext">4 / 4</div>
       <img src="3.entryBird.jpg" style="width:100%">
     </div>
 
-    <!-- Next/previous controls -->
+    <div class="mySlides">
+      <img src="5.rightCornerBird.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="6.leftCornerEye.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="7.leftCornerBird.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="8.familyCornerEye.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="9.familyCornerBird.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="10.shopCornerEye.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="11.shopCornerBird.jpg" style="width:100%">
+    </div>
+
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+   
 
     <!-- Caption text -->
     <div class="caption-container">
@@ -123,34 +154,46 @@
 
     <!-- Thumbnail image controls -->
     <div class="column">
-      <img class="demo" src="1.top.jpg" onclick="currentSlide(1)" alt="PlanView">
+      <img class="demo" src="1.top.jpg" onclick="currentSlide(1)" alt="">
     </div>
 
     <div class="column">
-      <img class="demo" src="4.rightCornerEye.jpg" onclick="currentSlide(2)" alt="RightCorner">
+      <img class="demo" src="4.rightCornerEye.jpg" onclick="currentSlide(2)" alt="">
     </div>
 
     <div class="column">
-      <img class="demo" src="2.entryEye.jpg" onclick="currentSlide(3)" alt="Mountains">
+      <img class="demo" src="2.entryEye.jpg" onclick="currentSlide(3)" alt="">
     </div>
 
     <div class="column">
-      <img class="demo" src="3.entryBird.jpg" onclick="currentSlide(4)" alt="Lights">
+      <img class="demo" src="3.entryBird.jpg" onclick="currentSlide(4)" alt="">
     </div>
     <div class="column">
-      <img class="demo" src="5.rightCornerBird.jpg" onclick="currentSlide(1)" alt="">
-    </div>
-
-    <div class="column">
-      <img class="demo" src="6.leftCornerEye.jpg" onclick="currentSlide(2)" alt="">
+      <img class="demo" src="5.rightCornerBird.jpg" onclick="currentSlide(5)" alt="">
     </div>
 
     <div class="column">
-      <img class="demo" src="7.leftCornerBird.jpg" onclick="currentSlide(3)" alt="">
+      <img class="demo" src="6.leftCornerEye.jpg" onclick="currentSlide(6)" alt="">
     </div>
 
     <div class="column">
-      <img class="demo" src="8.familyCornerEye.jpg" onclick="currentSlide(4)" alt="">
+      <img class="demo" src="7.leftCornerBird.jpg" onclick="currentSlide(7)" alt="">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="8.familyCornerEye.jpg" onclick="currentSlide(8)" alt="">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="9.familyCornerBird.jpg" onclick="currentSlide(9)" alt="">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="10.shopCornerEye.jpg" onclick="currentSlide(10)" alt="">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="11.shopCornerBird.jpg" onclick="currentSlide(11)" alt="">
     </div>
   </div>
 </div>

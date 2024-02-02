@@ -3,19 +3,30 @@ html {
  }
   
   body {
-    width: 90%;
+    width: 80%;
     margin: auto;
     color: white;
     background-color: black;
+    
      }
+
+     header {
+      width: 100%;
+      border: 2px solid white;
+      box-shadow: 0px 0px 20px 5px orange;
+      margin-top: 40px;
+      padding: 0px 10px;
+      border-radius: 4px;
+   }
   
    h1, h2, h4{
       text-align: center;
-      border: 1px solid aliceblue;
+     /*  border: 1px solid aliceblue; */
    }
 
    h1 {
     color:orange;
+    
    }
 
    h2 {
@@ -37,6 +48,7 @@ html {
   
   section#tables, #display {
     margin: 20px;
+    width: 100%;
   }
 
   #displaySets {
@@ -56,6 +68,10 @@ html {
       background-color: black;
    
   }
+
+  table#cabinetsBox {
+    width: 100%
+ }
 
   section#images {
    border: 2px solid aqua;
@@ -77,7 +93,7 @@ caption {
   td, tr, th {
    border: 1px solid orange;
    padding: 10px 100px;
-   /* box-shadow: 0px 0px 10px 1px white inset; */
+   box-shadow: 0px 0px 10px 1px white inset;
    border-radius: 2px; 
   }
 
