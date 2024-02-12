@@ -15,18 +15,23 @@ body {
   padding-bottom: 20px;
  }
 
+ h1, h3 {
+  box-shadow: 0px 0px 10px 1px white inset;
+ }
+
 h1 {
-     color: white;
-     background-color: black;
-     font-family:Verdana, Geneva, Tahoma, sans-serif;
-     text-align:center;
-     box-shadow: 0px 0px 4px 4px white inset;
-     border-radius: 5px;
-     padding: 5px;
+  color: white;
+  background-color: black;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-align:center;
+  box-shadow: 0px 0px 4px 4px white inset;
+  border-radius: 5px;
+  border-color: aqua;
+  padding: 5px;
 }
 
 #intro {
-  border: 1px solid white;
+  /* border: 1px solid white; */
   padding: 10px;
 }
 
@@ -34,6 +39,7 @@ h3 {
   text-align: center;
   border: 1px solid white;
   padding: 5px;
+  border-radius: 3px;
 }
 
 img {
@@ -42,6 +48,15 @@ img {
   margin: 15px auto;
   border: 1px solid black;
   box-shadow: 0px 0px 20px 1px;
+}
+
+#wise {
+  background-color: aqua;
+}
+
+#introImage {
+  border-radius: 3px;
+  object-fit: contain;
 }
 
 
@@ -53,8 +68,22 @@ a:visited {
   color: orange;
 }
 
+label {
+  font-size: 1.4em;
+}
 
-/* ∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂--6.1--∂∂∂∂∂∂∂∂∂∂∂∂∂ -- */
+.animeButton {
+  box-shadow: 0px 0px 8px 2px white;
+  margin-bottom: 30px;
+  justify-content: center;
+  border: 2px solid aqua;
+  border-radius: 3px;
+  padding: 3px;
+  margin-left: 10px;
+}
+
+
+
 
 
 
