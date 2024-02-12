@@ -27,9 +27,8 @@
        $('.border').animate({borderColor: 'aqua'}, 2000);
        $('#introWords').animate({color: 'aqua'}, 2000);
        let wordsReset = setTimeout(function() {$('#introWords').animate({color: 'white'}, 2000)}, 2000);
-       $('#wise').css('filter', 'hueRotate(90deg)');
+       $('#wise').animate({opacity: '67%'}, 1500);
        
-      
       });
 
      });
@@ -42,7 +41,10 @@
 
    <header>
       <h1 class="border">HTML / CSS / JQuery</h1>
-      <img src="daFotiJpeg-5-2.jpg" class='border' id='wise' alt="Wise Reflection">
+      <div id="wiseContainer">
+        <img src="daFotiJpeg-5-2.jpg" class='border' id='wise' alt="Wise Reflection">
+      </div>
+      
    </header>
 
    
