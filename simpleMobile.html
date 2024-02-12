@@ -9,21 +9,52 @@
   
    <link href="simpleLayout.css" rel="stylesheet">
    <link href="simple.css" rel="stylesheet">
-   
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/color/jquery.color.plus-names-2.2.0.js"
+            integrity="sha256-B2NKhQ/4wyx0RUkvxp34OVk2/+J9zwZRpFyQIst5/XY=" 
+            crossorigin="anonymous"></script>
+
+
+    <script>
+
+    $(document).ready(function(){
+      
+      $('.animeButton').on('click', function(){
+       $('h1').css('color', 'aqua');
+       let colorReset = setTimeout(function() {$('h1').css('color', 'white')}, 4000) 
+       $('h1').animate({'font-size': '+=0.5rem'}, 2000);
+       $('h1').animate({'font-size': '-=0.5rem'}, 2000);
+       $('.border').animate({borderColor: 'aqua'}, 2000);
+       $('#introWords').animate({color: 'aqua'}, 2000);
+       let wordsReset = setTimeout(function() {$('#introWords').animate({color: 'white'}, 2000)}, 2000);
+       $('#wise').css('filter', 'hueRotate(90deg)');
+       
+      
+      });
+
+     });
+
+   </script>
 
 </head>
 
-<body onload="navBar()">
+
 
    <header>
-      <h1>Simple HTML / CSS</h1>
-      <div id="navBar"></div>
-      <img src="daFotiJpeg-5-2.jpg" alt="Wise Reflection">
+      <h1 class="border">HTML / CSS / JQuery</h1>
+      <img src="daFotiJpeg-5-2.jpg" class='border' id='wise' alt="Wise Reflection">
    </header>
 
+   
+   <form>
+    <label for="button">Animations using JQuery</label>
+    <input type='button' id='button' class='animeButton' value="¡Start Animation!">
+   </form>
+   
+
  
-   <div id="intro">
-     <img id="introImage" src="swing.jpeg" alt="swing room build">
+   <div id="intro" class="'border">
+     <img id="introImage" class='border' src="swing.jpeg" alt="swing room build">
       <p id="introWords">
         My name is Adam. I started last summer in  the Web and Mobile App Development program. So far I have taken  HTML/CSS, JavaScript and Java. This semester I am also taking Intro to Databases and Mobile App Development. 
 
@@ -35,27 +66,26 @@
     </div>
    
   
-   <p>I am attending this class to learn more about app development. And also because
-      it is required.
-   </p>
+   <p>I am attending this class to learn more about app development.</p>
 
-   <h3>Technologies for this Class</h3><br>
+   <h3 class="border">Technologies for this Class</h3><br>
     <ul>
         <li>HTML</li>
         <li>CSS</li> 
         <li>JavaScript</li>
     </ul>
     <br>
-    <h3>Rescources</h3>
+    <h3 class="border">Rescources</h3>
     <ul>
-        <li><a href="https://www.w3schools.com" target="_blank">W3Schools.com</a>
+        <li>
+          <a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer">W3Schools.com</a>
           <ul>
             <li>W3 has tutorails for all major programming languages. Great reference source 
                 while also appropriately formatted to function as a stand-alone learning enviroment.
             </li>
           </ul>
         </li>
-        <li><a href="https://developer.mozilla.org/en-US/" target="_blank">mdn</a>
+        <li><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener noreferrer">mdn</a>
           <ul>
             <li>Secondary rescource. Top of the page often has the format, or formula, 
                 akin to equations in math.
@@ -66,8 +96,5 @@
 
 
     
-
-
-
 </body>
 </html>
