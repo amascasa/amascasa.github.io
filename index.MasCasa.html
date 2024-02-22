@@ -11,7 +11,7 @@
       margin-bottom: 20px;
       background-color: black;
       opacity: 80%;
-      border: 2px solid orange;
+      border: 2px solid orangered;
       
     }
 
@@ -45,26 +45,31 @@
 }  */
 
 
+* {
+  box-sizing: border-box;
+}
 
-
-    main #pocoFoto{
+    #pocoFoto{
       display: flex;
-      flex-wrap: wrap;
-      padding: 0 4px;
+      flex-flow: row wrap;
+      padding: 0 0px;
+      border: 2px solid white;
+     /*  width: 100%; */
     } 
 
-    #img_container {
-      flex: 25%;
+    .img_container {
+      flex: 20%;
       max-width: 25%;
-      padding: 0 4px;
-      border: 2px solid white;
-      
-
+     
+      padding: 0 1px;
+      border: 2px solid orange;
     }
+
     img {
       margin-top: 8px;
       vertical-align: middle;
       width: 100%;
+     /*  object-fit: contain; */
     }
    
 
@@ -79,24 +84,30 @@
 //åååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååå
 
     function foto() {
-
-        let html =  "<div id='img_container'>";
+      let i, j, numColumns, numFotos, html;
         
-        for (let i = 1; i < 68; i++) {
+        numColumns = 4;
 
-          let fileNum = Math.floor((Math.random() * 67) + 1);
-          let size = Math.floor((Math.random() * 200) + 1) + 200;
 
-            //html += "<img src='" + fileNum + "MasCasa.jpg' width='" + size + "'>";
-            html += "<img class=row' src='" + fileNum + "MasCasa.jpg'>";
-            console.log(fileNum, size, html);  
-        }
+         for(j = 0; j < numColumns; j++) {
+            html += "<div class='img_container'>";
+            
+               for (let i = 0; i < 10; i++) {
+                  
+                  let fileNum = Math.floor((Math.random() * 67) + 1);
+                  let size = Math.floor((Math.random() * 200) + 1) + 200;
 
-        html += '</div>';
-        document.getElementById('pocoFoto').innerHTML = html;
+                  html += "<img src='" + fileNum + "MasCasa.jpg'>";
+                 
+               }
+
+            html += "</div>";
+
+          }
+
+      document.getElementById('pocoFoto').innerHTML = html;
         
-       
-      }
+   }
 
       
 
@@ -114,10 +125,11 @@
     <h1>MasCasa</h1>
   </header>
 
- 
+
+   <div id="pocoFoto"></div>
 
 
-  <main id="pocoFoto"></main>
+   <div id="code"></div>
 
  </body>
-</html>
+</html> 
