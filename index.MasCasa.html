@@ -6,6 +6,19 @@
  <title>MasCasa</title>
  <style> 
 
+   
+
+   * {
+  box-sizing: border-box;
+}
+ 
+  
+   body {
+    background-color: rgb(69, 65, 65);
+    color: white;
+    width: 100%;
+   }
+
    header {
       width: 100%;
       margin-bottom: 20px;
@@ -15,39 +28,35 @@
       
     }
 
-   body {
-    background-color: rgb(69, 65, 65);
-    color: white;
-    width: 100%;
-   }
-
    h1 {
       text-align: center;
     }
+   
+    nav {
+      border: 1px solid yellow;
+      
+    }
+
+    ul {
+      border: 1px solid green;
+      display: flex;
+      flex-flow: row nowrap;
+      list-style-type: none;
+    }
+
+    li {
+      border: 1px solid indigo;
+      width: 33%;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
 
 
- /*   .row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
-
-/* Create four equal columns that sits next to each other */
-/* .column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-}
-
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-}  */
-
-
-* {
-  box-sizing: border-box;
-}
 
     #pocoFoto{
       display: flex;
@@ -59,10 +68,9 @@
 
     .img_container {
       flex: 20%;
-      max-width: 25%;
-     
+      max-width: 20;
       padding: 0 1px;
-      border: 2px solid orange;
+     /*  border: 2px solid orange; */
     }
 
     img {
@@ -71,6 +79,10 @@
       width: 100%;
      /*  object-fit: contain; */
     }
+
+
+
+    
    
 
    
@@ -82,12 +94,10 @@
 
 
 //åååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååå
+window.onload = function(){
 
-    function foto() {
-      let i, j, numColumns, numFotos, html;
-        
-        numColumns = 4;
-
+  let i, j, numColumns, numFotos, html;
+      numColumns = 4;
 
          for(j = 0; j < numColumns; j++) {
             html += "<div class='img_container'>";
@@ -105,9 +115,14 @@
 
           }
 
-      document.getElementById('pocoFoto').innerHTML = html;
+       document.getElementById('pocoFoto').innerHTML = html;
+}
+  
+     
+
+     
         
-   }
+   
 
       
 
@@ -116,20 +131,35 @@
       
 
    </script>
+   
   </head>
   
 
- <body onload="foto()">
+ <body>
   
-  <header>
+
     <h1>MasCasa</h1>
-  </header>
+    <nav id="roba">
+      <ul>
+        <li><a href='index.MasCasa.html'>casa</a></li>
+        <li><a href='phioro.html'>phioro</a> </li>
+        <li><a href="tavoli.html">tavoli</a></li>
+        <li><a href='angolo.html'>angolo</a></li>
+        <li><a href='appDev.html'>appDev</a></li>
+      </ul>
+    </nav>
+    
+  
 
 
-   <div id="pocoFoto"></div>
+  
 
 
-   <div id="code"></div>
+   <div id="pocoFoto">
+    <div class="img_container"></div>
+   </div>
 
+
+   
  </body>
 </html> 
