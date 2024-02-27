@@ -19,10 +19,11 @@ window.onload = function(){
 
   let i, j, numColumns, numFotos, html;
       numColumns = 4;
+        html = '';
 
          for(j = 0; j < numColumns; j++) {
             html += "<div class='img_container'>";
-            
+            console.log(html);
                for (let i = 0; i < 10; i++) {
                   
                   let fileNum = Math.floor((Math.random() * 67) + 1);
@@ -71,16 +72,10 @@ window.onload = function(){
     </nav>
     
   
-
-
-  
-
-
-   <div id="pocoFoto">
-    <div class="img_container"></div>
-   </div>
+   <div id="pocoFoto"></div>
 
 
    
  </body>
+
 </html> 
