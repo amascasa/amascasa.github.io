@@ -1,0 +1,106 @@
+@media screen and (max-width: 600px) {
+
+   body, div#header, .content, .col-right, .sidebar-left, #footer {
+      width: 100%;
+      box-sizing: border-box;
+      padding:0 3px;
+      }
+
+   div#header {
+      padding: 45px;
+      margin: 0 0;
+      
+   }
+
+   ul.navigation li{
+		display:inline-block;
+		margin: 0;
+      padding: 10px 0;
+	}
+
+    ul.navigation li:first-of-type {
+        padding-right: 10px;         
+                  
+   }
+
+   h1 {
+      font-size: 1.6rem;
+   }
+
+   div.content {
+      margin: 0;
+   }
+
+   .list {
+      padding: 10px 0; 
+   }
+   
+   .list li{
+      display: inline; 
+   }
+
+   .list li a {
+      font-size: .75rem;
+      
+   }
+
+   .list li:first-of-type {
+      padding-right: 48px;
+     
+   }
+
+   .footer {
+      padding: 0;
+      margin: 0;
+   }
+
+   .sidebar-left {
+      padding-bottom: 20px;
+   }
+  
+
+}
+
+
+
+@media screen and (min-width: 601px) {
+
+   div#header {
+      width: 870px;
+      padding: 45px 15px 15px;
+      margin: 0 auto;
+      min-height: 130px;
+   }
+						
+	ul.navigation li a:hover{
+		background-color:#000; /*this is a hover pseudo class.  By designating a different background color, than the class for the a tag above, when a mouse hovers over these particular links, in the navigation bar, the background color will change to what's defined here */
+		
+	}
+
+   div.content{
+		margin:15px auto; 
+		width:900px;
+	}
+
+   div.col-right {
+      float: right;
+      width: 660px;
+   }
+
+   div.sidebar-left{
+		float:left;
+		padding:0 10px;
+		width:200px;	/* when floating content next to each other, applying set widths will make the content play nice with each other. Change the width of the siebar, or take away the width of the above "div.col-right" and see what happens to get a better idea of how widths effect floats */
+		}
+
+     
+      .list{
+         padding:0 0 20px 15px;	/* adds spacing to the bottom of the list to further divide the content for eaier segragation */
+      }
+
+      #footer {
+         margin:0 auto;
+		   padding:15px;
+         width:900px;
+      }
+}
