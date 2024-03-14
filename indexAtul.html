@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta charset="utf-8" /> 
+  <meta name="poems fotos paintings" content="Atul">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atul Ranchod</title> 
+  <link href="atul.css" rel="stylesheet">
+  
+
+  <script>
+
+   function loadPhotos() {
+
+      let fileNum, i, html;
+
+      html = '<div>';
+      
+      for(i = 2; i < 5; i++) {
+         console.log(i)
+         html += "<img class='photo' src='photo." + i + ".jpg'>"
+      
+      }
+
+      html += '</div>';
+      document.getElementById('photo').innerHTML = html;
+
+   }
+
+
+
+</script>
+
+</head> 
+
+<body onload="loadPhotos()">
+
+
+  <header>
+   <h1>Poems Photos Paintings</h1>
+   <h4>by Atul Ranchod</h4>
+   <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="atul.poems.html" >Poems</a></li>
+      <li><a href="atul.photos.html" >Photography</a></li>
+      <li><a href="atul.paintings.html" >Painting</a></li>
+   </ul>
+   
+   <!-- art-sorter@atul-416718.iam.gserviceaccount.com -->
+   
+  
+  </header>
+
+
+
+    
+  
+    <div id="photo"></div>
+
+
+
+
+
+
+
+</body>
+
+</html>
