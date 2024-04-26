@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Service Worker & PWA</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="app.js"></script>
+    <link rel="stylesheet" href="sw.mediaQ.css">
+    <link rel="manifest.json" href="/manifest.json">
     <script src="sw.js"></script>
-
+    <style>
+        .example {
+            background-color: red
+        }
+    </style>
 
     <script>
 
@@ -23,22 +28,34 @@
 </head>
 <body>
 <div>
-<h1>Service Workers & PWA</h1>
+<h1 name="example" id="example">Service Workers & PWA</h1>
+
+<form>
+    <label for="background"></label>
+    <select id="background" name="background" onChange="changeBg()">
+       <option value="">Select Background</option>
+       <option value="url('lightgold.jpg')">Light Gold</option>
+       <option value="url('lightblue.jpg')">Blue</option>
+   </select>
+</form>
 
 
-<label for="background"></label>
-<select id="background" name="background" onChange="changeBg()">
-    <option value="">Select Background</option>
-    <option value="url('lightgold.jpg')">Light Gold</option>
-    <option value="url('lightblue.jpg')">Blue</option>
-</select>
+<p>
+    first paragraph abpout service workers
+</p>
+
+<p>
+    And this would be the second
+</p>
 
 
+<form>
+    <label for="name">Enter Your name</label>
+    <input type="text" id="name" name="name">
+</form>
 
 
-
-
-
+<p></p>
 
 
 
