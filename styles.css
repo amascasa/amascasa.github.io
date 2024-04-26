@@ -1,0 +1,12 @@
+body { background-color: white; 
+       font-family: Helvetica, Arial, sans-serif; 
+	   font-size: 1.5em; 
+	   color: black; }
+	   
+h1 { text-align: center; 
+     margin-bottom: 2em;
+	 font-style: italic; }
+
+img { float: left; 
+      border: 3px solid blue;
+	  border-radius: 10px; }
