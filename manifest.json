@@ -2,18 +2,9 @@
 {
    "short_name": "PWA",
    "name": "ServiceWorkers&PWA",
-   
+
    "icons": [
-   {
-   "src": "icon-48.png",
-   "type": "image/png",
-   "sizes": "48x48"
-   },
-   {
-   "src": "icon-100.png",
-   "type": "image/png",
-   "sizes": "100x100"
-   },
+
    {
    "src": "icon-196.png",
    "type": "image/png",
