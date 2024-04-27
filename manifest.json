@@ -21,7 +21,22 @@
    "background_color": "white",
    "display": "standalone",
    "scope": "/",
-   "theme_color": "#3367D6"
+   "theme_color": "#3367D6",
+
+   "screenshots": [
+      {
+        "src": "/icon-narrow.jpg",
+        "type": "image/jpg",
+        "sizes": "540x720",
+        "form_factor": "narrow"
+      },
+      {
+        "src": "/icon-wide.jpg",
+        "type": "image/jpg",
+        "sizes": "720x540",
+        "form_factor": "wide"
+      }
+    ]
    }
 
 
