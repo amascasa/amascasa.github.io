@@ -1,12 +1,21 @@
-body { background-color: white; 
-       font-family: Helvetica, Arial, sans-serif; 
-	   font-size: 1.5em; 
-	   color: black; }
+body { 
+	display: flex;
+	flex-flow: row wrap;
+	background-color: white; 
+	background-repeat: no-repeat;
+   font-family: Helvetica, Arial, sans-serif; 
+	font-size: 1.2em; 
+	color: black; 
+}
 	   
-h1 { text-align: center; 
-     margin-bottom: 2em;
-	 font-style: italic; }
+h1 { 
+	  text-align: center; 
+     margin-bottom: 1.2em;
+	  font-style: italic; 
+	}
 
-img { float: left; 
+img {  
+	  
       border: 3px solid blue;
-	  border-radius: 10px; }
+	   border-radius: 10px; 
+	}

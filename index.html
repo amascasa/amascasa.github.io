@@ -15,18 +15,26 @@
     <script>
 
         function changeBg () {
-           
             x = document.getElementById('background').value;
             console.log('"' + x + '"');
-            document.body.style.backgroundImage = x;
-            
+            document.body.style.backgroundImage = x;  
+        }
+
+        function local () {
+            const name = document.getElementById('name').value;
+            localStorage.setItem('name', name);
+
+            const localName = localStorage.getItem('name');
+            document.getElementById('localStorage').innerHTML = 
+            'Welcome back ' + localName + '!';
+
         }
        
     </script>
 </head>
 <body>
 <div>
-<h1 name="example" id="example">Service Workers & PWA</h1>
+<h1>Service Workers & PWA</h1>
 
 <form>
     <label for="background"></label>
@@ -41,21 +49,24 @@
 
 <h3>Progressive Web Applications</h3>
 <p>
-    first paragraph abpout service workers
+    Progressive Web Applications (PWA) are a powerful set of tools to use when developing
+    non-native applications. The PWA enviroment allows the designer of an app to produce
+    native-like apllications. Part of the process is storing critial files that can be loaded 
+    in case of no internet connection. This allows the app to function regardless of a connection,
+    making the app much more reliable. Another benefit is speed. With the critical files stored locally
+    retrieving them is less cpu intensive. Also with four different options on setting the viewport
+    a developer can achieve a native app appearence without the browser bar.
 </p>
 
-<p>
-    And this would be the second
-</p>
 
 
 <form>
-    <label for="name">Enter Your name</label>
-    <input type="text" id="name" name="name" autocomplete="on">
+    <label for="name">su nombre</label>
+    <input type="text" id="name" name="name" autocomplete="on" onChange="local()">
 </form>
 
 
-<p></p>
+<p id="localStorage"></p>
 
 
 
