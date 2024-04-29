@@ -1,10 +1,11 @@
 var CACHE_VERSION = 'myapp-v1';
 var CACHE_FILES = [
     'index.html',
-    'lightblue.jpg',
+    'lightblue2.jpg',
     'lightgold.jpg',
-    'app.js',
-    'styles.css'
+    'styles.css',
+    'sw.mediaQ.css',
+    'manifest.json'
 ];
 
 self.addEventListener('install', event => { //installs servive worker

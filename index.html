@@ -6,7 +6,7 @@
     <title>Service Worker & PWA</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="sw.mediaQ.css">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="manifest.json">
     <script src="sw.js"></script>
     <style>
         
@@ -16,7 +16,6 @@
 
         function changeBg () {
             x = document.getElementById('background').value;
-            console.log('"' + x + '"');
             document.body.style.backgroundImage = x;  
         }
 
@@ -27,7 +26,6 @@
             const localName = localStorage.getItem('name');
             document.getElementById('localStorage').innerHTML = 
             'Welcome back ' + localName + '!';
-
         }
        
     </script>
@@ -41,7 +39,7 @@
     <select id="background" name="background" onChange="changeBg()">
        <option value="">Select Background</option>
        <option value="url('lightgold.jpg')">Light Gold</option>
-       <option value="url('lightblue.jpg')">Blue</option>
+       <option value="url('lightblue2.jpg')">Light Blue</option>
    </select>
 </form>
 
@@ -65,10 +63,7 @@
     <input type="text" id="name" name="name" autocomplete="on" onChange="local()">
 </form>
 
-
 <p id="localStorage"></p>
-
-
 
 </body>
 <script src="app.js"></script>
