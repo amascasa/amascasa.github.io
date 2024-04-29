@@ -19,15 +19,22 @@
             document.body.style.backgroundImage = x;  
         }
 
+
         function local () {
             const name = document.getElementById('name').value;
-            localStorage.setItem('name', name);
-
-            const localName = localStorage.getItem('name');
-            document.getElementById('localStorage').innerHTML = 
-            'Welcome back ' + localName + '!';
+            
+            if (localStorage.getItem('name') != name) { 
+                localStorage.setItem('name', name);
+                document.getElementById('localStorage').innerHTML = 
+                'Hello ' + name + ', welcome to the site!';
+            } else {
+                const localName = localStorage.getItem('name');
+                document.getElementById('localStorage').innerHTML = 
+                'Welcome back ' + localName + '!';
+            }
         }
        
+        
     </script>
 </head>
 <body>
