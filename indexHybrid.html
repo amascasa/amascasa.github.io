@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <!--
+   
+   -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Hybrid</title>
+   <link rel="manifest2" href="manifest.json">
+   <script src="sw.js"></script>
+   <style>
+      * {
+         box-sizing: border-box;
+      }
+
+
+      body {
+         color: white;
+         background-color: black;
+         border: 2px solid green;
+      }
+
+      h1 {
+         text-align: center;
+         border: 1px solid yellow;
+      }
+
+      .container {
+         display: flex;
+         flex-direction: row;
+         border: 5px solid red;
+      }
+
+
+      .content {
+         border: 1px solid rgb(243, 142, 70);
+         color: grey;
+         box-shadow: 2px 2px 10px 2px white;
+         margin: 20px;
+         padding: 5px;
+      }
+
+
+      p {
+         color: white;
+      }
+
+
+      @media only screen and (max-width: 768px) {
+         .container {
+            flex-direction: column;
+         }
+      }
+
+
+
+      /* 
+      @media only screen and (min-width: 769px) {
+         .content {
+            flex: 30%;
+         }
+      }  */
+   </style>
+
+
+
+
+   <script> </script>
+
+</head>
+
+
+
+<body>
+
+
+   <h1>Hybrid Solutions</h1>
+
+   <div class="container">
+      <div class="content" id="flutter">
+         <h3>Flutter</h3>
+         <p>
+            Flutter utilizes cross platform development that is
+            user friendly and lets the user see changes in real time.
+         </p>
+
+
+      </div>
+
+
+      <div class="content" id="react">
+         <h3>ReactNative</h3>
+         <P>djlsf asfsad fjksdf kasd jkfjk as jk
+            sdlfjas;dklfjk asdljfals;j f;jl j
+            salfa;sj dfjasjfasdjl;fjl
+         </P>
+      </div>
+
+
+
+      <div class="content" id="phonegap">
+         <h3>PhoneGap</h3>
+         <P>PhoneGap is no longer supported by Adobe</P>
+      </div>
+   </div>
+
+
+
+
+
+
+</body>
+<script src="app.js"></script>
+
+</html>
