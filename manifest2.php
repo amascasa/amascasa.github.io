@@ -5,7 +5,7 @@ CACHE:
 
 https://amascasa.github.io/indexHybrid.html
 https://amascasa.github.io/app.js
-https://amascasa.github.io/sw.js
+https://amascasa.github.io/sw2.js
 
 
 
