@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>fasier</title>
+
+   <link rel="stylesheet" href="sw.mediaQ.css">
+   <link rel="manifest" href="manifest.json">
+   <script src="service-worker.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <style>
+      * {
+         box-sizing: border-box;
+      }
+
+      body {
+         color: white;
+         background-color: black;
+         display: flex;
+         flex-flow: row wrap;
+      }
+
+      div {
+         width: 100vw;
+      }
+
+      h1 {
+         width: 100%;
+      }
+   </style>
+   <script>
+      $(document).ready(function () {
+         $.ajax({
+            method: 'GET',
+            url: 'https://api.api-ninjas.com/v1/dadjokes?',
+            headers: { 'X-Api-Key': 'UAwx28hyYXdpIxmx1Lpyew==WPOf9RPSUWao23xA' },
+            contentType: 'application/json',
+            success: function (result) {
+               //returns list with one dictionary key:value
+               qANDa = result[0];
+               console.log(qANDa);
+               joke = qANDa['joke'];
+               console.log(joke);
+               document.getElementById('dadJokes').innerHTML = joke;
+            },
+            error: function ajaxError(jqXHR) {
+               console.error('Error: ', jqXHR.responseText);
+            }
+
+         });
+
+      });
+
+
+
+
+   </script>
+
+</head>
+
+
+
+<body>
+
+   <h1>fasierApp</h1>
+
+
+   <div class="lst">
+      <ul>
+         <li>Projects</li>
+         <ul>
+            <li>Kitchen</li>
+         </ul>
+         <li>Sports</li>
+         <ul>
+            <li>MarchMadness</li>
+            <li>SuperBowl</li>
+            <li>Nba finals</li>
+            <li>The Masters</li>
+         </ul>
+         <li>Westerns</li>
+         <ul>
+            <li>Quigley</li>
+            <li></li>
+         </ul>
+         <li>Weather</li>
+         <li>Animals</li>
+      </ul>
+   </div>
+
+   <div id="dadJokes"></div>
+   <br>
+
+
+
+
+
+</body>
+
+</html>

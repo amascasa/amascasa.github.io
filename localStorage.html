@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Service Worker & PWA</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        
+    </style>
+
+    <script>
+
+        function local() {
+            const name = document.getElementById('name').value;
+            localStorage.setItem('name', name);
+
+            const localName = localStorage.getItem('name');
+            document.getElementById('localStorage').innerHTML = localName;
+
+        }
+
+       
+      
+       
+    </script>
+</head>
+<body>
+<h1>LocalStorage</h1>
+
+<form>
+    <label for="name">su nombre</label>
+    <input type="text" id="name" name="name" autocomplete="on" onchange="local()">
+   
+</form>
+
+
+<p id="localStorage"></p>
+
+
+
+</body>
+
+</html>
