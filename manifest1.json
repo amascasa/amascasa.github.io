@@ -1,0 +1,35 @@
+{
+   "short_name": "fasier",
+   "name": "Fasier'sApp",
+   "icons": [
+      {
+         "src": "Icon-196.png",
+         "type": "image/png",
+         "sizes": "196x196"
+      },
+      {
+         "src": "Icon-512.png",
+         "type": "image/png",
+         "sizes": "512x512"
+      }
+   ],
+   "start_url": "index.html?launcher=true",
+   "background_color": "white",
+   "display": "standalone",
+   "scope": "/",
+   "theme_color": "#3367D6",
+   "screenshots": [
+      {
+         "src": "/Icon-narrow.jpg",
+         "type": "image/jpg",
+         "sizes": "540x720",
+         "form_factor": "narrow"
+      },
+      {
+         "src": "/Icon-wide.jpg",
+         "type": "image/jpg",
+         "sizes": "720x540",
+         "form_factor": "wide"
+      }
+   ]
+}
