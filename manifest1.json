@@ -13,7 +13,7 @@
          "sizes": "512x512"
       }
    ],
-   "start_url": "fasier.html?launcher=true",
+   "start_url": "/fasier.html?launcher=true",
    "background_color": "white",
    "display": "standalone",
    "scope": "/",
