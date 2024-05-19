@@ -20,15 +20,23 @@
          color: white;
          background-color: black;
          display: flex;
-         flex-flow: row wrap;
+         flex-flow: column nowrap;
+         justify-content: center;
       }
 
-      div {
-         width: 100vw;
+      #dadJokes {
+         text-align: center;
       }
 
       h1 {
          width: 100%;
+         text-align: center;
+      }
+
+      button {
+         margin: 10px;
+         padding: 5px;
+         box-shadow: 0px 0px 4px 2px white;
       }
    </style>
 
@@ -94,7 +102,7 @@
 
    <div id="dadJokes"></div>
 
-   <button onclick="location.reload()">Jiokes</button>
+   <button onclick="location.reload()">The More Jokes Button</button>
 
 
 
