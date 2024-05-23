@@ -1,5 +1,5 @@
 {
-   "short_name": "fasier",
+   "short_name": "aPapaAppa",
    "name": "Fasier'sApp",
    "icons": [
       {
@@ -15,7 +15,7 @@
    ],
    "id": "/fasier.html?launcher=true",
    "start_url": "/fasier.html?launcher=true",
-   "background_color": "white",
+   "background_color": "black",
    "display": "standalone",
    "scope": "/",
    "theme_color": "#3367D6",
