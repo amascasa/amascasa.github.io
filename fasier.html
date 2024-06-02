@@ -61,6 +61,24 @@
 
          });
 
+
+         $.ajax({
+            method: 'GET',
+            url: 'https://api.api-ninjas.com/v1/facts?limit=' + limit,
+            headers: { 'X-Api-Key': 'UAwx28hyYXdpIxmx1Lpyew==WPOf9RPSUWao23xA' },
+            contentType: 'application/json',
+            success: function (result) {
+               //returns list with one dictionary key:value
+               fact = result[1]
+               console.log(fact);
+               document.getElementById('facts').innerHTML = fact;
+            },
+            error: function ajaxError(jqXHR) {
+               console.error('Error: ', jqXHR.responseText);
+            }
+
+         });
+
       });
 
 
