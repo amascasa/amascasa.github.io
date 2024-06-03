@@ -7,8 +7,8 @@
    <title>fasier</title>
 
    <link rel="stylesheet" href="sw.mediaQ.css">
-   <link rel="manifest" href="manifest1.json">
-   <script src="service-worker1.js"></script>
+   <!--  <link rel="manifest" href="manifest1.json">
+   <script src="service-worker1.js"></script> -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
    <style>
@@ -56,6 +56,7 @@
             contentType: 'application/json',
             success: function (result) {
                //returns list with one dictionary key:value
+               console.log(result);
                qANDa = result[0];
                console.log(qANDa);
                joke = qANDa['joke'];
@@ -71,14 +72,18 @@
 
          $.ajax({
             method: 'GET',
-            url: 'https://api.api-ninjas.com/v1/facts?limit=' + limit,
+            url: 'https://api.api-ninjas.com/v1/facts',
             headers: { 'X-Api-Key': 'UAwx28hyYXdpIxmx1Lpyew==WPOf9RPSUWao23xA' },
             contentType: 'application/json',
             success: function (result) {
+
                //returns list with one dictionary key:value
-               fact = result[1]
+               console.log(result)
+               factDict = result[0];
+               console.log(factDict);
+               fact = factDict['fact']
                console.log(fact);
-               document.getElementById('facts').innerHTML = fact;
+               document.getElementById('fact').innerHTML = fact;
             },
             error: function ajaxError(jqXHR) {
                console.error('Error: ', jqXHR.responseText);
@@ -106,6 +111,9 @@
    <button onclick="location.reload()">The More Jokes Button</button>
    <br><br>
    <button onclick="location.reload()">The More Facts Buttinno</button>
+   <br>
+   <div id="fact"></div>
+
 
 
    <div class="lst">
@@ -141,6 +149,6 @@
 
 
 </body>
-<script src="app1.js"></script>
+<!-- <script src="app1.js"></script> -->
 
 </html>
