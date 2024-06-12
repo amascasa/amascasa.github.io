@@ -13,76 +13,160 @@
 
 
    <script>
-      $(document).ready(function () {
+
+      function dadJoke() {
+         $(document).ready(function () {
+            $.ajax({
+               method: 'GET',
+               url: 'https://api.api-ninjas.com/v1/dadjokes?',
+               headers: { 'X-Api-Key': 'UAwx28hyYXdpIxmx1Lpyew==WPOf9RPSUWao23xA' },
+               contentType: 'application/json',
+               success: function (result) {
+                  //returns list with one dictionary key:value
+                  console.log(result);
+                  qANDa = result[0];
+                  console.log(qANDa);
+                  joke = qANDa['joke'];
+                  console.log(joke);
+                  document.getElementById('dadJoke').innerHTML = joke;
+               },
+               error: function ajaxError(jqXHR) {
+                  console.error('Error: ', jqXHR.responseText);
+               }
+
+            });
+         });
+      }
+
+
+      function fact() {
+         $(document).ready(function () {
+            $.ajax({
+               method: 'GET',
+               url: 'https://api.api-ninjas.com/v1/facts',
+               headers: { 'X-Api-Key': 'UAwx28hyYXdpIxmx1Lpyew==WPOf9RPSUWao23xA' },
+               contentType: 'application/json',
+               success: function (result) {
+
+                  //returns list with one dictionary key:value
+                  console.log(result)
+                  factDict = result[0];
+                  console.log(factDict);
+                  factSolo = factDict['fact']
+                  console.log(fact);
+                  document.getElementById('fact').innerHTML = factSolo;
+               },
+               error: function ajaxError(jqXHR) {
+                  console.error('Error: ', jqXHR.responseText);
+               }
+
+            });
+         });
+
+      }
+
+
+
+      /* function quote() {
+         $(document).ready(function () {
+            $.ajax({
+               method: 'GET',
+               url: 'https://api.api-ninjas.com/v1/quotes?category',
+               headers: { 'X-Api-Key': 'UAwx28hyYXdpIxmx1Lpyew==WPOf9RPSUWao23xA' },
+               contentType: 'application/json',
+               success: function (result) {
+                  console.log(result);
+                  fullInfo = result[0];
+                  console.log(fullInfo);
+                  author = fullInfo['author'];
+                  console.log(author);
+                  quoteSolo = fullInfo['quote'];
+                  console.log(quote);
+
+                  document.getElementById('quote').innerHTML = quoteSolo + ' ' + author;
+               },
+               error: function ajaxError(jqXHR) {
+                  console.error('Error: ', jqXHR.responseText);
+               }
+            });
+
+         });
+      } */
+
+
+
+
+
+      function animali() {
+         var animals = ['cheetah', 'bear', 'raccoon', 'gopher', 'dog', 'hummingbird',
+            'butterfly', 'cat', 'lion', 'polar bear', 'dolphin', 'vulture',
+            'oriole'];
+         randomNum = Math.floor(Math.random() * animals.length);
+         name = animals[randomNum]
+         console.log(randomNum);
+
          $.ajax({
             method: 'GET',
-            url: 'https://api.api-ninjas.com/v1/dadjokes?',
+            url: 'https://api.api-ninjas.com/v1/animals?name=' + name,
             headers: { 'X-Api-Key': 'UAwx28hyYXdpIxmx1Lpyew==WPOf9RPSUWao23xA' },
             contentType: 'application/json',
             success: function (result) {
-               //returns list with one dictionary key:value
                console.log(result);
-               qANDa = result[0];
-               console.log(qANDa);
-               joke = qANDa['joke'];
-               console.log(joke);
-               document.getElementById('dadJoke').innerHTML = joke;
-            },
-            error: function ajaxError(jqXHR) {
-               console.error('Error: ', jqXHR.responseText);
-            }
 
-         });
+               animalInfo = result[0];
+               console.log(animalInfo);
 
+               name = animalInfo['name'];
+               console.log(name);
 
-         $.ajax({
-            method: 'GET',
-            url: 'https://api.api-ninjas.com/v1/facts',
-            headers: { 'X-Api-Key': 'UAwx28hyYXdpIxmx1Lpyew==WPOf9RPSUWao23xA' },
-            contentType: 'application/json',
-            success: function (result) {
+               taxonomy = animalInfo['taxonomy'];
+               console.log(taxonomy);
 
-               //returns list with one dictionary key:value
-               console.log(result)
-               factDict = result[0];
-               console.log(factDict);
-               fact = factDict['fact']
-               console.log(fact);
-               document.getElementById('fact').innerHTML = fact;
-            },
-            error: function ajaxError(jqXHR) {
-               console.error('Error: ', jqXHR.responseText);
-            }
+               characteristics = animalInfo['characteristics'];
+               console.log(characteristics);
 
-         });
+               prey = characteristics['prey'];
+               console.log(prey);
+
+               slogan = characteristics['slogan'];
+               console.log(slogan);
 
 
+               document.getElementById('prey').innerHTML = name + ': ' + slogan;
 
 
-
-         $.ajax({
-            method: 'GET',
-            url: 'https://api.api-ninjas.com/v1/quotes',
-            headers: { 'X-Api-Key': 'UAwx28hyYXdpIxmx1Lpyew==WPOf9RPSUWao23xA' },
-            contentType: 'application/json',
-            success: function (result) {
-               console.log(result);
-               fullInfo = result[0];
-               console.log(fullInfo);
-               author = fullInfo['author'];
-               console.log(author);
-               quote = fullInfo['quote'];
-               console.log(quote);
-
-               document.getElementById('quote').innerHTML = quote + ' ' + author;
             },
             error: function ajaxError(jqXHR) {
                console.error('Error: ', jqXHR.responseText);
             }
          });
 
-      });
+      }
 
+
+      function gold() {
+         $(document).ready(function () {
+            $.ajax({
+               method: 'GET',
+               url: 'https://api.api-ninjas.com/v1/goldprice',
+               headers: { 'X-Api-Key': 'UAwx28hyYXdpIxmx1Lpyew==WPOf9RPSUWao23xA' },
+               contentType: 'application/json',
+               success: function (result) {
+
+                  //returns dictionary
+                  console.log(result);
+                  price = Math.round(result['price']);
+
+                  document.getElementById('gold').innerHTML = 'GoldValue: $' + price + ' per ounce';
+               },
+               error: function ajaxError(jqXHR) {
+                  console.error('Error: ', jqXHR.responseText);
+               }
+
+            });
+         });
+
+      }
 
 
    </script>
@@ -112,7 +196,8 @@
 
       #dadJoke,
       #fact,
-      #quote {
+      #quote,
+      #prey {
          background-color: black;
          border: 1px solid orange;
          border-radius: 6px;
@@ -142,9 +227,10 @@
       }
 
       button {
-         margin: 10px 30px 0px 30px;
+         margin: 10px 30px 20px 30px;
          padding: 5px;
          box-shadow: 2px 2px 10px white;
+         border-radius: 6px;
       }
 
       /*  .background {
@@ -160,7 +246,6 @@
          padding: 5px 30px 5px 30px;
          border: 2px solid orange;
          border-radius: 6px;
-         font-weight: bold;
          background-color: rgba(245, 187, 29, 0.5);
 
       }
@@ -176,7 +261,7 @@
          font-size: 1.1em;
       }
 
-      #ideas {
+      #gold {
          text-align: center;
          color: black;
          margin: 10px;
@@ -194,26 +279,34 @@
 
 
 
-<body>
+<body onload="dadJoke(), fact(), animali(), gold()">
 
    <h1>aPapaAppa</h1>
 
    <div id="dadJoke"></div>
+   <button onclick="dadJoke()">The More Jokes Button</button>
 
-   <button onclick="location.reload()">The More Jokes Button</button>
 
-   <br>
    <div id="fact"></div>
-   <button onclick="location.reload()">The More Facts Buttinno</button>
+   <button type="button" onclick="fact()">The More Facts Buttinno</button>
 
-   <br>
-   <div id="quote"></div>
+
+
+   <!-- <div id="quote"></div>
+   <button onclick="quote()">The More Quotes Buttinno</button> -->
+
+   <div id="prey"></div>
+   <button onclick="animali()">The More Animals Buttinno</button>
+
+
+
+
 
 
    <div class="background">
 
       <div class="thoughts">
-         <h3>Some Thoughts</h3>
+
          <ul>
             <li>Projects</li>
             <ul>
@@ -242,7 +335,7 @@
    </div>
 
 
-   <p id="ideas">ideas?</p>
+   <div id="gold"></div>
 
 
 
