@@ -1,0 +1,79 @@
+* {
+   box-sizing: border-box;
+}
+
+body {
+   border: 2px solid red;
+   background-color: black;
+   color: white;
+   display: flex;
+   flex-flow: column wrap;
+}
+
+header {
+   position: fixed;
+   padding-top: 20px;
+}
+
+h1 {
+   /*  border: 1px dashed orange; */
+   color: orange;
+   text-align: right;
+   padding-right: 100px;
+   font-family: 'Amatic SC';
+   font-size: 5.5em;
+}
+
+
+nav {
+   border: 1px solid orange;
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: space-around;
+
+}
+
+
+img {
+   border: 5px solid teal;
+   width: 80%;
+   height: auto;
+   box-shadow: 0px 0px 10px 2px white;
+
+}
+
+object {
+   border: 2px solid rgb(130, 204, 238)
+}
+
+
+nav a,
+button {
+   color: white;
+   background-color: black;
+   border: 1px solid white;
+   padding: 8px;
+   border-radius: 6px;
+
+}
+
+nav a:hover {
+   color: orange;
+   scale: 1.1;
+}
+
+
+
+
+.test {
+   margin-top: 80px;
+   margin-left: 50px;
+}
+
+object {
+   margin: 20px;
+}
+
+.test {
+   margin-bottom: 40px;
+}
