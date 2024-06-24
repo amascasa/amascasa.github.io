@@ -120,17 +120,13 @@
          }
       }
    </style>
-
-
    <script>
-
-
    </script>
 
 </head>
 
 <body>
-   <h1>Pajaro</h1>
+   <h1 class="title">Pajaro</h1>
 
    <header id="nav_container">
 
@@ -144,24 +140,24 @@
 
    </header>
 
-   <div>
+   <div class="details" id="D11">
       <img class='test' src="floorFraming.png" alt="Floor Plan" usemap="#details">
       <map name="details">
-         <area shape="circle" coords="720, 620, 30" href="D11.png" onclick>
+         <area shape="circle" coords="720, 620, 100" href="D11.png" onclick>
       </map>
    </div>
 
 
    <!--3d Model floor 1-->
-   <div>
+   <div name="1_framing_3d" class="model">
       <iframe
-         src="https://3dwarehouse.sketchup.com/embed/a9adf35d-4e8a-4267-a342-aa557af95b95?token=wFq_VDPYgB8=&binaryName=s21"
+         src="https://3dwarehouse.sketchup.com/embed/5ec191e6-050e-49db-8113-42a6b607007f?token=q3CVwu9tV5E=&binaryName=s21"
          frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="880" height="500"
          allowfullscreen></iframe>
    </div>
 
-   <!--3d Model floor 2-->
-   <div id="floor_1&2">
+   <!--3d Model floor 1&2-->
+   <div id="1&2_framing_3d" class="model">
       <iframe
          src="https://3dwarehouse.sketchup.com/embed/cb104c3d-3e4a-473c-87b7-d9357d1fceee?token=8gZk21RyXwQ=&binaryName=s21"
          frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="880" height="500"
@@ -170,9 +166,12 @@
 
 
    <!-- pdf plans -->
-   <object class="pdf" data="preliminarySet.pdf" width="90%" height="1100px"></object>
+   <object id='A.plans' class="pdf" data="plans_set.pdf"></object>
    <br>
-   <object class="pdf" data="details.pdf" width="90%" height="1100px"></object>
+   <object id='S&D.plans' class="pdf" data="plans_structural.pdf"></object>
+   <br>
+   <object id='structural_calc' class="pdf_letter" data="plans_structural_calc.pdf"></object>
+   <br>
 
 
    <!-- Detail D11 -->
@@ -216,24 +215,10 @@
 
 
 
-
-
-
-
-   <div>
-      <img src="fullModel.png" alt="" height="200px">
-   </div>
-   <br><br>
-
-   <div id='title'>
-      <h3>Materials</h3>
-      <hr>
-   </div>
-
    <br>
-   <object class="pdf" data="materials_total.pdf" width="800" height="800">Lista</object>
+   <object class="pdf_letter" data="materials_total.pdf">Lista</object>
 
-   </div>
+
 </body>
 
 
