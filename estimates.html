@@ -7,16 +7,26 @@
    <title>estimates</title>
    <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
    <link href="main.css" rel="stylesheet">
-
-
-
    <script> </script>
+   <style>
+      #est_container {
+         display: flex;
+         flex-flow: row wrap;
+         justify-content: space-around;
+      }
+
+      .pdf_letter {
+         width: 44vw;
+      }
+   </style>
 
 </head>
 
 <body>
 
    <h1 class="title">Pajaro</h1>
+
+
 
 
    <header id="nav_container">
@@ -28,14 +38,29 @@
             <a href="estimates.html">Estimates</a>
       </nav>
    </header>
-   <div id="hagle">
-      <h3>Hagle Lumber</h3>
-      <object class="pdf_letter" data="hagleEst.pdf">Hagle Lumber</object> <br>
-   </div>
 
-   <object class="pdf_letter" data="materials_total.pdf"></object>
 
-   </div>
+   <section id="est_container">
+
+      <div id="hagle" class="estimates">
+         <object class="pdf_letter" data="hagle_est_update.pdf">Hagle Lumber</object>
+      </div>
+      <div class="estimates" id="ojai_lumber">
+         <object class="pdf_letter" data="ojai_lumber_est.pdf"></object>
+      </div>
+
+      <div class="estimates" id="ojai_lumber">
+         <object class="pdf_letter" data="hagle_est_og.pdf"></object>
+      </div>
+
+      <div class="estimates" id="cw">
+         <object class="pdf_letter" data="cw_lumber_est.pdf"></object>
+      </div>
+
+   </section>
+
+
+
 </body>
 
 

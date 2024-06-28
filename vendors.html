@@ -7,10 +7,44 @@
    <title>Vendors</title>
    <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
    <link href="main.css" rel="stylesheet">
-
-
-
    <script> </script>
+   <style>
+      #contacts_container {
+         display: flex;
+         flex-flow: row wrap;
+         justify-content: space-around;
+         margin-top: 20px;
+      }
+
+      .contact {
+         border: 1px solid aqua;
+         width: 17%;
+         padding: 10px;
+         margin-bottom: 20px;
+         box-shadow: 0px 0px 10px 2px white;
+         align-content: center;
+         text-align: center;
+         /* box-shadow: 0px 0px 10px 2px orange inset; */
+      }
+
+      h2,
+      h3 {
+         margin-top: 2px;
+         margin-bottom: 8px;
+         color: orange;
+         /* font-weight: normal; */
+      }
+
+      a {
+         color: silver;
+         padding: 5px;
+         text-decoration: none;
+      }
+
+      a.link_title {
+         color: orange;
+      }
+   </style>
 
 </head>
 
@@ -29,13 +63,58 @@
    </header>
 
    <div id="lumber">
-      <h3>Lumber</h3>
       <a href="https://haglelumber.com/" alt="Hagle Lumber Website">Hagle Lumber</a>
       <a href="https://gsbuildingsupplies.com//" alt="">G&S Building Supplies</a>
       <a href="https://www.bldr.com/location/ventura-ca-yard/VENTCAYD/" alt="">Builders First Source</a>
       <a href="http://ojailumber.com/" alt="">Ojai Lumber Company</a>
       <a href="https://www.contractorswarehouse.com/" alt="">Contactors Warehouse</a>
-      <a href="" alt=""></a>
+      <a href="https://www.statereadymix.com/" alt="concrete">State Ready Mix</a>
+      <a href="https://www.etanhomeconstructions.com/" alt="Etan">Etan Home Construction</a>
+   </div>
+
+
+   <div id="contacts_container">
+      <div class="contact">
+         <h3><a class='link_title' href="https://haglelumber.com/" alt="Hagle Lumber Website">Hagle Lumber Co, Inc.</a>
+         </h3>
+         Ben Hagle<br>
+         3100 Somis Road<br>
+         Somis, CA, 93066<br>
+         <a href='tel: 805-987-3887'>(805) 987-3887</a><br>
+      </div>
+      <div class="contact">
+         <h3>Ojai Lumber</h3>
+         Mike<br>
+         1900 E. Ojai Avenue<br>
+         P.O. Box 248<br>
+         Ojai CA 93024<br>
+         <a href="tel: 805-646-1419">805-646-1419</a> <br>
+      </div>
+      <div class="contact">
+         <h3>State Ready Mix Inc.</h3>
+         3127 West Los Angeles Ave.<br>
+         Oxnard, CA 93036<br>
+         <a href='tel: (805) 647-2817'>(805) 647-2817</a><br>
+      </div>
+      <div class="contact">
+         <h3>Contractor's Warehouse</h3>
+         Maximillian<br>
+         <a href="tel: 805-339-9382">805-339-9382</a>
+      </div>
+      <div class="contact">
+         <h3>Etan Home Co.</h3>
+         Foundation estimate<br>
+         <a href="tel: 805-710-5881">805-710-5881</a><br>
+         <a href="mailto: Etanhomeco@gmail.com">Etanhomeco@gmail.com</a>
+      </div>
+      <div class="contact">
+         <h3> A & A Concrete</h3>
+         6650 Crescent Street #7<br>
+         Ventura, CA 93003<br>
+         805-676-0829<br>
+         a-aconcrete@att.net
+      </div>
+
    </div>
 
    <br><br>
