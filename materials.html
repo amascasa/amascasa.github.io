@@ -10,7 +10,73 @@
    <script> </script>
 </head>
 
+<style>
+   #tables_container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-content: baseline;
+   }
 
+   table {
+      width: 43vw;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-size: 1.2em;
+      padding: 20px;
+      border: 3px solid orange;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px 2px white, 0px 0px 20px 4px white inset;
+   }
+
+   tr,
+   td,
+   th {
+      padding: 20px;
+      border: 1px solid aqua;
+   }
+
+   tr {
+      color: white;
+      box-shadow: 0px 0px 4px 1px white;
+      /* border: 2px solid orangered; */
+   }
+
+   th {
+      color: orange;
+      font-size: 1.2em;
+
+      /*  border: 2px solid orangered; */
+   }
+
+   td {
+      color: white;
+      box-shadow: 0px 0px 4px 1px white inset, 0px 0px 4px 1px white;
+      /* border: 2px solid orangered; */
+   }
+
+   #stats_container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-items: baseline;
+      color: white;
+      font-size: 1.1em;
+      border: 1px solid aqua;
+   }
+
+   .stats {
+      color: white;
+      border-left: 2px solid orangered;
+      padding-left: 15px;
+   }
+
+   .category {
+      color: white;
+      font-size: 0.9em;
+      text-align: center;
+   }
+</style>
 
 <body>
 
@@ -23,1024 +89,496 @@
          <a href="materials.html" class="dropbtn">Materials</button>
             <a href="vendors.html">Vendors</a>
             <a href="estimates.html">Estimates</a>
+            <a href="details_click.html">Details</a>
       </nav>
    </header>
 
-   <div id="materials">
-      <object class="pdf_letter" data="materials_total.pdf">Lista</object>
+   <div id="stats_container">
+      <p class="stats">FloorSquare Footage: 2,008 ft<sup>2</sup></p>
+      <p class="stats">Linear Feet: 172’ 9”</p>
+      <p class="stats">Wall surface area: 2761.42 ft<sup>2</sup></p>
+      <p class="stats">Roof area: 1614.53 ft<sup>2</sup></p>
+      <p class="stats">Foundation Volume: 999 ft<sup>3</sup> => 37.037 yards<sup>3</sup></p>
+      <p class="stats">Slab & Gravel Volume: 451.54ft<sup>3</sup></p>
    </div>
 
 
 
-   <div id='materials_html'>
-      <p style="padding-top: 4pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">lumber_estimates Santa Paula St
-      </p>
-      <p style="text-indent: 0pt;text-align: left;"><br /></p>
-      <table style="border-collapse:collapse;margin-left:6.05253pt" cellspacing="0">
-         <tr style="height:19pt">
-            <td>
-               <p class="s1" style="padding-left: 5pt;text-indent: 0pt;text-align: left;">Lumber</p>
-            </td>
-            <td>
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Quantity</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Notes</p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s3" style="padding-top: 2pt;padding-left: 15pt;text-indent: 0pt;text-align: center;">2x</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">2x6x10 (9ft
-                  ceiling?)</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">240</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Cut for 9’
-                  ceilings</p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">2x6x16
-                  (fascia)
-               </p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">11</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">fascia</p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">2X10x8</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">2</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">stair landing
-               </p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">2X14x22</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">2</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">stair
-                  stringers
-               </p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">2x12x16</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">20</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">treads + deck
-               </p>
-            </td>
-         </tr>
-         <tr style="height:16pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s3" style="padding-top: 2pt;padding-left: 37pt;text-indent: 0pt;text-align: left;">Soul Plates
-               </p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">2x6x16 pt</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">10</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">3x6x12 pt</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">4</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:36pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">2x6x16</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">55</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-left: 5pt;text-indent: 0pt;line-height: 17pt;text-align: left;">Top plates
-                  &amp; 2floor Soul(x5)</p>
-            </td>
-         </tr>
-         <tr style="height:16pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s3"
-                  style="padding-top: 2pt;padding-left: 15pt;padding-right: 8pt;text-indent: 0pt;text-align: center;">6x
-               </p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">6x6x10</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">86</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:16pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:36pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-left: 5pt;text-indent: 0pt;line-height: 17pt;text-align: left;">2x12x16 (for
-                  concrete forms)</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">45</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">691 ft</p>
-            </td>
-         </tr>
-      </table>
-      <p style="text-indent: 0pt;text-align: left;"><br /></p>
-      <table style="border-collapse:collapse;margin-left:6.05253pt" cellspacing="0">
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s5" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">
-                  <u>En</u>g<u>ineered Lumber</u>
-               </p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Quantity</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Notes</p>
-            </td>
-         </tr>
-         <tr style="height:36pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">14” TJI 360
-                  “FJ-1” (I-</p>
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">joist)</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">35 @ 22’ //
-                  13 @
-                  18’</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 12pt;text-indent: 0pt;text-align: left;">{48} Total
-               </p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">1 1⁄8&quot;
-                  TJ®
-                  Rim Board</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">9 @ 20’</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:16pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s4" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Beams</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">1.75x14x22’
-                  LVL
-                  DRAG</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">1</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:36pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2"
-                  style="padding-left: 5pt;padding-right: 17pt;text-indent: 0pt;line-height: 17pt;text-align: left;">
-                  5.25x11.825x12’6 PSL “H-4</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">1</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:36pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2"
-                  style="padding-left: 5pt;padding-right: 33pt;text-indent: 0pt;line-height: 17pt;text-align: left;">
-                  5.25X14x18’6” PSL “FB-3”</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">1</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">7x14x18’6”
-                  PSL
-                  “FB-1”</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">1</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-      </table>
-      <table style="border-collapse:collapse;margin-left:6.05253pt" cellspacing="0">
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">7x16x18’ PSL
-                  “H-2”</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">1</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">6x12x8 #1
-                  “H-1”
-               </p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">3</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">6x12x20 #1
-                  “H-1”
-               </p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">1</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:16pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s4" style="padding-top: 2pt;padding-left: 8pt;text-indent: 0pt;text-align: left;">Hardi
-                  StrongWall
-               </p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:36pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">HFX 24x9 (1
-                  1/8
-                  ST</p>
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">bolt)</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">2</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">HFX 12x9</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">2</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:16pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s4" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Trusses</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Common</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">1 @ 18’6 // 3
-                  @
-                  22’</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">4 total</p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Girder</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">1 @ 1 8’6 //
-                  3 @
-                  22’</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">4 total</p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Drag</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">1 @ 22’</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">1 total</p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Jack</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:16pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-      </table>
-      <p style="padding-top: 4pt;text-indent: 0pt;text-align: left;"><br /></p>
-      <table style="border-collapse:collapse;margin-left:6.05253pt" cellspacing="0">
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s4" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Hardware</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Quantity</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Notes</p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">HDU-2</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">13</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">HDU-5</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">5</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">HDU-8</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">4</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">HDU.14</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">2</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">ECCQ 6x6</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">10</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">ECCLQ 6x6</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">2</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">ECCQ 4x6</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">1</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">EPCZ 6x6</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">2</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">MST-48</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">muchos</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:16pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">LTP4</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">lots</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">A-35</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">bunches</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:16pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:16pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-      </table>
-      <p style="padding-top: 3pt;text-indent: 0pt;text-align: left;"><br /></p>
-      <table style="border-collapse:collapse;margin-left:6.05253pt" cellspacing="0">
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s5" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">
-                  <u>P</u>ly<u>wood</u>
-               </p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Quantity</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Notes</p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">19/32” CDX
-                  Plywood</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">52</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">roof</p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">15/32” OSB
-               </p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">35</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">walls</p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">3/4” T &amp;
-                  G
-               </p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">44</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">floor</p>
-            </td>
-         </tr>
-      </table>
-      <table style="border-collapse:collapse;margin-left:6.05253pt" cellspacing="0">
-         <tr style="height:16pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s4" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Shear Walls
-               </p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">15/32”
-                  Struc-1
-               </p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">44</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">124.0 / 96’ +
-                  18.2 / 73’:</p>
-            </td>
-         </tr>
-         <tr style="height:36pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2"
-                  style="padding-left: 5pt;padding-right: 17pt;text-indent: 0pt;line-height: 17pt;text-align: left;">
-                  15/32”
-                  Struc-1 Inspected</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">10</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">B: 25ft C:11
-                  ft
-               </p>
-            </td>
-         </tr>
-         <tr style="height:36pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-left: 5pt;text-indent: 0pt;line-height: 17pt;text-align: left;">15/32”
-                  Struc-1
-                  InspBothSid</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">2</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">5 CC</p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">HFX 12x9</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">2</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-         <tr style="height:19pt">
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">HFX 24x9</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p class="s2" style="padding-top: 2pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">2</p>
-            </td>
-            <td
-               style="width:153pt;border-top-style:solid;border-top-width:1pt;border-top-color:#AAAAAA;border-left-style:solid;border-left-width:1pt;border-left-color:#AAAAAA;border-bottom-style:solid;border-bottom-width:1pt;border-bottom-color:#AAAAAA;border-right-style:solid;border-right-width:1pt;border-right-color:#AAAAAA">
-               <p style="text-indent: 0pt;text-align: left;"><br /></p>
-            </td>
-         </tr>
-      </table>
-      <p style="text-indent: 0pt;text-align: left;"><br /></p>
-      <p class="s6" style="padding-left: 5pt;text-indent: 0pt;line-height: 119%;text-align: left;">Adam Morehouse
-         805.660.3169</p>
-      <p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;"><a
-            href="mailto:adammorehouse@icloud.com">adammorehouse@icloud.com</a></p>
-   </div>
+   <div id="tables_container">
 
+      <!-- Foundation -->
+      <table>
+         <tr>
+            <th colspan="3">Foundation</th>
+         </tr>
+         <!--  <tr>
+            <td class="category">Item</td>
+            <td class="category">Quantity</td>
+            <td class="category">Price</td>
+         </tr> -->
+         <tr>
+            <td>Volume</td>
+            <td>967 ft^3 :: 35.8 yards^3</td>
+            <td>$5293 @ 2500psi</td>
+         </tr>
+         <tr>
+            <td>Concrete 2500psi</td>
+            <td>35.8 yards^3</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>Concrete 3000psi</td>
+            <td>4.1 yards^3</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>1/2” gravel</td>
+            <td>451.54 ft^3 :: 16.7 yard^3</td>
+            <td>$850 :: 22 tonnes</td>
+         </tr>
+         <tr>
+            <td colspan="3"></td>
+         </tr>
+         <tr>
+            <td>2x8x(16) *in lumber list*</td>
+            <td>691 ft</td>
+            <td>$736.00 @$15.89</td>
+         </tr>
+         <tr>
+            <td>ebar #4 (standard)</td>
+            <td>692 ft :: $10.09 per 20’</td>
+            <td>$374.42</td>
+         </tr>
+         <tr>
+            <td>rebar (slab)</td>
+            <td>1366.8’</td>
+            <td>$700</td>
+         </tr>
+         <tr>
+            <td>Spacers</td>
+            <td>63</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>Tie wire</td>
+            <td>1</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>10 mil Visqueen</td>
+            <td>1354</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>5/8”x12” A-bolts</td>
+            <td>65</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>5/8”x3”x3” plate washers</td>
+            <td>33'</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>PAB7-7/8”</td>
+            <td>8'</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>PAB8-1”</td>
+            <td>4.17’</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td colspan="3">total.ish: ($10,000) $7953</td>
+         </tr>
+      </table id='foundation_materials'>
+
+      <!-- lumber -->
+      <table id="lumber_materials">
+         <tr>
+            <th colspan="3">Lumber</th>
+         </tr>
+         <!--  <tr>
+            <td class="category">Item</td>
+            <td class="category">Quantity</td>
+            <td class="category">Price</td>
+         </tr> -->
+         <tr>
+            <td colspan="3">2x</td>
+         </tr>
+         <tr>
+            <td>2x6x10 (9ft ceiling?)</td>
+            <td>120.1 (259.1 no openings)</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>2x6x16 (fascia)</td>
+            <td>10.8</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>2X10x8 stair landing</td>
+            <td>2</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>2X14x20.78’ stair stringers</td>
+            <td>2</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>2x12x16 treads+deck</td>
+            <td>20</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td colspan="3"></td>
+         </tr>
+         <tr>
+            <td colspan="3">Soul plates</td>
+         </tr>
+         <tr>
+            <td>2x6 pt</td>
+            <td> 8.2@16’ 131.8</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>3x6 pt</td>
+            <td>3.41 @12’ :: 41’</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>Top plates & 2nd Soul(x5)</td>
+            <td> 53.4@16’ 1718’ (x5)</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td colspan="6">6x</td>
+         </tr>
+         <tr>
+            <td>6x6x10</td>
+            <td>86 @ $69.hd</td>
+            <td> $5,934.30</td>
+         </tr>
+         <tr>
+            <td colspan="3"></td>
+         </tr>
+         <tr>
+            <td></td>
+            <td>Totalish</td>
+            <td>$20,000</td>
+         </tr>
+      </table>
+
+
+      <!-- Engineered Lumber-->
+      <table id="engineered_lumber_materials">
+         <tr>
+            <th colspan="3">Engineered Lumber</th>
+         </tr>
+         <tr>
+            <td>14” TJI 360 “FJ-1” (I-joist)</td>
+            <td>35@22’ :: 13@18’ {48}</td>
+            <td>$7.14/ft $1,076.79</td>
+         </tr>
+         <tr>
+            <td>1 1⁄8"x14" TJ® Rim Board</td>
+            <td>8.7@20’ 172’ 9”</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td colspan="3"></td>
+         </tr>
+         <tr>
+            <th colspan="3">Beams</th>
+         </tr>
+         <tr>
+            <td>1.75x14x22’ LVL DRAG</td>
+            <td>1</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>5.25x11.825x12’6 PSL “H-4</td>
+            <td>1</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>5.25X14x18’6” PSL “FB-3”</td>
+            <td>1</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>7x14x18’6” PSL “FB-1”</td>
+            <td>1</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>7x16x18’ PSL “H-2” </td>
+            <td>1</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>6x12x6’4 #1 “H-1”</td>
+            <td>1@ 20’ 3@ 8’</td>
+            <td>Beams ~ $1800</td>
+         </tr>
+         <tr>
+            <td colspan="3"></td>
+         </tr>
+         <tr>
+            <th colspan="3">Hardi StrongWall</th>
+         </tr>
+         <tr>
+            <td>HFX 24x9 (1 1/8 ST bolt)</td>
+            <td>2</td>
+            <td> $2091.78</td>
+         </tr>
+         <tr>
+            <td>HFX 12x9</td>
+            <td>2</td>
+            <td> $2347.78</td>
+         </tr>
+         <tr>
+            <td colspan="3"></td>
+         </tr>
+         <tr>
+            <th colspan="3">Trusses</th>
+         </tr>
+         <tr>
+            <td>Common</td>
+            <td>4 (1@18’6 :: 3@22’)</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>Girder</td>
+            <td>4 (1@18’6 :: 3@22’)</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>Drag</td>
+            <td>1 @ 22’</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>Jack</td>
+            <td></td>
+            <td></td>
+         </tr>
+         <tr>
+            <td></td>
+            <td>Totalish</td>
+            <td>$10,000</td>
+         </tr>
+      </table>
+
+
+      <!-- Hardware -->
+      <table>
+         <tr>
+            <th colspan="3">Hardware</th>
+         </tr>
+         <tr>
+            <td>HDU-2</td>
+            <td>11 /2 :: 13</td>
+            <td>$37.20 $483.60</td>
+         </tr>
+         <tr>
+            <td>HDU-5</td>
+            <td>2 /3 :: 5</td>
+            <td>$55.89 $279.45</td>
+         </tr>
+         <tr>
+            <td>HDU-8</td>
+            <td>1 /3 :: 4</td>
+            <td>$89.19 $356.76</td>
+         </tr>
+         <tr>
+            <td>HDU-14</td>
+            <td>2</td>
+            <td>$105.69 $211.38</td>
+         </tr>
+         <tr>
+            <td>ECCQ 6x6</td>
+            <td>10</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>ECCLQ 6x6</td>
+            <td>2</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>ECCQ 4x6</td>
+            <td>1</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>EPCZ 6x6</td>
+            <td>2</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>MST-48</td>
+            <td>muchos</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>LTP4</td>
+            <td></td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>A-35</td>
+            <td>bunches</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td></td>
+            <td>Totalish</td>
+            <td>($1600) $1334.16</td>
+         </tr>
+      </table>
+
+      <!-- Plywood -->
+      <table>
+         <tr>
+            <th colspan="3">Plywood</th>
+         </tr>
+         <tr>
+            <td>Item</td>
+            <td></td>
+            <td>86.29 sheets total</td>
+         </tr>
+         <tr>
+            <td>Roof</td>
+            <td>19/32 CDX Plywood 50.45</td>
+            <td>@$26.97 $1360 </td>
+         </tr>
+         <tr>
+            <td>Walls</td>
+            <td>76.7</td>
+            <td> ~~ $4000</td>
+         </tr>
+         <tr>
+            <td>Floor</td>
+            <td>3/4” T & G 42.3</td>
+            <td> ~~ $2250</td>
+         </tr>
+         <tr>
+            <td colspan="3"></td>
+         </tr>
+         <tr>
+            <th colspan="3">Shear Walls</td>
+         </tr>
+         <tr>
+            <td>15/32” Struc-1 </td>
+            <td>44</td>
+            <td>96’ & 73’ </td>
+         </tr>
+         <tr>
+            <td>15/32” Struc-1 Inspected</td>
+            <td>B: 25ft C:11 ft 9</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>15/32” Struc-1 InspBothSid</td>
+            <td>5 CC 2</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td></td>
+            <td>Totalish</td>
+            <td>~~$8000</td>
+         </tr>
+      </table>
+
+
+      <!-- Fasteners -->
+      <table>
+         <tr>
+            <th colspan="3">Fasteners</th>
+         </tr>
+         <tr>
+            <td>16d</td>
+            <td>3</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>10d</td>
+            <td>3</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>Coil Roof</td>
+            <td>2</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td>Coil Siding</td>
+            <td>2</td>
+            <td></td>
+         </tr>
+      </table>
+
+
+      <!-- Roof Materials -->
+      <table>
+         <tr>
+            <th colspan="3">Roof Materials</th>
+         </tr>
+         <tr>
+            <td>Items</td>
+            <td></td>
+            <td></td>
+         </tr>
+      </table>
+
+
+      <!-- Siding Materials-->
+      <table>
+         <tr>
+            <th colspan="3">Siding Materials</th>
+         </tr>
+         <tr>
+            <td class="category">Item</td>
+            <td class="category">Quantity</td>
+            <td class="category">Price</td>
+         </tr>
+      </table>
+
+      <!-- Windows & Doors-->
+      <table>
+         <tr>
+            <th>Windows 14 days</t>
+            <th>Doors</th>
+            <th>Shop Doors</th>
+         </tr>
+         <tr>
+            <td>$5,469.24</td>
+            <td>$834.48</td>
+            <td>~$10,000</td>
+         </tr>
+         <tr>
+            <td></td>
+            <td>Totalish</td>
+            <td>$18,000</td>
+         </tr>
+      </table>
+
+
+      <table>
+         <tr>
+            <th colspan="3">UnOtraMesa</th>
+         </tr>
+         <tr>
+            <td>SomeStuff</td>
+            <td></td>
+            <td></td>
+         </tr>
+      </table>
+
+   </div>
 
 
 </body>
