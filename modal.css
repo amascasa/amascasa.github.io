@@ -1,121 +1,101 @@
-@charset "utf-8";
+  * {
+     box-sizing: border-box;
+  }
 
+  body {
+     display: flex;
+     flex-flow: column nowrap;
+     justify-content: center;
+     align-content: space-around;
+     align-items: center;
+     background-color: black;
+     color: white;
+  }
 
-.row > .column {
-   padding: 0 8px;
-   }
+  .modal {
+     display: none;
+     /* Hidden by default */
+     position: fixed;
+     /* Stay in place */
+     z-index: 1;
+     /* Sit on top */
+     padding: 100px;
+     /* Location of the box */
+     left: 0;
+     top: 0;
+     width: 100%;
+     /* Full width */
+     height: 100%;
+     /* Full height */
+     overflow: auto;
+     /* Enable scroll if needed */
+     background-color: rgb(0, 0, 0);
+     /* Fallback color */
+     background-color: rgba(0, 0, 0, 0.7);
+     /* Black w/ opacity */
+     border: 3px solid orangered;
+     box-shadow: 0px 0px 10px 3px white;
+  }
 
-   .row:after {
-   content: "";
-   display: table;
-   clear: both;
-   }
+  .modal-content {
+     color: white;
+     display: block;
+     width: 1010px;
+     z-index: 2;
+     margin-left: auto;
+     margin-right: auto;
 
-   /* Create 5 equal columns that floats next to eachother */
-   .column {
-   width:20%;
-   
-   
-   margin: 20px;
-   }
+  }
 
-   /* The Modal (background) */
-   .modal {
-   display: none;
-   position: fixed;
-   z-index: 1;
-   padding-top: 100px;
-   left: 0;
-   top: 0;
-   width: 100%;
-   height: 100%;
-   overflow: auto;
-   background-color: black;
-   }
+  .modal-content {
+     animation-name: zoom;
+     animation-duration: 0.2s;
+  }
 
-   /* Modal Content */
-   .modal-content {
-   position: relative;
-   /* background-color: #fefefe; */
-   margin: auto;
-   padding: 0;
-   width: 100%;
-   /* max-width: 1200px; */
-   }
+  @keyframes zoom {
+     from {
+        transform: scale(.95)
+     }
 
-   /* The Close Button */
-   .close {
-   color: white;
-   position: absolute;
-   top: 10px;
-   right: 25px;
-   font-size: 35px;
-   font-weight: bold;
-   }
+     to {
+        transform: scale(1)
+     }
+  }
 
-   .close:hover,
-   .close:focus {
-   color: #999;
-   text-decoration: none;
-   cursor: pointer;
-   }
+  .details {
+     width: 1000px;
+     border: 3px solid aqua;
+     border-radius: 3px;
+     box-shadow: 0px 0px 10px 3px rgb(135, 177, 21) inset;
+  }
 
-   /* Hide the slides by default */
-   .mySlides {
-   display: none;
-   }
+  area {
+     cursor: pointer;
+  }
 
-   /* Next & previous buttons */
-   .prev,
-   .next {
-   cursor: pointer;
-   position: absolute;
-   /* top: 50%; */
-   width: auto;
-   padding: 16px;
-   margin-top: 0px;
-   color: orangered;
-   font-weight: bold;
-   font-size: 20px;
-   transition: 0.6s ease;
-   border-radius: 0 3px 3px 0;
-   user-select: none;
-   -webkit-user-select: none;
-   }
+  .close {
+     position: absolute;
+     top: 15px;
+     right: 35px;
+     color: #f1f1f1;
+     font-size: 40px;
+     font-weight: bold;
+     transition: 0.3s;
+  }
 
-   /* Position the "next button" to the right */
-   .next {
-   right: 0;
-   border-radius: 3px 0 0 3px;
-   }
+  .close:hover,
+  .close:focus {
+     color: orangered;
+  }
 
-   /* On hover, add a black background color with a little bit see-through */
-   .prev:hover,
-   .next:hover {
-   background-color: black;
-   }
+  .test {
+     width: 1600px;
+  }
 
-   /* Caption text */
-   .caption-container {
-   text-align: center;
-   background-color: black;
-   padding: 2px 16px;
-   color: white;
-   }
+  .detailCoords {
+     width: 1600px;
+  }
 
-   img.demo {
-   opacity: 0.6;
-   }
-
-   .active,
-   .demo:hover {
-   opacity: 1;
-   }
-
-   img.hover-shadow {
-   transition: 0.3s;
-   }
-
-   .hover-shadow:hover {
-   box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
-   }
+  .S2-1 {
+     cursor: pointer;
+  }

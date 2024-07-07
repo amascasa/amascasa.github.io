@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>foundation</title>
+   <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+   <link href="main.css" rel="stylesheet">
+
+
+
+
+   <style>
+      * {
+         box-sizing: border-box;
+      }
+
+      body {
+         display: flex;
+         flex-flow: column nowrap;
+         justify-content: center;
+         align-content: space-around;
+         background-color: black;
+         color: white;
+      }
+
+      .title {
+         color: orangered;
+         text-align: right;
+         padding-right: 100px;
+         font-family: 'Amatic SC';
+         font-size: 5.5em;
+         font-weight: normal;
+         margin-top: 0px;
+         margin-bottom: 30px;
+      }
+
+      header {
+         position: fixed;
+         padding-top: 20px;
+      }
+
+
+
+
+      nav {
+         border: 1px solid orangered;
+         display: flex;
+         flex-flow: row nowrap;
+         justify-content: space-around;
+      }
+
+      nav a,
+      button {
+         color: white;
+         background-color: rgb(0, 0, 0);
+         border: 1px solid white;
+         padding: 8px;
+         border-radius: 6px;
+
+      }
+
+      nav a:hover {
+         color: orange;
+         scale: 1.1;
+      }
+
+      .modal {
+         display: none;
+
+         position: fixed;
+
+
+         /* Sit on top */
+         padding: 100px;
+         /* Location of the box */
+         left: 0;
+         top: 0;
+         width: 100%;
+         /* Full width */
+         height: 100%;
+         /* Full height */
+         overflow: auto;
+         /* Enable scroll if needed */
+         background-color: rgb(0, 0, 0);
+         /* Fallback color */
+         background-color: rgba(0, 0, 0, 0.7);
+         box-shadow: 0px 0px 10px 3px white;
+      }
+
+      .modal-content {
+         color: white;
+         display: block;
+         width: 1010px;
+         z-index: 1;
+         margin-left: auto;
+         margin-right: auto;
+
+      }
+
+      .modal-content {
+         animation-name: zoom;
+         animation-duration: 0.2s;
+      }
+
+      @keyframes zoom {
+         from {
+            transform: scale(.95)
+         }
+
+         to {
+            transform: scale(1)
+         }
+      }
+
+      .details {
+         width: 1000px;
+         border: 3px solid aqua;
+         border-radius: 3px;
+      }
+
+      area {
+         cursor: pointer;
+      }
+
+      .close {
+         position: absolute;
+         top: 15px;
+         right: 35px;
+         color: #f1f1f1;
+         font-size: 40px;
+         font-weight: bold;
+         transition: 0.3s;
+      }
+
+      .close:hover,
+      .close:focus {
+         color: orangered;
+      }
+
+      .detail_click {
+         width: 1600px;
+      }
+
+      .detailCoords {
+         width: 1600px;
+      }
+
+      .S2-1 {
+         cursor: pointer;
+      }
+   </style>
+
+</head>
+
+<body>
+
+   <h1 class="title">Pajaro</h1>
+
+   <header id="nav_container">
+      <nav>
+         <a href="indexBirdShop.html">Home</a>
+         <a href="plans.html">Plans</a>
+         <a href="materials.html" class="dropbtn">Materials</button>
+            <a href="vendors.html">Vendors</a>
+            <a href="estimates.html">Estimates</a>
+            <a></a>
+            <a href="framing_click.html">Framing</a>
+            <a href="foundation_click.html">Foundation</a>
+      </nav>
+   </header>
+
+   <!-- <p id="coordinates">coords</p> -->
+
+
+   <!--  Foundation Clickable Details -->
+   <!-- <div class="detailCoords" id="S2.1" onclick="foundationCoords(event)"></div> -->
+
+   <div class="detailCoords">
+
+      <img class='detail_click' src="foundation_plan.jpg" alt="foundation plan" usemap="#foundation">
+
+      <map name="foundation">
+         <area class="S2-1" shape="circle" coords="797, 200, 25" onclick="getDetail('S2-1')">
+         <area class="S2-1" shape="circle" coords="1270, 197, 25" onclick="getDetail('S2-1')">
+         <area class="S2-1" shape="circle" coords="1401, 479, 25" onclick="getDetail('S2-1')">
+         <area class="S2-1" shape="circle" coords="135, 830, 25" onclick="getDetail('S2-1')">
+         <area class="S2-1" shape="circle" coords="363, 302, 25" onclick="getDetail('S2-1')">
+         <area class="S2-1" shape="circle" coords="1444, 375, 25" onclick="getDetail('S2-2')">
+
+         <area class="HFX" shape="circle" coords="204, 1292, 25" onclick="getDetail('HFX1-2')">
+         <area class="HFX" shape="circle" coords="568, 1156, 25" onclick="getDetail('HFX2-2')">
+         <area class="HFX" shape="circle" coords="552, 834, 25" onclick="getDetail('HFX2-2')">
+
+         <area class="shear" shape="circle" coords="337, 215, 20" onclick="getDetail('shear_schedule')">
+         <area class="shear" shape="circle" coords="844, 216, 20" onclick="getDetail('shear_schedule')">
+         <area class="shear" shape="circle" coords="1228, 218, 20" onclick="getDetail('shear_schedule')">
+         <area class="shear" shape="circle" coords="1390, 532, 20" onclick="getDetail('shear_schedule')">
+         <area class="shear" shape="circle" coords="1389, 532, 20" onclick="getDetail('shear_schedule')">
+         <area class="shear" shape="circle" coords="1259, 809, 20" onclick="getDetail('shear_schedule')">
+         <area class="shear" shape="circle" coords="575, 857, 20" onclick="getDetail('shear_schedule')">
+         <area class="shear" shape="circle" coords="679, 1195, 20" onclick="getDetail('shear_schedule')">
+         <area class="shear" shape="circle" coords="604, 1250, 20" onclick="getDetail('shear_schedule')">
+         <area class="shear" shape="circle" coords="184, 1248, 20" onclick="getDetail('shear_schedule')">
+         <area class="shear" shape="circle" coords="151, 882, 20" onclick="getDetail('shear_schedule')">
+      </map>
+   </div>
+
+
+   <!--  <script>
+      function foundationCoords(event) {
+         let x = event.offsetX;
+         let y = event.offsetY;
+         console.log(x, y);
+         document.getElementById("coordinates").innerHTML = x + ', ' + y;
+      }
+   </script> -->
+
+
+   <div id="myModal" class="modal">
+      <span class='close'>&times;</span>
+      <div id='modal-content' class="modal-content"></div>
+   </div>
+
+
+
+   <script>
+
+      let html = "";
+      function getDetail(detailNumber) {
+
+         html += "<img class='details' src='" + detailNumber + ".jpg'>";
+
+         document.getElementById('modal-content').innerHTML = html;
+         document.getElementById('myModal').style.display = 'block';
+         html = ""
+
+         console.log(modal);
+      }
+
+      //closes the modal when the x is clicked
+      let span = document.getElementsByClassName('close')[0];
+      let modal = document.getElementById("myModal");
+
+      span.onclick = function () {
+         modal.style.display = 'none';
+      }
+
+      //closes the modal when clicked outside the modal
+      window.onclick = function (event) {
+         if (event.target == modal) {
+            modal.style.display = 'none';
+         }
+      }
+
+   </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
