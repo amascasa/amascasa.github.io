@@ -2,7 +2,7 @@
 
    body {
       flex-flow: column nowrap;
-      background-color: blue;
+      background-color: rgb(71, 3, 3);
    }
 }
 
