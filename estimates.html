@@ -6,9 +6,17 @@
    <meta name="viewport" content="width=device-width, initial-scale=1" />
    <title>estimates</title>
    <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&display=swap" rel="stylesheet">
    <link href="pajaro.main.css" rel="stylesheet">
    <script> </script>
+
    <style>
+      h1 {
+         margin-bottom: 40px;
+      }
+
       #est_container {
          display: flex;
          flex-flow: row wrap;
@@ -17,6 +25,23 @@
 
       .pdf_letter {
          width: 44vw;
+      }
+
+      object {
+         margin: 10px;
+      }
+
+      .est_title {
+         padding: 10px;
+         margin: 20px 0px 0px 0px;
+         text-align: center;
+         color: aqua;
+         /* border: 1px solid orangered; */
+         border-radius: 4px;
+         width: 44vw;
+         font-family: "Loved by the King";
+         font-size: 1.7em;
+         font-weight: normal;
       }
    </style>
 
@@ -46,14 +71,15 @@
    <section id="est_container">
 
       <div id="hagle" class="estimates">
+         <h3 class="est_title">Hagle Lumber _ $31,000</h3>
          <object class="pdf_letter" data="hagle_est_update.pdf">Hagle Lumber</object>
       </div>
 
       <div id="sabrina" class="estimates">
-         <object class="pdf_letter" data="over_ex_est.pdf">OverEx Sabrina</object>
+         <h3 class='est_title'>Earth Ex _ Sabrina $7,000</h3>
+         <object class="pdf_letter" data="over_ex_est.pdf">Earth Ex . Sabrina</object>
       </div>
 
-      <br><br><br><br>
 
 
 
