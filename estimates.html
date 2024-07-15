@@ -43,6 +43,15 @@
          font-size: 1.7em;
          font-weight: normal;
       }
+
+      .non_winner {
+         opacity: .6;
+         transition: opacity .5s;
+      }
+
+      .non_winner:hover {
+         opacity: 0.9;
+      }
    </style>
 
 </head>
@@ -85,13 +94,13 @@
 
 
 
-      <div class="estimates" id="ojai_lumber">
+      <div class="estimates non_winner" id="ojai_lumber">
          <object class="pdf_letter" data="ojai_lumber_est.pdf"></object>
       </div>
-      <div class="estimates" id="cw">
+      <div class="estimates non_winner" id="cw">
          <object class="pdf_letter" data="cw_lumber_est.pdf"></object>
       </div>
-      <div class="estimates" id="bfs">
+      <div class="estimates non_winner" id="bfs">
          <object class="pdf_letter" data="bfs_lumber_est.pdf"></object>
       </div>
 
