@@ -10,7 +10,29 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&display=swap" rel="stylesheet">
    <link href="pajaro.main.css" rel="stylesheet">
-   <script> </script>
+   <script>
+
+      let not_first = document.getElementsByClassName("non_winners");
+      let i;
+
+      for (i = 0; i < not_first.length; i++) {
+
+         not_first[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            let content = this.nextElementSibling;
+
+            if (content.style.display === "block") {
+               content.style.display = "none";
+            } else {
+               content.style.display = "block";
+            }
+         });
+      }
+
+   </script>
+
+
+
 
    <style>
       h1 {
@@ -21,6 +43,10 @@
          display: flex;
          flex-flow: row wrap;
          justify-content: space-around;
+      }
+
+      .estimates {
+         margin-bottom: 50px;
       }
 
       .pdf_letter {
@@ -35,11 +61,11 @@
          padding: 10px;
          margin: 20px 0px 0px 0px;
          text-align: center;
-         color: aqua;
+         color: S;
          /* border: 1px solid orangered; */
          border-radius: 4px;
          width: 44vw;
-         font-family: "Loved by the King";
+         font-family: "";
          font-size: 1.7em;
          font-weight: normal;
       }
@@ -52,6 +78,65 @@
       .non_winner:hover {
          opacity: 0.9;
       }
+
+
+
+
+      /* ------------- Collapse ------- */
+
+
+      /* Style the button that is used to open and close the collapsible content */
+      /* .non_winners {
+         background-color: #eee;
+         color: #444;
+         cursor: pointer;
+         padding: 18px;
+         width: 100%;
+         border: none;
+         text-align: left;
+         outline: none;
+         font-size: 15px;
+      } */
+
+      /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+      /* .active,
+      .non_winners:hover {
+         background-color: #ccc;
+      } */
+
+      /* Style the collapsible content. Note: hidden by default */
+      /*  .content {
+         padding: 0 18px;
+         display: none;
+         overflow: hidden;
+         background-color: #f1f1f1;
+      }  */
+
+      #glance {
+         border: 2px solid orange;
+         display: flex;
+         flex-flow: row nowrap;
+         justify-content: space-around;
+         margin-bottom: 50px;
+         padding: 20px;
+         border-radius: 4px;
+         box-shadow: 0px 0px 10px 2px white inset;
+      }
+
+      .quick_look {
+         border: 2px double orangered;
+         font-size: 1.4em;
+         min-width: 400px;
+         text-align: center;
+         border-radius: 4px;
+         /*  box-shadow: 0px 0px 10px 2px white; */
+      }
+
+      .quick_title {
+         font-family: '';
+         /* color: orangered; */
+         /* text-decoration: underline; */
+      }
    </style>
 
 </head>
@@ -59,10 +144,6 @@
 <body>
 
    <h1 class="title">P&aacute;jaro</h1>
-
-
-
-
    <header id="nav_container">
       <nav>
          <a href="indexBirdShop.html">Home</a>
@@ -77,32 +158,83 @@
    </header>
 
 
+   <section id="glance">
+
+      <div id="survey_Henry" class="quick_look">
+         <p class="quick_title">Survey</p>
+         <p>$2,000 - $2500</p>
+      </div>
+      <div id="over_ex_Sabrina" class="quick_look">
+         <p class="quick_title">Excavation</p>
+         <p>$7,600 - $7,900</p>
+      </div>
+      <div id="g&r_foundation" class="quick_look">
+         <p class="quick_title">Foundation</p>
+         <p>$43,000</p>
+      </div>
+      <div id="hagle_summary" class="quick_look">
+         <p class="quick_title">Lumber</p>
+         <p>$31,000</p>
+      </div>
+
+      <!-- <div id="" class="quick_look">
+         <p></p>
+         <p></p>
+      </div> -->
+
+   </section>
+
+
+
+
+
+
+
    <section id="est_container">
 
-      <div id="hagle" class="estimates">
-         <h3 class="est_title">Hagle Lumber _ $31,000</h3>
-         <object class="pdf_letter" data="hagle_est_update.pdf">Hagle Lumber</object>
+
+      <div id="survey" class="estimates">
+         <!-- <h3 class='est_title'>Henry Surveying _ $2,000 - $2,500</h3> -->
+         <object class="pdf_letter" data="survey_est.pdf">G&R</object>
       </div>
 
       <div id="sabrina" class="estimates">
-         <h3 class='est_title'>Earth Ex _ Sabrina $7,000</h3>
+         <!-- <h3 class='est_title'>Earth Ex _ Sabrina $7,000</h3> -->
          <object class="pdf_letter" data="over_ex_est.pdf">Earth Ex . Sabrina</object>
       </div>
 
+      <div id="g&r" class="estimates">
+         <!-- <h3 class='est_title'>Foundation G&R _ $43,000</h3> -->
+         <object class="pdf_letter" data="g&r_estimate.pdf">G&R</object>
+      </div>
+
+
+      <div id="hagle" class="estimates">
+         <!--  <h3 class="est_title">Hagle Lumber _ $31,000</h3> -->
+         <object class="pdf_letter" data="hagle_est_update.pdf">Hagle Lumber</object>
+      </div>
 
 
 
 
 
+
+
+
+
+
+      <!--  <button type="button" class="non-winners">Ojai Lumber</button> -->
       <div class="estimates non_winner" id="ojai_lumber">
          <object class="pdf_letter" data="ojai_lumber_est.pdf"></object>
       </div>
+
       <div class="estimates non_winner" id="cw">
          <object class="pdf_letter" data="cw_lumber_est.pdf"></object>
       </div>
       <div class="estimates non_winner" id="bfs">
          <object class="pdf_letter" data="bfs_lumber_est.pdf"></object>
       </div>
+
 
    </section>
 
