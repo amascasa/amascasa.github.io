@@ -11,6 +11,7 @@ h2 {
 }
 
 h1,
+h2,
 h3 {
    font-family: 'Amatic SC';
 }
@@ -69,12 +70,39 @@ h3 {
    width: 100vw;
 }
 
-#capitolo_tre {
-   color: white;
+
+
+
+
+
+
+
+#what_would_itty {
+   position: relative;
 }
 
+
+/* thought */
+.itty_thought {
+   position: absolute;
+   top: 60px;
+   right: 30px;
+   font-size: 1.3em;
+   padding: 10px;
+   border-radius: 4px;
+   border: none;
+   font-size: 1.6em;
+   font-family: 'Amatic SC';
+}
+
+
+/* image */
 #itty_cradle {
-   border-radius: 50%;
+   object-fit: cover;
+   z-index: -1;
+   width: 100%;
+   height: auto;
+   border-radius: 4px;
    opacity: .4;
    box-shadow: 0px 0px 10px 4px white;
 }
@@ -82,13 +110,33 @@ h3 {
 
 
 
+
+
+
+
+
+#ana {
+   display: block;
+   text-align: center;
+}
+
+
+
+#capitolo_tre {
+   color: white;
+   margin-top: 20px;
+}
+
+h3.map_header {
+   text-align: center;
+}
+
 #maps_container {
    display: flex;
    flex-flow: row wrap;
    justify-content: flex-start;
    /*  background-image: url("itty_cross_close.jpg"); */
    background-repeat: no-repeat;
-   margin-top: 200px;
 }
 
 .maps {

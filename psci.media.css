@@ -12,7 +12,7 @@
 
    body {
       flex-flow: row wrap;
-      background-color: purple;
+      background-color: rgb(79, 3, 3);
    }
 }
 
