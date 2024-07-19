@@ -10,7 +10,61 @@
    <script> </script>
 
    <style>
+      /*  #calendar,
+      #calendar_header,
+      .row,
+      .day {
+         border: 1px solid orange;
+      } */
 
+      #calendar {
+         display: flex;
+         flex-flow: row wrap;
+         width: 100%;
+         justify-content: space-around;
+         margin-bottom: 50px;
+      }
+
+      #calendar_header {
+         border: 1px solid red;
+         height: auto;
+
+      }
+
+      .week {
+         display: flex;
+         flex-flow: row wrap;
+         width: 100%;
+         justify-content: space-around;
+         border: 1px solid orange;
+      }
+
+      .day_name {
+         width: 14.2%;
+         border: 1px solid aqua;
+         padding: 7px;
+      }
+
+      .day {
+         border: 1px solid aqua;
+         width: 14.2%;
+         height: 120px;
+         padding: 7px;
+      }
+
+      .current_day {
+         color: orange;
+         font-size: 1.4em;
+         background-image: url('itty_cradle.jpg');
+      }
+
+      .excavation_days {
+         background-color: darkblue;
+      }
+
+      .foundation_days {
+         background-color: purple;
+      }
    </style>
 
 </head>
@@ -32,6 +86,139 @@
       </nav>
 
    </header>
+
+
+   <section id="calendar">
+
+      <div id="calendar_header" class="week">
+         <div class="day_name">
+            <p>Sunday</p>
+         </div>
+         <div class="day_name">
+            <p>Monday</p>
+         </div>
+         <div class="day_name">
+            <p>Tueday</p>
+         </div>
+         <div class="day_name">
+            <p>Wednesday</p>
+         </div>
+         <div class="day_name">
+            <p>Thurssday</p>
+         </div>
+         <div class="day_name">
+            <p>Friday</p>
+         </div>
+         <div class="day_name">
+            <p>Saturday</p>
+         </div>
+      </div>
+
+      <div class="week">
+         <div class="day">
+            <p class="current_day">21</p>
+         </div>
+         <div class="day">
+            <p>22</p>
+         </div>
+         <div class="day">
+            <p>22</p>
+         </div>
+         <div class="day">
+            <p>23</p>
+         </div>
+         <div class="day">
+            <p>24</p>
+         </div>
+         <div class="day">
+            <p>25</p>
+         </div>
+         <div class="day">
+            <p>26</p>
+         </div>
+      </div>
+
+      <div class="week">
+         <div class="day">
+            <p>27</p>
+         </div>
+         <div class="day excavation_days">
+            <p>28</p>
+            <br>
+            <p>Earth-Ex<br>Sabrina<br>potential start</p>
+         </div>
+         <div class="day excavation_days">
+            <p>29</p>
+         </div>
+         <div class="day excavation_days">
+            <p>30</p>
+         </div>
+         <div class="day excavation_days">
+            <p>31<br></p>
+            <p>Potential Finish</p>
+         </div>
+         <div class="day">
+            <p>August<br>1</p>
+         </div>
+         <div class="day">
+            <p>2</p>
+         </div>
+      </div>
+
+      <div class="week">
+         <div class="day">
+            <p>3</p>
+         </div>
+         <div class="day foundation_days">
+            <p>4</p>
+            <p>G&R<br>Foundation potential start</p>
+         </div>
+         <div class="day foundation_days">
+            <p>5</p>
+         </div>
+         <div class="day foundation_days">
+            <p>6</p>
+         </div>
+         <div class="day foundation_days">
+            <p>7</p>
+         </div>
+         <div class="day foundation_days">
+            <p>8</p>
+         </div>
+         <div class="day">
+            <p>9</p>
+         </div>
+      </div>
+
+      <div class="week">
+         <div class="day">
+            <p>10</p>
+         </div>
+         <div class="day foundation_days">
+            <p>11</p>
+         </div>
+         <div class="day foundation_days">
+            <p>12</p>
+         </div>
+         <div class="day foundation_days">
+            <p>13</p>
+         </div>
+         <div class="day foundation_days">
+            <p>14</p>
+         </div>
+         <div class="day foundation_days">
+            <p>15</p>
+            <p>G&R<br>Foundation potential finish</p>
+         </div>
+         <div class="day">
+            <p>16</p>
+         </div>
+      </div>
+
+
+      </div>
+
+   </section>
 
 
 
