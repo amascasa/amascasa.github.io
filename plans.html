@@ -7,11 +7,41 @@
    <title>Plans</title>
    <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
    <link href="pajaro.main.css" rel="stylesheet">
+
    <style name="modal">
+      #main_container {
+         display: flex;
+         flex-flow: row wrap;
+         justify-content: space-around;
+         width: 100%;
+      }
+
+      #plans_container {
+         width: 100%;
+      }
+
+      .pdf {
+         width: 90%;
+         height: 900px;
+      }
+
       #coords {
          color: white;
          background-color: orange;
       }
+
+      .model {
+         width: 90%;
+         height: 90vh;
+         margin-bottom: 60px;
+      }
+
+      #first_framing_3d,
+      #first_second_framing_3d {
+         width: 90%;
+      }
+
+
 
       #pdf_container {
          border: 1px solid black;
@@ -44,105 +74,64 @@
             <a href="vendors.html">Vendors</a>
             <a href="estimates.html">Estimates</a>
             <a></a>
-            <a href="framing_click.html">Framing</a>
+            <a href="framing.html">Framing</a>
             <a href="foundation.html">Foundation</a>
       </nav>
 
    </header>
 
 
-
-   <!-- pdf plan sets -->
-   <div id="pdf_container">
-      <object id='A.plans' class="pdf" data="plans_set.pdf"></object>
-      <br>
-      <object id='S&D.plans' class="pdf" data="plans_structural.pdf"></object>
-   </div>
-
-   <!--3d Model floor 1-->
-   <div name="1_framing_3d" class="model">
-      <iframe
-         src="https://3dwarehouse.sketchup.com/embed/5ec191e6-050e-49db-8113-42a6b607007f?token=q3CVwu9tV5E=&binaryName=s21"
-         frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="880" height="500" allowfullscreen>
-      </iframe>
-   </div>
-
-   <!--3d Model floor 1&2-->
-   <div id="1&2_framing_3d" class="model">
-      <iframe
-         src="https://3dwarehouse.sketchup.com/embed/cb104c3d-3e4a-473c-87b7-d9357d1fceee?token=8gZk21RyXwQ=&binaryName=s21"
-         frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="880" height="500" allowfullscreen>
-      </iframe>
-   </div>
-
-   <!-- Structural calculations and Soil Report and Pre-Survey -->
-   <div id="pdf_letter_container">
-      <object id="pre_survey" class="pdf_letter" data="pre_survey.pdf"></object>
-      <object id='structural_calc' class="pdf_letter" data="plans_structural_calc.pdf"></object>
-      <br>
-      <object id="soil_report" class="pdf_letter" data="soil_report.pdf"></object>
-   </div>
+   <div id="main_container">
 
 
-   <!-- Clickable Details Framing-->
-   <p id="framing_coords">coords</p>
-   <div class="details" id="D11" onclick="framingCoords(event)">
-      <img class='test' src="floorFraming.png" alt="Floor Plan" usemap="#framing">
-      <map name="framing">
-         <area shape="circle" coords="645, 162, 20" href="D1-1.jpg">
-         <area shape="circle" coords="122, 282, 20" href="D1-9.jpg">
-         <area shape="circle" coords="122, 420, 20" href="D1-9.jpg">
-         <area shape="circle" coords="122, 590, 20" href="D1-9.jpg">
-         <area shape="circle" coords="122, 835, 20" href="D1-9.jpg">
-         <area shape="circle" coords="218, 821, 20" href="D1-12.jpg">
-         <area shape="circle" coords="122, 530, 20" href="D1-16.jpg">
-         <area shape="circle" coords="273, 810, 20" href="D1-19.jpg">
-         <area shape="circle" coords="356, 992, 20" href="D1-18.jpg">
-         <area shape="circle" coords=", 20" href="D1-.jpg">
-         <area shape="circle" coords=", 20" href="D1-.jpg">
-         <area shape="circle" coords=", 20" href="D1-.jpg">
-         <area shape="circle" coords=", 20" href="D1-.jpg">
-         <area shape="circle" coords=", 20" href="D1-.jpg">
-         <area shape="circle" coords=", 20" href="D1-.jpg">
-         <area shape="circle" coords=", 20" href="D1-.jpg">
-      </map>
-   </div>
+      <!-- pdf plan sets -->
+      <div id="plans_container">
+         <object id='A.plans' class="pdf" data="plans_set.pdf"></object>
+         <object id='S&D.plans' class="pdf" data="plans_structural.pdf"></object>
+      </div>
 
-   <!-- Coordinates finder -->
-   <p id="coordinates"></p>
-   <script>
-      function foundationCoords(event) {
-         let x = event.offsetX;
-         let y = event.offsetY;
-         document.getElementById("coordinates").innerHTML = x + ' : ' + y;
-      }
-   </script>
+      <!--3d Model floor 1-->
+      <div name="first_framing_3d" class="model">
+         <iframe class="model"
+            src="https://3dwarehouse.sketchup.com/embed/5ec191e6-050e-49db-8113-42a6b607007f?token=q3CVwu9tV5E=&binaryName=s21"
+            frameborder="0" scrolling="no" allowfullscreen>
+         </iframe>
+      </div>
 
-   <!--  Foundation Clickable Details -->
-   <div class="details" id="S2.1" onmousemove="foundationChoords(event)">
-      <img class='test' src="foundation_plan.jpg" alt="foundation plan" usemap="#foundation">
-      <map name="foundation">
-         <area shape="circle" coords="602, 150, 20" href="S2.1.jpg">
-         <area shape="circle" coords="962, 150, 20" href="S2.1.jpg">
-      </map>
-   </div>
+      <!--3d Model floor 1&2-->
+      <div id="first_second_framing_3d">
+         <iframe class="model"
+            src="https://3dwarehouse.sketchup.com/embed/cb104c3d-3e4a-473c-87b7-d9357d1fceee?token=8gZk21RyXwQ=&binaryName=s21"
+            frameborder="0" scrolling="no" allowfullscreen>
+         </iframe>
+      </div>
+
+      <!-- Structural calculations and Soil Report and Pre-Survey -->
+      <div id="pdf_letter_container">
+         <object id="pre_survey" class="pdf_letter" data="pre_survey.pdf"></object>
+         <object id='structural_calc' class="pdf_letter" data="plans_structural_calc.pdf"></object>
+         <br>
+         <object id="soil_report" class="pdf_letter" data="soil_report.pdf"></object>
+      </div>
 
 
-   <!-- pdf api test -->
-   <!-- <object class="pdf_letter" data="materials_total.pdf">Lista</object> -->
-   <div class="pdf_letter" id='hg_geotechnical' style="height:90vh; width: 42vw; padding-bottom:10px">
-      <div id="adobe-dc-view"></div>
-      <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
-      <script type="text/javascript">
-         document.addEventListener("adobe_dc_view_sdk.ready", function () {
-            var adobeDCView = new AdobeDC.View({ clientId: "9c29e9ed381548ec8d03c441bb6fff88", divId: "adobe-dc-view" });
-            adobeDCView.previewFile(
-               {
-                  content: { location: { url: "https://amascasa.github.io/soil_report.pdf" } },
-                  metaData: { fileName: "soils_report.pdf" }
-               }, { embedMode: "SIZED_CONTAINER" });
-         });
-      </script>
+      <!-- pdf api test -->
+      <!-- <object class="pdf_letter" data="materials_total.pdf">Lista</object> -->
+      <div class="pdf_letter" id='hg_geotechnical' style="height:90vh; width: 42vw; padding-bottom:10px">
+         <div id="adobe-dc-view"></div>
+         <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+         <script type="text/javascript">
+            document.addEventListener("adobe_dc_view_sdk.ready", function () {
+               var adobeDCView = new AdobeDC.View({ clientId: "9c29e9ed381548ec8d03c441bb6fff88", divId: "adobe-dc-view" });
+               adobeDCView.previewFile(
+                  {
+                     content: { location: { url: "https://amascasa.github.io/soil_report.pdf" } },
+                     metaData: { fileName: "soils_report.pdf" }
+                  }, { embedMode: "SIZED_CONTAINER" });
+            });
+         </script>
+      </div>
+
    </div>
 
 
