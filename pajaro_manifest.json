@@ -1,0 +1,36 @@
+{
+   "short_name": "pajaro",
+   "name": "pajaro",
+   "icons": [
+      {
+         "src": "Icon-196.png",
+         "type": "image/png",
+         "sizes": "196x196"
+      },
+      {
+         "src": "Icon-512.png",
+         "type": "image/png",
+         "sizes": "512x512"
+      }
+   ],
+   "id": "/pajaro.html?launcher=true",
+   "start_url": "/index_pajaro.html?launcher=true",
+   "background_color": "black",
+   "display": "standalone",
+   "scope": "/",
+   "theme_color": "purple",
+   "screenshots": [
+      {
+         "src": "/Icon-narrow.jpg",
+         "type": "image/jpg",
+         "sizes": "540x720",
+         "form_factor": "narrow"
+      },
+      {
+         "src": "/Icon-wide.jpg",
+         "type": "image/jpg",
+         "sizes": "720x540",
+         "form_factor": "wide"
+      }
+   ]
+}

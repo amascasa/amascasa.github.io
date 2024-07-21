@@ -12,23 +12,6 @@
    <link href="pajaro.main.css" rel="stylesheet">
    <script>
 
-      let not_first = document.getElementsByClassName("non_winners");
-      let i;
-
-      for (i = 0; i < not_first.length; i++) {
-
-         not_first[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            let content = this.nextElementSibling;
-
-            if (content.style.display === "block") {
-               content.style.display = "none";
-            } else {
-               content.style.display = "block";
-            }
-         });
-      }
-
    </script>
 
 
@@ -45,12 +28,18 @@
          justify-content: space-around;
       }
 
-      .estimates {
-         margin-bottom: 50px;
-         width: 44vw;
-         border: none;
+      .estimates_content {
+         border: 2px solid pink;
 
       }
+
+      .estimates {
+         margin-bottom: 50px;
+         width: 100vw;
+         border: 2px solid pink;
+         display: none;
+      }
+
 
       h3 {
          border: 1px solid aqua;
@@ -60,7 +49,7 @@
       }
 
       .pdf_letter {
-         width: 44vw;
+         width: 80vw;
 
       }
 
@@ -75,14 +64,27 @@
          color: white;
          border: 1px solid orangered;
          border-radius: 4px;
-         width: 44vw;
          font-family: "";
-         font-size: 1.7em;
+         font-size: 1.4em;
          font-weight: normal;
       }
 
+      .active,
+      .collapsible:hover {
+         background-color: teal;
+      }
+
+      .content {
+         padding: 0 18px;
+         height: 1000px;
+         width: 100%;
+         display: none;
+         overflow: hidden;
+         background-color: #f1f1f1;
+      }
+
       .non_winner {
-         opacity: .4;
+         opacity: .8;
          transition: opacity .5s;
       }
 
@@ -90,38 +92,6 @@
          opacity: 0.9;
       }
 
-
-
-
-      /* ------------- Collapse ------- */
-
-
-      /* Style the button that is used to open and close the collapsible content */
-      /* .non_winners {
-         background-color: #eee;
-         color: #444;
-         cursor: pointer;
-         padding: 18px;
-         width: 100%;
-         border: none;
-         text-align: left;
-         outline: none;
-         font-size: 15px;
-      } */
-
-      /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-      /* .active,
-      .non_winners:hover {
-         background-color: #ccc;
-      } */
-
-      /* Style the collapsible content. Note: hidden by default */
-      /*  .content {
-         padding: 0 18px;
-         display: none;
-         overflow: hidden;
-         background-color: #f1f1f1;
-      }  */
 
       #glance {
          border: 2px solid orange;
@@ -137,7 +107,6 @@
       .quick_look {
          border: 2px double orangered;
          font-size: 1.4em;
-         min-width: 400px;
          text-align: center;
          border-radius: 4px;
          /*  box-shadow: 0px 0px 10px 2px white; */
@@ -203,53 +172,74 @@
 
    <section id="est_container">
 
-
+      <button type="button" class="collapsible est_title">Henry Surveying _ $2,000 - $2,500</button>
       <div id="survey" class="estimates">
-         <h3 class='est_title'>Henry Surveying _ $2,000 - $2,500</h3>
          <object class="pdf_letter" data="survey_est.pdf">G&R</object>
       </div>
 
+      <button type="button" class="collapsible est_title">Earth Ex _ Sabrina $7,600 - $7,900</button>
       <div id="sabrina" class="estimates">
-         <h3 class='est_title'>Earth Ex _ Sabrina $7,600 - $7,900</h3>
          <object class="pdf_letter" data="over_ex_est.pdf">Earth Ex . Sabrina</object>
       </div>
 
+      <button type="button" class="collapsible est_title">G&R Concrete</button>
       <div id="g&r" class="estimates">
-         <h3 class='est_title'>Foundation G&R _ $43,000</h3>
          <object class="pdf_letter" data="g&r_estimate.pdf">G&R</object>
       </div>
 
-
+      <button type="button" class="collapsible est_title">Hagle Lumber _ $31,000</button>
       <div id="hagle" class="estimates">
-         <h3 class="est_title">Hagle Lumber _ $31,000</h3>
          <object class="pdf_letter" data="hagle_est_update.pdf">Hagle Lumber</object>
       </div>
 
+      <button type="button" class="collapsible est_title">GoldenWood Truss _ $6,409 + $792 heel option</button>
       <div id="goldenwood_truss" class="estimates">
-         <h3 class="est_title">GoldenWood Truss _ $6,409 + $792 heel option</h3>
          <object class="pdf_letter" data="truss_est.pdf">GoldenWood Truss</object>
       </div>
 
 
-
-
-
-
-
-
-
-
-      <!--  <button type="button" class="non-winners">Ojai Lumber</button> -->
+      <!--  non-winners -->
+      <button type="button" class="non_winners collapsible est_title">Ojai Lumber</button>
       <div class="estimates non_winner" id="ojai_lumber">
          <object class="pdf_letter" data="ojai_lumber_est.pdf"></object>
       </div>
 
+      <button type="button" class="non-winners collapsible est_title">Contractors Warehouse</button>
       <div class="estimates non_winner" id="cw">
          <object class="pdf_letter" data="cw_lumber_est.pdf"></object>
       </div>
+
+      <button type="button" class="non-winners collapsible est_title">BuildersFirstChoice</button>
       <div class="estimates non_winner" id="bfs">
          <object class="pdf_letter" data="bfs_lumber_est.pdf"></object>
       </div>
+
+
+      <script>
+         let coll = document.getElementsByClassName("collapsible");
+         let i;
+
+         for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+               this.classList.toggle("active");
+               var content = this.nextElementSibling;
+               if (content.style.display === "block") {
+                  content.style.display = "none";
+               } else {
+                  content.style.display = "block";
+               }
+            });
+         }
+
+      </script>
+
+
+
+
+
+
+
+
 
 
    </section>
