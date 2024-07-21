@@ -10,6 +10,7 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&display=swap" rel="stylesheet">
    <link href="pajaro.main.css" rel="stylesheet">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
    <script>
 
    </script>
@@ -31,6 +32,10 @@
       .estimates_content {
          border: 2px solid pink;
 
+      }
+
+      button {
+         margin: 10px;
       }
 
       .estimates {
@@ -65,7 +70,7 @@
          border: 1px solid orangered;
          border-radius: 4px;
          font-family: "";
-         font-size: 1.4em;
+         font-size: 1.2em;
          font-weight: normal;
       }
 
@@ -96,7 +101,7 @@
       #glance {
          border: 2px solid orange;
          display: flex;
-         flex-flow: row nowrap;
+         flex-flow: row wrap;
          justify-content: space-around;
          margin-bottom: 50px;
          padding: 20px;
@@ -105,7 +110,7 @@
       }
 
       .quick_look {
-         border: 2px double orangered;
+         border: 2px double orange;
          font-size: 1.4em;
          text-align: center;
          border-radius: 4px;
@@ -126,7 +131,7 @@
    <h1 class="title">P&aacute;jaro</h1>
    <header id="nav_container">
       <nav>
-         <a href="indexBirdShop.html">Home</a>
+         <a href="index_pajaro.html">Home</a>
          <a href="plans.html">Plans</a>
          <a href="materials.html" class="dropbtn">Materials</button>
             <a href="vendors.html">Vendors</a>
@@ -178,7 +183,7 @@
       </div>
 
       <button type="button" class="collapsible est_title">Earth Ex _ Sabrina $7,600 - $7,900</button>
-      <div id="sabrina" class="estimates">
+      <div id="earth-ex" class="estimates">
          <object class="pdf_letter" data="over_ex_est.pdf">Earth Ex . Sabrina</object>
       </div>
 
