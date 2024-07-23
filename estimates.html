@@ -10,8 +10,24 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&display=swap" rel="stylesheet">
    <link href="pajaro.main.css" rel="stylesheet">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
    <script>
+
+      let not_first = document.getElementsByClassName("non_winners");
+      let i;
+
+      for (i = 0; i < not_first.length; i++) {
+
+         not_first[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            let content = this.nextElementSibling;
+
+            if (content.style.display === "block") {
+               content.style.display = "none";
+            } else {
+               content.style.display = "block";
+            }
+         });
+      }
 
    </script>
 
@@ -29,22 +45,12 @@
          justify-content: space-around;
       }
 
-      .estimates_content {
-         border: 2px solid pink;
-
-      }
-
-      button {
-         margin: 10px;
-      }
-
       .estimates {
          margin-bottom: 50px;
-         width: 100vw;
-         border: 2px solid pink;
-         display: none;
-      }
+         width: 44vw;
+         border: none;
 
+      }
 
       h3 {
          border: 1px solid aqua;
@@ -54,7 +60,7 @@
       }
 
       .pdf_letter {
-         width: 80vw;
+         width: 44vw;
 
       }
 
@@ -69,27 +75,14 @@
          color: white;
          border: 1px solid orangered;
          border-radius: 4px;
+         width: 44vw;
          font-family: "";
-         font-size: 1.2em;
+         font-size: 1.7em;
          font-weight: normal;
       }
 
-      .active,
-      .collapsible:hover {
-         background-color: teal;
-      }
-
-      .content {
-         padding: 0 18px;
-         height: 1000px;
-         width: 100%;
-         display: none;
-         overflow: hidden;
-         background-color: #f1f1f1;
-      }
-
       .non_winner {
-         opacity: .8;
+         opacity: .4;
          transition: opacity .5s;
       }
 
@@ -98,10 +91,12 @@
       }
 
 
+
+
       #glance {
          border: 2px solid orange;
          display: flex;
-         flex-flow: row wrap;
+         flex-flow: row nowrap;
          justify-content: space-around;
          margin-bottom: 50px;
          padding: 20px;
@@ -110,8 +105,9 @@
       }
 
       .quick_look {
-         border: 2px double orange;
+         border: 2px double orangered;
          font-size: 1.4em;
+         min-width: 400px;
          text-align: center;
          border-radius: 4px;
          /*  box-shadow: 0px 0px 10px 2px white; */
@@ -131,7 +127,7 @@
    <h1 class="title">P&aacute;jaro</h1>
    <header id="nav_container">
       <nav>
-         <a href="index_pajaro.html">Home</a>
+         <a href="indexBirdShop.html">Home</a>
          <a href="plans.html">Plans</a>
          <a href="materials.html" class="dropbtn">Materials</button>
             <a href="vendors.html">Vendors</a>
@@ -177,74 +173,53 @@
 
    <section id="est_container">
 
-      <button type="button" class="collapsible est_title">Henry Surveying _ $2,000 - $2,500</button>
+
       <div id="survey" class="estimates">
+         <h3 class='est_title'>Henry Surveying _ $2,000 - $2,500</h3>
          <object class="pdf_letter" data="survey_est.pdf">G&R</object>
       </div>
 
-      <button type="button" class="collapsible est_title">Earth Ex _ Sabrina $7,600 - $7,900</button>
-      <div id="earth-ex" class="estimates">
+      <div id="sabrina" class="estimates">
+         <h3 class='est_title'>Earth Ex _ Sabrina $7,600 - $7,900</h3>
          <object class="pdf_letter" data="over_ex_est.pdf">Earth Ex . Sabrina</object>
       </div>
 
-      <button type="button" class="collapsible est_title">G&R Concrete</button>
       <div id="g&r" class="estimates">
+         <h3 class='est_title'>Foundation G&R _ $43,000</h3>
          <object class="pdf_letter" data="g&r_estimate.pdf">G&R</object>
       </div>
 
-      <button type="button" class="collapsible est_title">Hagle Lumber _ $31,000</button>
+
       <div id="hagle" class="estimates">
+         <h3 class="est_title">Hagle Lumber _ $31,000</h3>
          <object class="pdf_letter" data="hagle_est_update.pdf">Hagle Lumber</object>
       </div>
 
-      <button type="button" class="collapsible est_title">GoldenWood Truss _ $6,409 + $792 heel option</button>
       <div id="goldenwood_truss" class="estimates">
+         <h3 class="est_title">GoldenWood Truss _ $6,409 + $792 heel option</h3>
          <object class="pdf_letter" data="truss_est.pdf">GoldenWood Truss</object>
       </div>
 
 
-      <!--  non-winners -->
-      <button type="button" class="non_winners collapsible est_title">Ojai Lumber</button>
+
+
+
+
+
+
+
+
+      <!--  <button type="button" class="non-winners">Ojai Lumber</button> -->
       <div class="estimates non_winner" id="ojai_lumber">
          <object class="pdf_letter" data="ojai_lumber_est.pdf"></object>
       </div>
 
-      <button type="button" class="non-winners collapsible est_title">Contractors Warehouse</button>
       <div class="estimates non_winner" id="cw">
          <object class="pdf_letter" data="cw_lumber_est.pdf"></object>
       </div>
-
-      <button type="button" class="non-winners collapsible est_title">BuildersFirstChoice</button>
       <div class="estimates non_winner" id="bfs">
          <object class="pdf_letter" data="bfs_lumber_est.pdf"></object>
       </div>
-
-
-      <script>
-         let coll = document.getElementsByClassName("collapsible");
-         let i;
-
-         for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function () {
-               this.classList.toggle("active");
-               var content = this.nextElementSibling;
-               if (content.style.display === "block") {
-                  content.style.display = "none";
-               } else {
-                  content.style.display = "block";
-               }
-            });
-         }
-
-      </script>
-
-
-
-
-
-
-
-
 
 
    </section>
