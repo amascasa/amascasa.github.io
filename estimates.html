@@ -10,24 +10,8 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&display=swap" rel="stylesheet">
    <link href="pajaro.main.css" rel="stylesheet">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
    <script>
-
-      let not_first = document.getElementsByClassName("non_winners");
-      let i;
-
-      for (i = 0; i < not_first.length; i++) {
-
-         not_first[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            let content = this.nextElementSibling;
-
-            if (content.style.display === "block") {
-               content.style.display = "none";
-            } else {
-               content.style.display = "block";
-            }
-         });
-      }
 
    </script>
 
@@ -39,18 +23,59 @@
          margin-bottom: 40px;
       }
 
+      #glance {
+         border: 1px solid green;
+         display: flex;
+         flex-flow: row nowrap;
+         justify-content: space-between;
+         margin-bottom: 50px;
+         padding: 20px;
+         border-radius: 4px;
+         box-shadow: 0px 0px 10px 2px white inset;
+      }
+
+      .quick_look {
+         border: 2px solid aqua;
+         font-size: 1.4em;
+         text-align: center;
+         border-radius: 4px;
+         padding: 10px;
+         width: 20%;
+         height: 100px;
+         box-shadow: 0px 0px 8px 2px white inset;
+         /*  box-shadow: 0px 0px 10px 2px white; */
+      }
+
+      .glance_title {
+         font-family: '';
+         /* color: orangered; */
+         /* text-decoration: underline; */
+      }
+
       #est_container {
          display: flex;
          flex-flow: row wrap;
          justify-content: space-around;
+         margin-bottom: 30px;
+      }
+
+      /*  .estimates_content {
+         border: 2px solid pink;
+
+      } */
+
+      button {
+         margin: 10px;
       }
 
       .estimates {
          margin-bottom: 50px;
-         width: 44vw;
-         border: none;
-
+         width: 100vw;
+         /* border: 2px solid pink; */
+         display: none;
+         align-content: center;
       }
+
 
       h3 {
          border: 1px solid aqua;
@@ -59,8 +84,12 @@
          box-shadow: 0px 0px 15px 4px white inset;
       }
 
+
+      /* ∑∑∑∑∑∑∑∑∑∑∑∑∑∑∑∑∑∑∑∑∑∑∑∑∑∑∑(w)∑∑∑∑∑∑´∑´∑´∑´®†¥¨ˆøπøøøøøøøø(o)ππππππππ(p) */
+
       .pdf_letter {
-         width: 44vw;
+         width: 80vw;
+
 
       }
 
@@ -72,17 +101,36 @@
          padding: 10px;
          margin: 0px 0px 10px 0px;
          text-align: center;
-         color: white;
-         border: 1px solid orangered;
+         color: rgb(253, 239, 213);
+
+         border: 1px solid aqua;
          border-radius: 4px;
-         width: 44vw;
          font-family: "";
-         font-size: 1.7em;
+         font-size: 1.2em;
          font-weight: normal;
       }
 
+      .active,
+      .est_title:hover {
+         background-color: aqua;
+         color: black;
+      }
+
+      .content {
+         padding: 0 18px;
+         height: 1000px;
+         width: 80%;
+         display: none;
+         position: fixed;
+         top: 50px;
+         left: 50px;
+         z-index: 999;
+         background-color: black;
+         border: 2px solid pink;
+      }
+
       .non_winner {
-         opacity: .4;
+         opacity: .8;
          transition: opacity .5s;
       }
 
@@ -90,44 +138,116 @@
          opacity: 0.9;
       }
 
+      #est_calc {
+         width: 90%;
+         padding: 10px;
 
+      }
 
+      .calc {
+         color: aqua;
+      }
 
-      #glance {
-         border: 2px solid orange;
+      .calc:hover {
+         color: orange;
+      }
+
+      /* ©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©© */
+
+      .material_sections {
          display: flex;
-         flex-flow: row nowrap;
-         justify-content: space-around;
-         margin-bottom: 50px;
-         padding: 20px;
-         border-radius: 4px;
-         box-shadow: 0px 0px 10px 2px white inset;
+         flex-flow: column wrap;
+         border: 2px solid green;
+         box-shadow: 0px 0px 8px 2px white inset;
+         width: 30%;
+         margin-bottom: 40px;
+         padding: 0px 20px 10px 20px;
       }
 
-      .quick_look {
-         border: 2px double orangered;
-         font-size: 1.4em;
-         min-width: 400px;
+
+      #foundation_container {
+         padding: 0px 20px 10px 20px;
+      }
+
+      #lumber_container {
+         padding: 0px 20px 10px 20px;
+      }
+
+      #hardware_container {
+         padding: 0px 20px 10px 20px;
+      }
+
+
+      .container_title {
+         margin-bottom: 0px 16px 0px 16px;
+         border-bottom: 2px double orangered;
+         color: rgb(253, 239, 213);
          text-align: center;
-         border-radius: 4px;
-         /*  box-shadow: 0px 0px 10px 2px white; */
       }
 
-      .quick_title {
-         font-family: '';
-         /* color: orangered; */
-         /* text-decoration: underline; */
+      .totals {
+         text-align: right;
+         position: relative;
+         bottom: 0;
+         right: 0;
       }
+
+      /* Modal CSS  */
+
+      .modal {
+         display: none;
+         /* Hidden by default */
+         position: fixed;
+         /* Stay in place */
+         z-index: 1;
+         /* Sit on top */
+         padding: 100px;
+         /* Location of the box */
+         left: 0;
+         top: 0;
+         width: 100%;
+         /* Full width */
+         height: 100%;
+         /* Full height */
+         overflow: auto;
+         /* Enable scroll if needed */
+         background-color: rgb(0, 0, 0);
+         /* Fallback color */
+         background-color: rgba(0, 0, 0, 0.7);
+         /* Black w/ opacity */
+         box-shadow: 0px 0px 10px 3px white;
+      }
+
+      .modal-content {
+         color: white;
+         display: block;
+         width: 90vw;
+         height: 80vw;
+         z-index: 2;
+         margin-left: 5vw;
+         margin-right: 5vw;
+         animation-name: zoom;
+         animation-duration: 0.2s;
+      }
+
+
+
+      .close {
+         color: white;
+      }
+
+      /* ©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©©© */
    </style>
 
 </head>
 
 <body>
 
+
    <h1 class="title">P&aacute;jaro</h1>
    <header id="nav_container">
       <nav>
-         <a href="indexBirdShop.html">Home</a>
+         <a href="index_pajaro.html">Home</a>
          <a href="plans.html">Plans</a>
          <a href="materials.html" class="dropbtn">Materials</button>
             <a href="vendors.html">Vendors</a>
@@ -139,22 +259,23 @@
    </header>
 
 
+
    <section id="glance">
 
       <div id="survey_Henry" class="quick_look">
-         <p class="quick_title">Survey</p>
+         <p class="glance_title">Survey</p>
          <p>$2,000 - $2500</p>
       </div>
       <div id="over_ex_Sabrina" class="quick_look">
-         <p class="quick_title">Excavation</p>
+         <p class="glance_title">Excavation</p>
          <p>$7,600 - $7,900</p>
       </div>
       <div id="g&r_foundation" class="quick_look">
-         <p class="quick_title">Foundation</p>
+         <p class="glance_title">Foundation</p>
          <p>$43,000 Option: $1200 dirt removal</p>
       </div>
       <div id="hagle_summary" class="quick_look">
-         <p class="quick_title">Lumber</p>
+         <p class="glance_title">Lumber</p>
          <p>$31,000</p>
       </div>
 
@@ -166,63 +287,225 @@
    </section>
 
 
-
-
-
-
+   <div id="myModal" class="modal">
+      <p><span class="close">&times;</span></p>
+      <div id="modal-content" class="modal-content"></div>
+   </div>
 
    <section id="est_container">
 
+      <!-- Lumber -->
+      <div id="lumber_container" class="material_sections">
 
-      <div id="survey" class="estimates">
-         <h3 class='est_title'>Henry Surveying _ $2,000 - $2,500</h3>
-         <object class="pdf_letter" data="survey_est.pdf">G&R</object>
-      </div>
+         <h2 class="container_title">lumber</h2>
 
-      <div id="sabrina" class="estimates">
-         <h3 class='est_title'>Earth Ex _ Sabrina $7,600 - $7,900</h3>
-         <object class="pdf_letter" data="over_ex_est.pdf">Earth Ex . Sabrina</object>
-      </div>
+         <button type="button" class="collapsible est_title" onclick='getEstimate("hagle_est_update.pdf")'>Hagle Lumber
+            _ $31,000</button>
 
-      <div id="g&r" class="estimates">
-         <h3 class='est_title'>Foundation G&R _ $43,000</h3>
-         <object class="pdf_letter" data="g&r_estimate.pdf">G&R</object>
-      </div>
+         <!--  non-winners -->
+         <button type="button" class="non_winners collapsible est_title"
+            onclick='getEstimate("ojai_lumber_est.pdf")'>Ojai Lumber : $36,250</button>
 
 
-      <div id="hagle" class="estimates">
-         <h3 class="est_title">Hagle Lumber _ $31,000</h3>
-         <object class="pdf_letter" data="hagle_est_update.pdf">Hagle Lumber</object>
-      </div>
+         <button type="button" class="non-winners collapsible est_title"
+            onclick='getEstimate("cw_lumber_est.pdf")'>Contractors Warehouse : $33,500</button>
 
-      <div id="goldenwood_truss" class="estimates">
-         <h3 class="est_title">GoldenWood Truss _ $6,409 + $792 heel option</h3>
-         <object class="pdf_letter" data="truss_est.pdf">GoldenWood Truss</object>
+
+         <button type="button" class="non-winners collapsible est_title"
+            onclick='getEstimate("bfs_lumber_est.pdf")'>BuildersFirstChoice : $34,000</button>
+
+         <button type="button" class="non_winners collapsible est_title" onclick='getEstimate("lowes_est.pdf")'>Lowes :
+            $34,300</button>
       </div>
 
 
 
+      <!-- Harware Estimates-->
+      <div id="hardware_container" class="material_sections">
 
+         <h2 class="container_title">hardware</h2>
 
+         <button class="hardware collapsible est_title" type="button">WhiteCap : $</button>
+         <div class="estimates" id="whitecap_hardware_est">
+            <object class="pdf_letter" data=""></object>
+         </div>
 
+         <button class="hardware collapsible  est_title collapsible" type="button">ContractorsWarehouse : $</button>
+         <div class="estimates" id="cw_hardware_est">
+            <object class="pdf_letter" data=""></object>
+         </div>
 
+         <button class="hardware collapsible  est_title" type="button">HomeDepot : $</button>
+         <div class="estimates" id="cw_hardware_est">
+            <object class="pdf_letter" data=""></object>
+         </div>
 
+         <button class="hardware collapsible  est_title" type="button">Lowe's : $</button>
+         <div class="estimates" id="cw_hardware_est">
+            <object class="pdf_letter" data=""></object>
+         </div>
 
-
-      <!--  <button type="button" class="non-winners">Ojai Lumber</button> -->
-      <div class="estimates non_winner" id="ojai_lumber">
-         <object class="pdf_letter" data="ojai_lumber_est.pdf"></object>
       </div>
 
-      <div class="estimates non_winner" id="cw">
-         <object class="pdf_letter" data="cw_lumber_est.pdf"></object>
+
+      <!-- Trusses -->
+      <div id="truss_container" class="material_sections">
+
+         <h2 class="container_title">trusses</h2>
+
+
+         <button id="golden_wood_truss" class="trusses collapsible est_title" type="button"
+            onclick='getEstimate("truss_est.pdf")'>GoldenWood Truss _ $6,409 +
+            $792 heel option</button>
+
+
+         <button class="trusses collapsible  est_title" type="button">ContractorsWarehouse : $</button>
+         <div class="estimates" id="">
+            <object class="pdf_letter" data=""></object>
+         </div>
+
+         <button class="trusses collapsible  est_title" type="button">HomeDepot : $</button>
+         <div class="estimates" id="">
+            <object class="pdf_letter" data=""></object>
+         </div>
+
+         <button class="trusses collapsible  est_title" type="button">Lowe's : $</button>
+         <div class="estimates" id="">
+            <object class="pdf_letter" data=""></object>
+         </div>
+
       </div>
-      <div class="estimates non_winner" id="bfs">
-         <object class="pdf_letter" data="bfs_lumber_est.pdf"></object>
+
+      <!-- foundation -->
+      <div id="foundation_container" class="material_sections">
+         <h2 class="container_title">foundation</h2>
+
+         <button type="button" class="est_title" onclick='getEstimate("survey_est.pdf")'>Henry Surveying _ $2,000 -
+            $2,500</button>
+         <button type="button" class="est_title" onclick="getEstimate('over_ex_est.pdf')">Earth Ex _ Sabrina
+            $7,600
+            - $7,900</button>
+         <button type="button" class="est_title" onclick="getEstimate('g&r_estimate.pdf')">G&R Concrete
+            :$43,000</button>
+
+
+         <div class="totals">
+            <p class="totals">Total: $54,000</p>
+         </div>
+
       </div>
+
+   </section>
+
+
+
+
+
+
+   <!-- The Modal -->
+   <!-- <div id="myModal" class="modal"> -->
+
+   <!-- Modal content -->
+   <!-- <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="test">Some text in the Modal..</p>
+         </div>
+
+      </div> -->
+
+
+
+   <script>
+      let html = "";
+
+      function getEstimate(company_file) {
+
+         html = "<object class='pdf_letter' data='" + company_file + "'></object>"
+         document.getElementById('modal-content').innerHTML = html;
+
+         document.getElementById('myModal').style.display = 'block';
+      }
+
+
+
+      let span = document.getElementsByClassName('close')[0];
+      let modal = document.getElementById('myModal');
+
+      span.onclick = function () {
+         document.getElementById('myModal').style.display = 'none';
+      }
+
+      window.onclick = function (event) {
+         if (event.target == modal) {
+            modal.style.display = 'none';
+         }
+      }
+
+   </script>
+
+   <!-- <script>
+
+         // let html = "";
+         function getDetail(detailNumber) {
+
+            html += "<img class='details' src='" + detailNumber + ".jpg'>";
+
+            document.getElementById('modal-content').innerHTML = html;
+            document.getElementById('myModal').style.display = 'block';
+            html = ""
+
+            console.log(modal);
+         }
+
+         //closes the modal when the x is clicked
+         let span1 = document.getElementsByClassName('close')[0];
+         var modal1 = document.getElementById("myModal");
+
+         span.onclick = function () {
+            modal.style.display = 'none';
+         }
+
+         //closes the modal when clicked outside the modal
+         window.onclick = function (event) {
+            if (event.target != modal1) {
+               modal1.style.display = 'none';
+            }
+         }
+
+      </script> -->
+
+
+
+
+
+
+
+
+   <!-- <script>
+         let coll = document.getElementsByClassName("collapsible");
+         let i;
+
+         for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+               this.classList.toggle("active");
+               var content = this.nextElementSibling;
+               if (content.style.display === "block") {
+                  content.style.display = "none";
+               } else {
+                  content.style.display = "block";
+               }
+            });
+         }
+
+      </script> -->
+
 
 
    </section>
+
+
+
+
 
 
 
