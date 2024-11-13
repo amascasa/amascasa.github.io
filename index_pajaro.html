@@ -13,10 +13,32 @@
    <script> </script>
 
    <style>
+      h1#pajaro {
+         color: "";
+      }
+
+      /*  Forecast */
       .forecast {
          height: 20px;
-         margin-bottom: 20px;
       }
+
+      .ww_box,
+      .ww_col1,
+      .ww_col2,
+      .resize_sensor {
+         font-family: "";
+      }
+
+      #ww_e92de088cd7 {
+         border: 2px solid aqua;
+         border-radius: 4px;
+         opacity: .8;
+         box-shadow: 0px 0px 8px 1px white;
+      }
+
+      /* ************************** */
+
+
 
       #main_container {
          display: flex;
@@ -27,13 +49,75 @@
 
 
 
+
+
+
+
+      .title {
+         margin-bottom: 40px;
+      }
+
+
+      /* ******** Stats ****************** */
+      #stats_container {
+         display: flex;
+         flex-flow: row wrap;
+         justify-content: space-around;
+         align-items: baseline;
+         color: white;
+         font-size: 1.1em;
+         border: 1px solid aqua;
+         padding: 5px 0px 12px 5px;
+         width: 97%;
+         margin: 30px 1.5% 50px 1.5%;
+
+      }
+
+      .stats {
+         color: white;
+         border-left: 2px double orangered;
+         padding-left: 10px;
+      }
+
+
+      /* ******** Days ****************** */
+      #giorni_container {
+         border: 1px solid aqua;
+         display: flex;
+         flex-flow: row nowrap;
+         justify-content: space-between;
+         min-height: 100px;
+         width: 94vw;
+         margin-bottom: 60px;
+      }
+
+      .giorno {
+         border: 1px solid aqua;
+         width: 50%;
+         padding: 10px;
+         box-shadow: 0px 0px 10px 3px white;
+         border-radius: 4px;
+      }
+
+      .giorno_titolo {
+         text-align: center;
+         font-family: 'Amatic SC';
+         color: orange;
+         box-shadow: 0px 0px 10px 3px white;
+         border-radius: 4px;
+
+      }
+
+      /* ************************** */
+
+
+      /* ********* Calendar***************** */
       #calendar {
          display: flex;
          flex-flow: row wrap;
          width: 90%;
          justify-content: space-around;
          margin-bottom: 46px;
-         margin-top: 46px;
       }
 
       #calendar_header {
@@ -69,49 +153,62 @@
          background-image: url('itty_cradle.jpg');
       }
 
-      .excavation_days {
-         background-color: darkblue;
-      }
-
-      .foundation_days {
-         background-color: purple;
-      }
 
 
-      #elevations_img {
-         width: 90%;
-         border: 4px solid purple;
-      }
+      /* ************************** */
 
+
+      /* ************************** */
       iframe {
          width: 90%;
-         border: 2px solid pink;
+         border: 2px solid aqua;
          width: 90%;
          height: 90vh;
       }
 
-      #ww_e92de088cd7 {
-         border: 2px solid aqua;
-         border-radius: 4px;
-         opacity: 1;
-         box-shadow: 0px 0px 8px 1px white;
-
+      .model {
+         width: 95%;
+         height: 90vh;
+         margin-bottom: 60px;
       }
 
-      .ww_box,
-      .ww_col1,
-      .ww_col2,
-      .resize_sensor {
-         font-family: "";
-
+      #first_framing_3d,
+      #first_second_framing_3d {
+         width: 90%;
+         margin-left: 5%;
       }
+
+      #elevations_img {
+         width: 90%;
+         border: 4px solid aqua;
+      }
+
+      #lumber_container {
+         margin: auto;
+         width: 90vw;
+         border: 1px solid aqua;
+         padding: 10px;
+      }
+
+      #lumber {
+         width: 100%;
+      }
+
+      #model_header {
+         font-size: 3em;
+         margin-bottom: 10px;
+         text-align: center;
+      }
+
+      /* ************************** */
    </style>
 
 </head>
 
 <body>
 
-   <h1 class="title">P&aacute;jaro</h1>
+   <h1 id="pajaro" class="title">P&aacute;jaro</h1>
+
    <header id="nav_container">
 
       <nav id="navbar">
@@ -123,6 +220,9 @@
             <a></a>
             <a class="tabs" href="framing.html">Framing</a>
             <a class="tabs" href="foundation.html">Foundation</a>
+            <a class="tabs" href="floor_dimensions_first.html">FirstFloor</a>
+            <a class="tabs" href="floor_dimensions_second.html">SecondFloor</a>
+            <a class="tabs" href="php_test.html">PHP</a>
       </nav>
 
       <script>
@@ -140,15 +240,79 @@
 
    </header>
 
+
+
+
+
+
+   <!-- Meteo -->
    <div id="ww_e92de088cd7" v='1.3' loc='auto'
       a='{"t":"responsive","lang":"en","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"fahrenheit","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
       <a href="https://weatherwidget.org/" id="ww_e92de088cd7_u" target="_blank">Widget weather HTML</a>
    </div>
    <script async src="https://app2.weatherwidget.org/js/?id=ww_e92de088cd7"></script>
 
+   <!-- Stats -->
+   <div id="stats_container">
+      <p class="stats">FloorSquare Footage: 2,608 ft<sup>2</sup></p>
+      <p class="stats">Linear Feet: 172’ 9”</p>
+      <p class="stats">Wall surface area: 2761.42 ft<sup>2</sup></p>
+      <p class="stats">Roof area: 1614.53 ft<sup>2</sup></p>
+      <p class="stats">Foundation Volume: 999 ft<sup>3</sup> => 37.037 yards<sup>3</sup></p>
+      <p class="stats">Slab & Gravel Volume: 451.54ft<sup>3</sup></p>
+   </div>
+
+
+   <!-- Materials Model -->
+   <h1 id="model_header" class="title">1st Floor Lumber Materials & Arrangment</h1>
+   <div id="lumber_container">
+
+      <iframe id="lumber"
+         src="https://3dwarehouse.sketchup.com/embed/3e657c83-1178-44ef-848d-cd934515780f?token=aJ2003bCf7s=&binaryName=s21"
+         allowfullscreen>
+      </iframe>
+   </div>
+
+
+
    <!-- Main -->
    <div id="main_container">
 
+      <!-- giorni -->
+      <section id="giorni_container">
+
+         <div class="giorno ">
+            <h2 class="giorno_titolo">Oggi</h2>
+            <ul>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+            </ul>
+         </div>
+
+
+         <div class="giorno ">
+            <h2 class="giorno_titolo">Notas</h2>
+            <ul>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+            </ul>
+         </div>
+
+         <div class="giorno ">
+            <h2 class="giorno_titolo">Domani</h2>
+            <ul>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+            </ul>
+         </div>
+
+      </section>
 
 
       <!-- Calendar -->
@@ -180,7 +344,7 @@
 
          <div class="week">
             <div class="day">
-               <p class="current_day">21</p>
+               <p>21</p>
             </div>
             <div class="day">
                <p>22</p>
@@ -192,7 +356,7 @@
                <p>23</p>
             </div>
             <div class="day">
-               <p>24</p>
+               <p class="current_day">24</p>
             </div>
             <div class="day">
                <p>25</p>
@@ -208,8 +372,8 @@
             </div>
             <div class="day excavation_days">
                <p>28</p>
-               <br>
-               <p>Earth-Ex<br>Sabrina<br>potential start</p>
+
+
             </div>
             <div class="day excavation_days">
                <p>29</p>
@@ -219,7 +383,7 @@
             </div>
             <div class="day excavation_days">
                <p>31<br></p>
-               <p>Excavation Potential Finish</p>
+
             </div>
             <div class="day">
                <p>August<br>1</p>
@@ -235,7 +399,7 @@
             </div>
             <div class="day foundation_days">
                <p>4</p>
-               <p>G&R<br>Foundation potential start</p>
+
             </div>
             <div class="day foundation_days">
                <p>5</p>
@@ -272,7 +436,6 @@
             </div>
             <div class="day foundation_days">
                <p>15</p>
-               <p>G&R<br>Foundation potential finish</p>
             </div>
             <div class="day">
                <p>16</p>
@@ -308,13 +471,19 @@
       </section>
 
 
+      <!--3d Model floor 1&2-->
+      <div id="first_second_framing_3d">
+         <iframe
+            src="https://3dwarehouse.sketchup.com/embed/c43fadb4-08b4-4cae-9cd0-2974662664ce?token=liH-mlQdEMc=&binaryName=s21"
+            frameborder="0" scrolling="no" allowfullscreen>
+         </iframe>
+      </div>
+
+
       <!-- Elevations -->
-      <!--  <div id="elevations"> -->
       <img id="elevations_img" src=" elevations.png" alt="elevations">
-      <!-- </div> -->
 
       <!-- SketchUp shell Model -->
-      <!-- <div id="full_model"> -->
       <iframe
          src="https://3dwarehouse.sketchup.com/embed/58a81849-a747-4137-a3e8-52d871e64c4c?token=kNaQKMIInaA=&binaryName=s21"
          scrolling="no" allowfullscreen></iframe>
