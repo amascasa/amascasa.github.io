@@ -202,16 +202,27 @@
       }
 
       #first_list {
+         display: flex;
+         flex-flow: row wrap;
+         justify-content: space-around;
          margin-bottom: 60px;
-         width: 100%;
+         width: 100vw;
          height: auto;
-         display: absolute;
+
       }
 
       #list {
-         margin-left: 24vw;
          width: 49vw;
       }
+
+      #saw_nailer {
+         width: 40vw;
+         height: auto;
+         object-fit: contain;
+         border: none;
+         box-shadow: none;
+      }
+
 
 
 
@@ -286,10 +297,13 @@
          src="https://3dwarehouse.sketchup.com/embed/3e657c83-1178-44ef-848d-cd934515780f?token=aJ2003bCf7s=&binaryName=s21"
          allowfullscreen>
       </iframe>
+
    </div>
+
 
    <div id="first_list">
       <image id="list" src="first_list.png" alt=""></image>
+      <image id="saw_nailer" src="saw_nailer.png" alt=""></image>
    </div>
 
 
