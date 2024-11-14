@@ -17,12 +17,17 @@
       }
 
       #plans_container {
-         width: 100%;
+         width: 90vw;
+         height: 90vh;
+
+         /* border: 2px solid orange; */
+
       }
 
       .pdf {
          width: 90%;
          height: 900px;
+         border: 2px solid red;
       }
 
       #coords {
@@ -68,7 +73,7 @@
    <header id="nav_container">
 
       <nav>
-         <a href="indexBirdShop.html">Home</a>
+         <a href="index_pajaro.html">Home</a>
          <a href="plans.html">Plans</a>
          <a href="materials.html" class="dropbtn">Materials</button>
             <a href="vendors.html">Vendors</a>
@@ -85,15 +90,65 @@
 
 
       <!-- pdf plan sets -->
+
+
+      <!-- <div id="adobe-dc-view"></div>
+      <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+      <script type="text/javascript">
+         document.addEventListener("adobe_dc_view_sdk.ready", function () {
+            var adobeDCView = new AdobeDC.View({ clientId: "9c29e9ed381548ec8d03c441bb6fff88", divId: "adobe-dc-view" });
+            adobeDCView.previewFile({
+               content: { location: { url: "https://amascasa.github.io/plans_structural.pdf" } },
+               metaData: { fileName: "plans_structural.pdf" }
+            }, {});
+         });
+      </script> -->
+
+
       <div id="plans_container">
-         <object id='A.plans' class="pdf" data="plans_set.pdf"></object>
-         <object id='S&D.plans' class="pdf" data="plans_structural.pdf"></object>
+
+         <div id="adobe-dc-view" class="full_"></div>
+         <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+         <script type="text/javascript">
+            document.addEventListener("adobe_dc_view_sdk.ready", function () {
+               var adobeDCView = new AdobeDC.View({ clientId: "9c29e9ed381548ec8d03c441bb6fff88", divId: "adobe-dc-view" });
+               adobeDCView.previewFile({
+                  content: { location: { url: "https://amascasa.github.io/plans_set.pdf" } },
+                  metaData: { fileName: "plans_set.pdf" }
+               }, {
+                  showLeftHandPanel: true,
+                  showAnnotationTools: true,
+               });
+            });
+         </script>
+
+         <!-- <div id="adobe-dc-view" class="full_"></div>
+         <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+         <script type="text/javascript">
+            document.addEventListener("adobe_dc_view_sdk.ready", function () {
+               var adobeDCView = new AdobeDC.View({ clientId: "9c29e9ed381548ec8d03c441bb6fff88", divId: "adobe-dc-view" });
+               adobeDCView.previewFile({
+                  content: { location: { url: "https://amascasa.github.io/plans_structural.pdf" } },
+                  metaData: { fileName: "plans_structural.pdf" }
+               }, {
+                  showLeftHandPanel: true,
+                  showAnnotationTools: true,
+               });
+            });
+         </script> -->
+
+         <!-- <object id='A.plans' class="pdf" data="plans_set.pdf"></object>
+         <object id='S&D.plans' class="pdf" data="plans_structural.pdf"></object> -->
       </div>
 
+
+
+
+
       <!--3d Model floor 1-->
-      <div name="first_framing_3d" class="model">
+      <div id="first_framing_3d">
          <iframe class="model"
-            src="https://3dwarehouse.sketchup.com/embed/5ec191e6-050e-49db-8113-42a6b607007f?token=q3CVwu9tV5E=&binaryName=s21"
+            src="https://3dwarehouse.sketchup.com/embed/77ca4f96-8d8f-4da6-bc63-8f2b5ca39e6b?token=qrgcC4jU0PA=&binaryName=s21"
             frameborder="0" scrolling="no" allowfullscreen>
          </iframe>
       </div>
@@ -101,7 +156,7 @@
       <!--3d Model floor 1&2-->
       <div id="first_second_framing_3d">
          <iframe class="model"
-            src="https://3dwarehouse.sketchup.com/embed/cb104c3d-3e4a-473c-87b7-d9357d1fceee?token=8gZk21RyXwQ=&binaryName=s21"
+            src="https://3dwarehouse.sketchup.com/embed/c43fadb4-08b4-4cae-9cd0-2974662664ce?token=liH-mlQdEMc=&binaryName=s21"
             frameborder="0" scrolling="no" allowfullscreen>
          </iframe>
       </div>
@@ -116,23 +171,26 @@
 
 
       <!-- pdf api test -->
-      <!-- <object class="pdf_letter" data="materials_total.pdf">Lista</object> -->
-      <div class="pdf_letter" id='hg_geotechnical' style="height:90vh; width: 42vw; padding-bottom:10px">
-         <div id="adobe-dc-view"></div>
-         <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
-         <script type="text/javascript">
-            document.addEventListener("adobe_dc_view_sdk.ready", function () {
-               var adobeDCView = new AdobeDC.View({ clientId: "9c29e9ed381548ec8d03c441bb6fff88", divId: "adobe-dc-view" });
-               adobeDCView.previewFile(
-                  {
-                     content: { location: { url: "https://amascasa.github.io/soil_report.pdf" } },
-                     metaData: { fileName: "soils_report.pdf" }
-                  }, { embedMode: "SIZED_CONTAINER" });
-            });
-         </script>
-      </div>
+
+
+
+
+
+
 
    </div>
+
+   <!-- <div id="adobe-dc-view"></div>
+   <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+   <script type="text/javascript">
+      document.addEventListener("adobe_dc_view_sdk.ready", function () {
+         var adobeDCView = new AdobeDC.View({ clientId: "9c29e9ed381548ec8d03c441bb6fff88", divId: "adobe-dc-view" });
+         adobeDCView.previewFile({
+            content: { location: { url: "https://amascasa.github.io/soil_report.pdf" } },
+            metaData: { fileName: "soils_report.pdf" }
+         }, {});
+      });
+   </script> -->
 
 
 
@@ -142,3 +200,12 @@
 
 
 </html>
+
+
+
+
+<!-- the berinning of the befinning is the befinning of time; whtever that means, if that means anythinh....at Rabalais decaf cappuccino, spelled wreong, typing is cscode....just thinking abouth things.
+
+the blue bird flies flyes flees fleas
+
+salmon sniper document.getElementById('sassafras') -->

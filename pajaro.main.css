@@ -1,11 +1,12 @@
 * {
    box-sizing: border-box;
+   border-radius: 4px;
 }
 
 body {
    /* border: 2px solid red; */
    background-color: black;
-   color: white;
+   color: rgb(253, 239, 213);
    display: flex;
    flex-flow: column wrap;
    /*  align-items: center; */
@@ -38,9 +39,9 @@ nav {
 
 nav a,
 button {
-   color: white;
+   color: rgb(253, 239, 213);
    background-color: rgb(0, 0, 0);
-   border: 1px solid white;
+   border: 1px solid rgb(253, 239, 213);
    padding: 8px;
    border-radius: 6px;
 
@@ -52,20 +53,179 @@ nav a:hover,
    scale: 1.1;
 }
 
-
-
 p {
    margin: 0px;
    padding: 0px;
 }
 
 
+/*  Forecast */
+.forecast {
+   height: 20px;
+}
+
+.ww_box,
+.ww_col1,
+.ww_col2,
+.resize_sensor {
+   font-family: "";
+}
+
+/* .ww_col2 {
+   height: 100px;
+} */
+
+/* .ww_box {
+   height: 40px;
+} */
+
+/*
+.ww_child,
+.day-forecast {
+   height: 80px;
+} */
+
+.temp,
+.day {
+   height: 16px;
+}
+
+.day2 {
+   height: 30px;
+}
+
+.svg-wrapper .narrow #ww_e92de088cd7 {
+   border: 2px solid aqua;
+   border-radius: 4px;
+   opacity: .8;
+   box-shadow: 0px 0px 8px 1px white;
+}
+
+/* ************************** */
+
+
+
+#main_container {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-around;
+   /*  border: 3px solid pink; */
+}
+
+.title {
+   margin-bottom: 40px;
+}
+
+
+/* ******** Stats ****************** */
+#stats_container {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-around;
+   align-items: baseline;
+   color: white;
+   font-size: 1.1em;
+   border: 1px solid aqua;
+   padding: 5px 0px 12px 5px;
+   width: 97%;
+   margin: 30px 1.5% 46px 1.5%;
+
+}
+
+.stats {
+   color: white;
+   border-left: 2px double orangered;
+   padding-left: 10px;
+}
+
+
+/* ******** Days ****************** */
+#giorni_container {
+   border: 1px solid aqua;
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: space-between;
+   min-height: 100px;
+   width: 94vw;
+   margin-bottom: 60px;
+}
+
+.giorno {
+   border: 1px solid aqua;
+   width: 50%;
+   padding: 10px;
+   box-shadow: 0px 0px 10px 3px white;
+   border-radius: 4px;
+}
+
+.giorno_titolo {
+   text-align: center;
+   font-family: 'Amatic SC';
+   color: orange;
+   box-shadow: 0px 0px 10px 3px white;
+   border-radius: 4px;
+
+}
+
+/* ************************** */
+
+
+/* ********* Calendar***************** */
+#calendar {
+   display: flex;
+   flex-flow: row wrap;
+   width: 90%;
+   justify-content: space-around;
+   margin-bottom: 46px;
+}
+
+#calendar_header {
+   border: 1px solid red;
+   height: auto;
+
+}
+
+.week {
+   display: flex;
+   flex-flow: row wrap;
+   width: 100%;
+   justify-content: space-around;
+   border: 1px solid orange;
+}
+
+.day_name {
+   width: 14.2%;
+   border: 1px solid aqua;
+   padding: 7px;
+}
+
+.day_calender {
+   border: 1px solid aqua;
+   width: 14.2%;
+   height: 120px;
+   padding: 7px;
+}
+
+.current_day {
+   color: orange;
+   font-size: 1.4em;
+   background-image: url('itty_cradle.jpg');
+}
+
+
+
+/* ************************** */
+
+
+
+
+
 img {
-   border: 4px solid aqua;
+   border: 1px solid aqua;
+   box-shadow: 0px 0px 15px 2px white;
    border-radius: 6px;
    width: 80%;
    height: auto;
-   box-shadow: 0px 0px 15px 4px white, 0px 0px 15px 4px orange inset;
 }
 
 object {
@@ -77,21 +237,128 @@ object {
 }
 
 
-iframe {
+.model {
    margin: 20px;
    border: 3px solid aqua;
    border-radius: 3px;
-   box-shadow: 0px 0px 20px 6px white, 0px 0px 20px 6px green inset;
+   box-shadow: 0px 0px 20px 6px white;
    width: 800;
    height: 400;
+}
+
+.sk_model {
+   margin-bottom: 40px;
+   box-shadow: 0 0 12px 3px;
+   padding: 10px;
+   width: 90vw;
+   height: 60vw;
 }
 
 
 
 .pdf_letter {
-   width: 40vw;
+   width: 80vw;
    height: 90vh;
    border: 4px solid rgb(130, 204, 238);
    border-radius: 6px;
    box-shadow: 0px 0px 15px 4px white;
+}
+
+
+.model {
+   width: 95%;
+   height: 90vh;
+   margin-bottom: 60px;
+}
+
+#first_framing_3d,
+#first_second_framing_3d {
+   width: 90%;
+   margin-left: 5%;
+}
+
+#elevations_img {
+   width: 90%;
+   border: 4px solid aqua;
+   box-shadow: 0 0 12px 3px;
+   padding: 10px;
+}
+
+#lumber_container {
+   margin: auto;
+   width: 90vw;
+   border: 1px solid aqua;
+   padding: 10px;
+   margin-bottom: 36px;
+}
+
+#lumber {
+   box-shadow: 0 0 12px 3px;
+   border: 2px solid aqua;
+   width: 100%;
+   height: 90vh;
+}
+
+#model_header {
+   font-size: 3em;
+   margin-bottom: 10px;
+   text-align: center;
+}
+
+#first_list {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-around;
+   margin-bottom: 60px;
+   width: 100vw;
+   height: auto;
+}
+
+
+
+#list {
+   width: 49vw;
+   margin-bottom: 40px;
+}
+
+#framing_tools {
+   width: 36vw;
+   height: auto;
+   object-fit: contain;
+   box-shadow: none;
+   border: 1px solid aqua;
+   box-shadow: 0px 0px 15px 4px white;
+   padding: 10px;
+}
+
+#hd_cart {
+   width: 40vw;
+   height: auto;
+
+}
+
+#card_container {
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: space-around;
+   margin-bottom: 40px;
+}
+
+
+.card {
+   width: 40vw;
+   height: auto;
+   margin-bottom: 20px;
+   border: 1px solid aqua;
+   box-shadow: 0px 0px 15px 2px white;
+   border-radius: 6px;
+}
+
+a {
+   scale: 1;
+   transition: .3s;
+}
+
+a:hover {
+   scale: 1.05;
 }
