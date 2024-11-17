@@ -71,20 +71,6 @@ p {
    font-family: "";
 }
 
-/* .ww_col2 {
-   height: 100px;
-} */
-
-/* .ww_box {
-   height: 40px;
-} */
-
-/*
-.ww_child,
-.day-forecast {
-   height: 80px;
-} */
-
 .temp,
 .day {
    height: 16px;
@@ -254,6 +240,11 @@ object {
    height: 60vw;
 }
 
+.sk_model:hover {
+   scale: 1.05;
+   transition: 0.2s;
+}
+
 
 
 .pdf_letter {
@@ -284,7 +275,8 @@ object {
    padding: 10px;
 }
 
-#lumber_container {
+#lumber_container,
+#full_model_container {
    margin: auto;
    width: 90vw;
    border: 1px solid aqua;
@@ -292,7 +284,8 @@ object {
    margin-bottom: 36px;
 }
 
-#lumber {
+#lumber,
+#full_model {
    box-shadow: 0 0 12px 3px;
    border: 2px solid aqua;
    width: 100%;
@@ -361,4 +354,10 @@ a {
 
 a:hover {
    scale: 1.05;
+}
+
+.pages {
+   width: 1600px;
+   border: 2px solid aqua;
+   box-shadow: 0 0 14px 4px;
 }
