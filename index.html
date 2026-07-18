@@ -1,77 +1,182 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Service Worker & PWA</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="sw.mediaQ.css">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>EriccoStudio</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+   <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Barriecito&family=Butcherman&family=Emilys+Candy&family=Geo:ital@0;1&family=Iceland&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Life+Savers:wght@400;700;800&family=Lovers+Quarrel&family=Nova+Oval&family=Playwrite+MX:wght@100..400&family=Sankofa+Display&family=Snowburst+One&family=Sue+Ellen+Francisco&family=Sunshiney&display=swap"
+      rel="stylesheet">
+  
+   <link href="fonts.css" rel="stylesheet">
+   <link href="psci.media.css" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&display=swap" rel="stylesheet">
     <link rel="manifest" href="manifest.json">
-    <script src="sw.js"></script>
-    <style>
-        
-    </style>
+  <!-- Favicon for most browsers -->
+    <link rel="icon" href="icons/jelly_earth.ico" type="image/x-icon">
 
-    <script>
+    <!-- PNG alternatives for newer browsers / higher DPI -->
+    <link rel="icon" type="image/png" sizes="48x48" href="icons/ericco-logo-48.png">
+    <link rel="icon" type="image/png" sizes="72x72" href="icons/ericco-logo-72.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/ericco-logo-96.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="icons/ericco-logo-128.png">
 
-        function changeBg () {
-            x = document.getElementById('background').value;
-            document.body.style.backgroundImage = x;  
-        }
+    <link rel="canonical" href="https://tiempio.io/">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icons/ericco-logo-192.png">
 
 
-        function local () {
-            const name = document.getElementById('name').value;
-            
-            if (localStorage.getItem('name') != name) { 
-                localStorage.setItem('name', name);
-                document.getElementById('localStorage').innerHTML = 
-                'Hello ' + name + ', welcome to the site!';
-            } else {
-                const localName = localStorage.getItem('name');
-                document.getElementById('localStorage').innerHTML = 
-                'Welcome back ' + localName + '!';
-            }
-        }
-       
-        
-    </script>
+    <link rel="preload" href="../fonts/amatic-sc-v27-latin-regular.woff2" as="font" type="font/woff2">
+   
+
+    <link href="css/EriccoStudio.css" rel="stylesheet">
+    
+
+    
 </head>
+
+
+
 <body>
-<div>
-<h1>Service Workers & PWA</h1>
-
-<form>
-    <label for="background"></label>
-    <select id="background" name="background" onChange="changeBg()">
-       <option value="">Select Background</option>
-       <option value="url('lightgold.jpg')">Light Gold</option>
-       <option value="url('lightblue2.jpg')">Light Blue</option>
-   </select>
-</form>
 
 
+   <section id="all-categories-container">
 
-<h3>Progressive Web Applications</h3>
-<p>
-    Progressive Web Applications (PWA) are a powerful set of tools to use when developing
-    non-native applications. The PWA enviroment allows the designer of an app to produce
-    native-like apllications. Part of the process is storing critial files that can be loaded 
-    in case of no internet connection. This allows the app to function regardless of a connection,
-    making the app much more reliable. Another benefit is speed. With the critical files stored locally
-    retrieving them is less cpu intensive. Also with four different options on setting the viewport
-    a developer can achieve a native app appearence without the browser bar.
-</p>
+      <div id="images-root">
+         <div id="paintings-container" class="flex"><h1>Paintings</h1></div>
+         <div id="tiles-container" class="flex"><h1>Tiles</h1></div>
+         <div id="clothes-container"  class="flex"><h1>Clothes</h1></div>
+         <div id="glassware-container"  class="flex"><h1>Glassware</h1></div>
+         <div id="sculptures-container"  class="flex"><h1>Sculptures</h1></div>
+         <div id="faux-finish-container"  class="flex"><h1>Faux Finishes</h1></div>
+         <div id="murals-container"  class="flex"><h1>Murals</h1></div>
+
+      </div>
+
+   </section>   
+
+
+    <div id="modal">
+
+        <div id="modal-content">
+
+            <img id="modal-img" src="" alt="">
+
+            <div id="modal-description"></div>
+
+        </div>
+
+    </div>
+
+    <script id="load-all-photos">
+
+            const categories = [
+            { name: "paintings",   path: "opt-images/paintings",    count: 12 },
+            { name: "tiles",       path: "opt-images/tiles",       count: 10 },
+            { name: "clothes",      path: "opt-images/clothes",     count: 4 },
+            { name: "glassware",    path: "opt-images/glassware",   count: 6 },
+            { name: "sculptures",    path: "opt-images/scupltures",  count: 2 },
+            { name: "faux-finish",   path: "opt-images/faux-finish", count: 9 },
+            { name: "murals",        path: "opt-images/murals",      count: 3 }
+            ];
+
+            const artworkDescriptions = {
+
+                "paintings-1": "Sunset landscape — acrylic on canvas",
+                "paintings-2": "Abstract color study — mixed media",
+                "paintings-3": "Ocean inspired piece — acrylic",
+                
+                "tiles-1": "Hand painted ceramic tile",
+                "tiles-2": "Decorative tile installation",
+
+                "glassware-1": "Hand blown glass vessel",
+
+                "sculptures-1": "Mixed media sculpture",
+
+                "murals-1": "Large scale wall mural"
+
+            };
+
+            categories.forEach(category => {
+            const container = document.getElementById(`${category.name}-container`);
+
+            for (let i = 1; i <= category.count; i++) {
+                const img = document.createElement("img");
+
+                img.id = `${category.name}-${i}`;
+                img.classList.add(category.name, "categories-container", "zoom"); 
+                img.src = `${category.path}/ericco-${category.name}-${i}.jpg`;
+                img.loading = 'lazy';
+                img.alt = `${category.name} ${i}`;
+
+                img.dataset.description =
+                    artworkDescriptions[`${category.name}-${i}`]
+                    ||
+                    "EriccoStudio artwork";
+
+                                container.appendChild(img);
+                            }
+                            });
+
+            /* ===== Modal Logic ===== */
+
+            const modal = document.getElementById("modal");
+            const modalImg = document.getElementById("modal-img");
+            const modalDescription = document.getElementById("modal-description");
+
+            document.addEventListener("click", e => {
+            if (e.target.classList.contains("categories-container" )) {
+                modal.classList.add("active");
+               modalImg.src = e.target.src;
+
+                modalDescription.textContent =
+                    e.target.dataset.description;
+                            } else if (e.target.id === "modal") {
+                                modal.classList.remove("active");
+                            }
+                            });
+
+            document.addEventListener("keydown", e => {
+            if (e.key === "Escape") {
+                modal.classList.remove("active");
+            }
+            });
 
 
 
-<form>
-    <label for="name">su nombre</label>
-    <input type="text" id="name" name="name" autocomplete="on" onChange="local()">
-</form>
+    </script>
 
-<p id="localStorage"></p>
 
-</body>
-<script src="app.js"></script>
+   <div id="toolbar">
+        <div id="home">
+            <a id="home-link" src="">&#8962;</a>
+        </div>
+        <div id="-button" class="categories">
+            <a id="" class="" href=".html">Info</a>
+        </div>
+         <div id="-button" class="categories">
+            <a id="" class="" href=".html">Info</a>
+        </div>
+         <div id="-button" class="categories">
+            <a id="" class="" href=".html">Info</a>
+        </div>
+         <div id="-button" class="categories">
+            <a id="" class="" href=".html">Info</a>
+        </div>
+       
+
+   </div>
+
+    </body>
+
 </html>
+
+
+   
